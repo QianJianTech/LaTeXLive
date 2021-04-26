@@ -1,0 +1,14 @@
+#navbar-header {
+  position: sticky;
+  top: 0;
+}
+
+#img-nav-portrait {
+  width: 20px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+#ver_h1 {
+  padding: 0px 4px;
+  font-size: 0.1rem;
+}

@@ -1,0 +1,4497 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8" />
+  <title>在线LaTeX公式编辑器-帮助文档</title>
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="always" name="referrer" />
+  <meta name="description"
+    content="识别图片中的公式！免费的在线LaTeX公式编辑器。支持导出svg、超大png、jpg、MathML、SVGCode。可以打出任何公式，不只是数学！支持物理physics、化学mhchem、unicode等常用扩展宏包加载。即时渲染，基于MathJax实现。" />
+  <meta name="keywords" content="在线LaTeX,LaTeX公式编辑器,公式识别,公式编辑器,LaTeX公式识别,数学公式,LaTeX公式编辑,数学公式编辑,数学公式编辑器,妈叔,在线公式编辑" />
+  <meta name="author" content="PandaHero, yuetao_1011@outlook.com" />
+  <meta name="copyright" content="妈咪说（北京）科技传媒有限公司,熊猫大侠" />
+  <meta name="renderer" content="webkit" />
+  <meta name="robots" content="all" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- #region icon -->
+  <link rel="shortcut icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAASOElEQVRoQ+1ZeXiU1bn/ffMts89kJiuThTAJYQlJRARRVgVUQJRStCKitrUVvSqPLdTb0t7GbpeqV61LtVzUevVyW6hY2aMgkR0kQFgTsm+TTPaZyWzfdu5zvskEgnGBe//w8fFLnkm+Oec75/2d9z2/9z2/j8E35GK+ITjwLZCvmye/9UjcI89nZBgv6PXWIzUtxnd/9QvLWFmytR88YlE+LTNHR2QZhTvmm0hTi0BCEQ6qrNMZDDKTnS5h98Egyk8Fhy3/ge+/W5u8G7Zv75pvHx142FMWuhpvX5VHisePdz2gKNMDIWVie3dvul5h7GJfwJibk2EyEWKRun0m4o8YwTIGYhMMjKRyRIUOhIDRMQCvk9EnholEwoaMxEBHVOxu8oW6zSZ9b6/V1JUD1Lvs9qpfk2jVDV1dtXc3N4e/DNwVAdk1a9a0jLMVKxL90QVSJCwYVQlGGMBBB5bh0EY6IQJgYQQDAxgoIAgC4IABXiEAZAAGAAIk+GAHjwRYEIYEBqL2RJjXQ1A5qEZde4vTcsjP6g4kDkvdUXTw4JmhQH1lII25Y59LaGz+KSOKiEBAFBwYhgHRfmKXbhAJxr/9oiloHzoGtFFoT4Z+EvqrQq+1qOAhwgQBXr0OOrt51yFIzy1uby+5FNBXArLLNeLdmz3epV6wkBk9dFAHLUrMkJgRDInd6TTDGLBgoGorTWGymmG0nd7Tz3gb9aMCVftOgzSwSBo0GpXgIMMECQRRtE2YsG502dEfxQ35UiC7s0auubmx7akmsNAx1KzYSscNB1G0CWzgISGIMA0bwQadEgsniSjQcTooRFUlRVXBsopmv0pYRiU6gdNx2mCyCoH+q1MRlULQIwozLFoQ+qm/GEGbmz7MEyANfuyxJ3z4t9ys76wtKwt9LpAHZ85Mmx1RFnzn8Kdrg9BDZDhtoBgAHQwkosW6whshGoRWryxf4LOz6hMzMs/11lVWnpOIGFSlYKM/EDTNnBLOaO6Ims6elyJZWQpr5VS0+VgEg2zHxAlCwN9h5KvrjUlmuyVBle0TUpKHeSXFHWppzXZIao5TFou4sIgQOHBgwSEAC1QYUlL9Hy+4tXDWG280DAnktfxrptiJOj3bH5l0fXPTwhbGBDa+FwiQiii6kxIaG03Gt4KZqbvTbbajI3fsiH4Zs1xt+6klS0an7Ni1KtUn/qCHROHLdu2rcNifnnvixO4vDK0DLvf7tUm20ulna39rVFirxMTwUrdmEAkbLezm89cVLS0uLe271Li7HA776p5gSYZgLjhp1P1ptq/rF1dr/FDP/d2V/TN9ku3QwlOn9h2aOTP7g9LS780dObpqRlXFps945HzuuJ+fDPTm1lhtO1fXNG1oJDy4GJHAQiRE7aaWVJ83Y6iJ9s+Y9fPJn+z+Qw+cMCGKcjt3qNftfmjeiRPn/r8A/Wdh4bQZnq5fp3f6ZpkYFj6jgI+yUp/4DJDG5LS27rEFqwRRciYf2veiyCRoW5tyDfXG+jTnK0vbGh4fyrCS1OHvzPF239fC8NBBh0QSQsAiiJ057sfHlB9fe7VgNtxwgzG5zfNDd0h+1OntHkNZzaeRsw4cwrCPyXlzEJCnsnLz726sPsNOmT2tKBx8oun40bvYfiDUiEQSwKb8/CfvPXvyxaGMKrOn78r39c3qYFjoNPgsWBKCEzLKMoZtqigYs/wHO3Z0fFVA2+fOtbl7epYbK+uecPb40qnhfTBCpexMYRACjmVwLNHy9CAgNZOnPeI8e+7PT+cXjFh27PiHeTIz0qdRLuVxVassxJumz83cvX3n5caQDRvYtkd/0kg621yEsfcTdCxjEKJgGET02a0tW1Nsy++rqtr6RWDemDLFmub1PnZNZ2CFpbc7VYaACIwgTCzLxOnfSIAwVKxPdzwwCMir9qTXHk1IXLAmJXn6omPlFYmE46P9G11PVIgCj2dHpeW8cPp07eWGfPS9743J31RyjpFUqAzNIYMvmTCwIwIOIs6Ny1tXP2bsk3dv3DiILIrHjhVmRiKPjQiEfprW4XMFNQ/ooWNoUoxXCrFxKSQTCSOQYGt6Pzvzu4OAfGJJ2Z+lY33S5PG/SS49fDgoqmAYmoEBJyFoFhjParE7ayMlsMuud5LS5t/eGdkaAQuVGTxpvGssmREkw4fOpLSaTWnJKx49c3IbbS8ZlvlCTlC8O9Xvd8lgEIQJ6PeAViMQ+jRAGFodxLIZR/yI5rh3BHKz7xsEpM+S6N+emvLHYYX55df8c9MWHxL6qyf6UB9kV/redE/tjKHC4m95hY8uulD9agctBi8dNTbnoEsmOjgQpAUPTo5yv1bndv+rq/LCMzfVNjxMPdADWjjTcoWGNAMLIjCzAtoFIYRI1BQrbwAXkfBemuP1u9oaHxmY4i93/dj+/R3/6N0weuRdvroW9/Kunj+2MvoBG4wkgKrR4/5yfcWJ5UMBaZg09XXh6P6HVSZxYH/QlXWSCOjfAASwlwBSNe+ocCCEbqvxwoGicfdzBl0op7LheXeTZ3YAJq1mNiKKTrvl/MFR7tWjm9ofyG3tuNNH7SIMktGHv+Xl/uT+C2dfGBh6pTPlhn/nrAd3Ok03shUVj82B7d42hvIEXRWCdI7HT/nIiufD/peGZqzU0jG+0Ixuhh8o8qw6BeV5rrctnvZRo/zRyT2Mvj+6L46gEgZGRLT9cz5/7PP7TIZn3T0986c3dKwLCnykKcf1bxNOnXqWPnFc76gaFyW57TTcaY3HqbDeOfc2y3sbSgaAlI0tus9Q0/TOendq9r80936gD/QVhfuN0hFGY6w9abaFd3maPhgCCFNpSGoYEVEy27WNGStXEyHh3esKCx46dvBMde7Ylx3V9Y9R70ha+MXK9vjGpYAS0AsrZOycP/82MRJptTY3R2+urKykfbYuutdduLWkRhBFKAwPnsgQBQE7p07Kfujj7RdrrfZbF7zQ9dH2Ze9fN+HGZSdrTgmiopcZ6g9qlAToWbQtWzx2wrp15y8H8tbChdm3bN9fy4tRRmJ4rdlICNpY4t8wypW8ICOjwHL8+Ep7gNxObGa/uaPLFQWPcH++oaATIILO1+12bduUkvzyykP7Bp03fLfeMT+ya89WUYmdgxxEhtdiaHb3tWdpHBA3qtSecnBGcpJ/gxj97dRG734WeihMrNoVSBCSI6nFteJHWUxx8eDDCADPvHm3sSV7d0jaJDHwPFHQYzM3eRMMuwsavQ/SUr9Pb7uwb1rRpGE1davyG72rBUU7wUAAwSkbv6s9I/PpuefK9w8Vuq+mZj75iLfn+Vaa0RnARiKoS7LvKer03Ez7DwDx6J29J9LT1ogW86dzTp3d5etnH2p1ClFx1siXXhvuuGmoSV7PGPH4Q80dL3mh10KGXvQ5HgR2IqETHGiK9BjZY6PDXRNp+9qCghnfrWt9sxPEXDM87bF5Z8/+Y6ix499tSs95bUFL+3Jvv8fNxI/m8ZNeKjhxcMUAkJfmztUvKfk4UjJh/D2TU1wpjm2bXor0sw81KJVEsC/D9e6s5uplQ032VqLrpQe7Qo+30FPgZdSrwWIYJJA+lKe7Nk5pqbs7PsbKwkKzhxBh/enTPV8EgrZ5Ro4pQdWFWwiToJGPAWHUjsx9eFLVaa2G06Z9b8asiTcePXq0p/DaW/j6mged3p57wwwVD7TDM3TohnzrHU9llmx+ZqgJG9yjt+pra+YrjG2Aei/tR7c1R7qgn7fod47tm371ZUZf3l4M6JaZklpSQmKaj+HBEqLlmUPpCXPvbK7XyiUNyIfJaQ/OMdje+r0gZE2uObd5ChzXdPWzCj2D61kd9gyzz1/cXLt9KCOanMNqDN29bpExfQYIZSk7EaEgjIZpMxdfu2/Xe1cK5Od5eaNXXGg/T6s+kWHA0vEMAimdd9uIpZvWNwwA+dQ9Zk2Gp+OHG+dNHz+35ECFPRgyx9lHT4jGJr9LNxa+0tx8+nIj7pk4MfO543WNZkVGKM5y8WxBCByIQDUacSzR8fTK5urflwHSlQLZMW78E7ecvfAnDxE0xjIREX6rpSY70JYbH4vyEhOaOLWk/NMDhtzF96zmt+3aGwhLYLWahoGBiAgY+c6/zp4yvHjLls+ogK9njpi+2OP7RFIIVE35ABQtJ0iwQUV1knXnX3KynnruyJFTVwog3v+UOakyLxjN6+jf6MOIhPJER8mErsbbBoBsHjsha3x91WmxoOjFcl/PpzMrLmyJwKqVzJrAQ3ogFxR+mHX65K1DGdJ87wOPCOvf/nMUidqmNhIFiYii2sB5jmWmrlpSVbX+agFoYZ/k+s3srtCvmqkISNlQK026sX/qjJWz95f+xwCQu8322a+EpY+OzJx6R0NDi/Phmrq/tjNUBYyVyjYioTXBXDuqtzVnKIP2zb/zqXHbPlhDC40wwugBK5e5h79c43D8srjs6nRcOk9JTk5Kgj/4y3EdfY8HwEPWvM3AQveHwKnPjcpIWnMJ2zHl0+esGHXw+ItPZiYVuaFMXFnnWddCJc/+fEArTYH4UJbp+nOlnv/JE9XVg9SSuuJiQ2jLtnVqbyA1c3hWSaUcee/6vXvrvsgLGwC2LTeXO1ZQYDGUHjGPGZFmZmTGtkzgMhubPHldvP7a/I6uW+xR1RoAC1E7EcZEugyE8f5w16pFDTXPXToHQ2bNe9W3Z++jb4/ILBhmt+nvLD9/rF3hQLXmmFeoBggkgKDdzHokPdemD6tRxmoK600G0Zk7wlsVEqVgwG8Z7nRUOzq6hzPdvWmdkYigygonhiKsZNPzjJ7jmajIEonwJCzxhNXpDQaDWQ5GzHqW4zioCBMRVkmBBUAXOEiaLBsTU3UEcCGAo2muLde31d9x+UIxjWnZb5O2+vvtq1bfk/Ds7/9eDb3iAKcLX1LCa+uhJSEqVyoQQaelGmAEElRY6dkcPAKIgIAKD1TWpqUKJUwOAkQQrT+9p9Ip7UNTLZVS9aDkTO8U+gxDZciYjqwlU60OIxDQg/1G8zs3h4P3D+VtRpo+Z010796nPAVF2/NOH52/Jzn9dzM7ulY3wAT+sgNRrPiIHzsvNsZP0f11b/88F0+JF+vcuAnxkQa26sWTOIkpxFTftWoCNoMzLDkQmVj4zNTDhzd/Xsgya92jli6qbX2XrsvSJIttc2dnoMWRXuXq8eU202G03PBZUy4f8KL2HhdW46DjAdqv3BN6xrm4CNSzBqgQNDFUhh8hzWOczdnXaNdvrLSZ3w0R0mecMaNq6WuvfW4pw/xh2rTkJVVN27LbWib+1WR+7/uh3sV7Fi5MyDpUtjXd2zGFKrwqTFC0dx1xp19cSdpKA4sKQFRZp3owNYse6lWEIGvm0ZDqg0s79VH5AQjQ0OEYEJ6FR5SDPFFqQ0nOylF57sObw4EPkZLS4G70pjT19TxQYEvAtmvGvbnqnXc+l0S0pfmvayfdfOeJM7s5EoYwOv9pvuJMMf3+g6Ki+4q8HQ/Lbb2TeLNNUHU6MJISe3Wg02mEEAiHECB+lcAq2wQ+yhr1IWNECpkVOcymJ4Zsiq5PCUp+3w3junadrehul5Vek6I05Yiq12A1tLumTKobvn69ttIEYJpvv90VPV+/JCT2TcxU4fg4FNr13Z72IWu8QawVvzmckfPi9c0tK2jx/UmyeVN9VvrPHiwrq4m3/3jCBN4sCBxbG9RFrSE2URDU+nPn5OyZM+Xi0lK6k7/ytWH8+GT4fGlpbf4s9/CsvHSTcbK3rbnA1+1zCgJPeoz6c62y8j+pw11vX1dW9pVKmkHbuT5r5DMmT/uqZNmnvZ2osFkO+5OS9yQzcp2+xRs2MZwkCyyBqIATo2yXgTM4b5xoSrEnO3u3fOSoSU2whnlYI7UNViIYLQZVtSqSz36Nw2VzRiO2sApBtZogBvwQOfoeilV9cthncyaeD+vYg+V2w95MW8aBGw+VdH/lVenv+Bnt9/WRY6bfJInft3b6F9n7QjbKIGEDD1bVQdMqWRpVOsiqiiil4mifRsGc0Q5bOKIYEh2BqN3qY5q7A9bc7ECDqvh2NtX5YRBai4KRDrPD3p6aP7YxlJHVsO94fdP9pz6krwz/z9eQ70dIcbFuzz+33nCkszs7NSnJyPgDgijLVJRnwPMqEsyKLiKJbFVtSBgxPBiefG1fZk1jX/6RExHMuSncaeaC+p0HI6OXzA8za9de1evmK0U2JJArHeTr0P9bIF8HLwxJv183w67Unm9MaP0vKVv/HjB53P8AAAAASUVORK5CYII="
+    type="image/x-icon">
+  <!-- #endregion -->
+  <script src="../js/common/config.js" id="common_config" data-pagetype="readme"></script>
+  <script src="../js/common/common_05.js" id="common_05"></script>
+  <script src="../js/common/common_10.js" id="common_10"></script>
+</head>
+
+<body>
+  <script src="../js/common/common_20.js" id="common_20"></script>
+  <script src="../js/common/common_30.js" id="common_30"></script>
+
+  <!-- #region page -->
+  <div id="toc-doc"></div>
+  <div id="wrap_readme_parent">
+    <div class="container-fluid" id="wrap_readme">
+      <h2>帮助文档 Documentation</h2>
+      <h3>1 关于LaTeX公式编辑 Introduce</h3>
+      <p><strong>LaTeX</strong>（常被读作/ˈlɑːtɛk/或/ˈleɪtɛk/，正确读音:/ˈlɑːtɛx/音译：拉泰赫，写作 $\LaTeX$），是一种基于TeX的排版系统，由美国计算机科学家<a
+          href="https://zh.wikipedia.org/wiki/%E8%8E%B1%E6%96%AF%E5%88%A9%C2%B7%E5%85%B0%E6%B3%A2%E7%89%B9"
+          target="_blank">莱斯利·兰伯特</a>在20世纪80年代初期开发。
+        <strong>MathJax</strong>是一个跨浏览器的JavaScript库，它使用MathML、LaTeX和ASCIIMathML标记在Web浏览器中显示数学符号。 本页面是基于<a
+          href="https://www.mathjax.org/"
+          target="_blank">MathJax</a>实现的便捷LaTeX公式编辑器，支持导出SVG矢量图、高清PNG位图、MathML代码以及SVGCode，并且可根据需要自定义加载TeX扩展包，实现功能拓展。
+      </p>
+      <h4>1.1 基本使用 Basic</h4>
+      <p>
+        在本页面输入框中输入的公式<strong>不用</strong>放在<code>&lt;math&gt;</code>与<code>&lt;/math&gt;</code>，或<code>$</code>与<code>$</code>之间，直接输入相关LaTeX代码即可。
+      </p>
+      <p>在输出框您可以看到即时渲染出来效果，方便进行代码修改。</p>
+      <p>本页面已添加【代码高亮】与【自动补全】功能，默认设置为打开状态。但考虑到性能影响，您可自行在【设置】中关闭相关功能。</p>
+      <p>本页面现有4款颜色主题模式，您可根据自己的喜好，在【设置】中进行主题切换。</p>
+      <p>本页面已做多平台适配，如您需要，也可以在除PC和Mac之外的，iPad、ios、Android平台使用（注：考虑到性能影响，移动端部分功能会受到影响）。</p>
+      <p>以下字符在LaTeX环境中是保留字符，它们具有特殊含义，只可以特定语法中起作用，所以并不能在输入框中直接输入它们（会报错或者不会渲染）</p>
+      <pre><code># % ^ &amp; _ { } ~ \
+        </code></pre>
+      <p>如您因其他原因需要直接显示它们，请在其前面加入<code>\</code> 反斜杠或其它转义符。</p>
+      <pre><code>\# \% ^\wedge \&amp; \_ \{ \} \sim \backslash
+        </code></pre>
+      <div>$$ \# \% ^\wedge \&amp; \_ \{ \} \sim \backslash $$</div>
+      <p>关于LaTeX代码部分请参考下一章节。</p>
+      <p><strong>注意：</strong>本页面不支持文档编辑环境，因此不支持调用<code>\begin{document}</code>等相关命令，默认即为数学环境，可直接输入数学公式。</p>
+      <h4>1.2 关于渲染 Render</h4>
+      <p>本页面采用MathJax-tex-svg显示数学符号，支持五种格式导出。</p>
+      <h5>1.2.1 导出SVG</h5>
+      <p>SVG全称<strong>S</strong>calable <strong>V</strong>ector
+        <strong>G</strong>raphics（可缩放矢量图形），是一种基于可扩展标记语言（XML），用于描述二维矢量图形的图形格式，标准由W3C制定，是一个开放标准。
+      </p>
+      <p>我们可以简单理解为，SVG是一种与图像分辨率无关的矢量格式的拓展名，因此SVG文件可以直接拖入<strong>AI、PS</strong>等绘图软件中进行相应编辑、修改，以满足任意尺寸需求。</p>
+      <h5>1.2.2 导出PNG</h5>
+      <p>PNG全称<strong>P</strong>ortable <strong>N</strong>etwork
+        <strong>G</strong>raphics（便携式网络图形），是一种无损压缩的<strong>位图</strong>图形格式。
+      </p>
+      <p>因此PNG与图像分辨率有关，本页面导出的PNG分辨率为4K裁切标准（3840x2160），也可以满足绝大部分的文档需求。IOS端若出现无法保存图片的现象，请手动打开浏览器访问照片的权限。</p>
+      <h5>1.2.3 导出JPG</h5>
+      <p>JPEG全称<strong>J</strong>oint <strong>P</strong>hotograghic <strong>E</strong>xperts
+        <strong>G</strong>roup（联合图像专家小组），是一种针对照片影像而广泛使用的<strong>有损压缩</strong>标准方法。<strong>JPG</strong>为使用JPEG方法压缩后的图片文件格式。
+      </p>
+      <p>本页面提供白底JPG图片下载，大小为4K裁切标准（3840x2160）。IOS端若出现无法保存图片的现象，请手动打开浏览器访问照片的权限。</p>
+      <h5>1.2.4 导出MathML</h5>
+      <p>MathML全称<strong>Math</strong>ematical <strong>M</strong>arkup
+        <strong>L</strong>anguage（数学标记语言），是一种基于可扩展标记语言（XML）的标准，用来描述数学符号和公式。现已获得<strong>HTML5</strong>和大部分<strong>办公软件</strong>与<strong>数学软件</strong>的支持，例如Microsoft
+        Office、LibreOffice、Mathematica、Maple等，这意味着，您只需将<strong>MathML代码</strong>复制进Microsoft
+        Word当中，便会自动转换成Word支持的LaTeX公式，并可进行相应后续编辑。
+      </p>
+      <h5>1.2.5 导出SVG Code</h5>
+      <p>SVGCode是矢量图数据编码，用svg标签表示，可以直接粘贴在html文档内显示。</p>
+      <h5>1.2.6 导出转义LaTeX字符</h5>
+      <p>该功能是将需要转义的字符进行转义，用于JSON或其他需要转义的场合。例如将<code>\</code>转义为<code>\\</code>等。</p>
+      <h5>1.2.7 ShareURL</h5>
+      <p>通过该功能可以将已经编辑好的公式快速分享给好友，好友只需将获得的url地址复制到浏览器的地址栏中访问即可。</p>
+      <h4>1.3 关于图片OCR公式识别 OCR</h4>
+      <p>支持jpg或png格式的公式图片识别，点击工具栏中的【图片识别】标签，再点击【选择图片】，在弹出的对话框中选择想要识别的公式图片，即可在输入栏中获得该公式的latex代码。</p>
+      <p><strong>注：</strong>上传的公式图片须为正向。方向颠倒的公式会严重影响OCR识别的准确度。</p>
+      <p>&nbsp;</p>
+
+      <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+      <!-- <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+              data-ad-format="fluid" data-ad-client="ca-pub-4786420636728190" data-ad-slot="9164837790"></ins> -->
+      <!-- <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script> -->
+
+      <h3>2 数学公式编辑 Displaying a formula</h3>
+      <h4>2.1 符号与字母 Symbol and Alphabet</h4>
+      <h5>2.1.1 希腊字母 Greek alphabet</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">小写</th>
+              <th class="l">LaTeX</th>
+              <th class="l">读音</th>
+              <th class="c">序号</th>
+              <th class="c">大写</th>
+              <th class="l">LaTeX</th>
+              <th class="l">读音</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$\alpha$</td>
+              <td class="l">\alpha</td>
+              <td class="l">/ˈælfə/</td>
+              <td class="c">31</td>
+              <td class="c">$\Gamma$</td>
+              <td class="l">\Gamma</td>
+              <td class="l">/ˈɡæmə/</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\beta$</td>
+              <td class="l">\beta</td>
+              <td class="l">/ˈbiːtə/, US: /ˈbeɪtə/</td>
+              <td class="c">32</td>
+              <td class="c">$\Delta$</td>
+              <td class="l">\Delta</td>
+              <td class="l">/ˈdɛltə/</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\gamma$</td>
+              <td class="l">\gamma</td>
+              <td class="l">/ˈɡæmə/</td>
+              <td class="c">33</td>
+              <td class="c">$\Theta$</td>
+              <td class="l">\Theta</td>
+              <td class="l">/ˈθiːtə/</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\delta$</td>
+              <td class="l">\delta</td>
+              <td class="l">/ˈdɛltə/</td>
+              <td class="c">34</td>
+              <td class="c">$\Lambda$</td>
+              <td class="l">\Lambda</td>
+              <td class="l">/ˈlæmdə/</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\epsilon$</td>
+              <td class="l">\epsilon</td>
+              <td class="l">/ˈɛpsɪlɒn/</td>
+              <td class="c">35</td>
+              <td class="c">$\Xi$</td>
+              <td class="l">\Xi</td>
+              <td class="l">/zaɪ, ksaɪ/</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\varepsilon$</td>
+              <td class="l">\varepsilon</td>
+              <td class="l">/ˈɛpsɪlɒn/</td>
+              <td class="c">36</td>
+              <td class="c">$\Pi$</td>
+              <td class="l">\Pi</td>
+              <td class="l">/paɪ/</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\zeta$</td>
+              <td class="l">\zeta</td>
+              <td class="l">/ˈzeɪtə/</td>
+              <td class="c">37</td>
+              <td class="c">$\Sigma$</td>
+              <td class="l">\Sigma</td>
+              <td class="l">/ˈsɪɡmə/</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\eta$</td>
+              <td class="l">\eta</td>
+              <td class="l">/ˈeɪtə/</td>
+              <td class="c">38</td>
+              <td class="c">$\Upsilon$</td>
+              <td class="l">\Upsilon</td>
+              <td class="l">/ˈʌpsɪlɒn/</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$\theta$</td>
+              <td class="l">\theta</td>
+              <td class="l">/ˈθiːtə/</td>
+              <td class="c">39</td>
+              <td class="c">$\Phi$</td>
+              <td class="l">\Phi</td>
+              <td class="l">/faɪ/</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\vartheta$</td>
+              <td class="l">\vartheta</td>
+              <td class="l">/ˈθiːtə/</td>
+              <td class="c">40</td>
+              <td class="c">$\Psi$</td>
+              <td class="l">\Psi</td>
+              <td class="l">/psaɪ/</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\iota$</td>
+              <td class="l">\iota</td>
+              <td class="l">/aɪˈoʊtə/</td>
+              <td class="c">41</td>
+              <td class="c">$\Omega$</td>
+              <td class="l">\Omega</td>
+              <td class="l">/oʊˈmeɪɡə/</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\kappa$</td>
+              <td class="l">\kappa</td>
+              <td class="l">/ˈkæpə/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\lambda$</td>
+              <td class="l">\lambda</td>
+              <td class="l">/ˈlæmdə/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">14</td>
+              <td class="c">$\mu$</td>
+              <td class="l">\mu</td>
+              <td class="l">/mjuː/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">15</td>
+              <td class="c">$\nu$</td>
+              <td class="l">\nu</td>
+              <td class="l">/njuː/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">16</td>
+              <td class="c">$\xi$</td>
+              <td class="l">\xi</td>
+              <td class="l">/zaɪ, ksaɪ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">17</td>
+              <td class="c">$o$</td>
+              <td class="l">o</td>
+              <td class="l">/ˈɒmɪkrɒn/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">18</td>
+              <td class="c">$\pi$</td>
+              <td class="l">\pi</td>
+              <td class="l">/paɪ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">19</td>
+              <td class="c">$\varpi$</td>
+              <td class="l">\varpi</td>
+              <td class="l">/paɪ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">20</td>
+              <td class="c">$\rho$</td>
+              <td class="l">\rho</td>
+              <td class="l">/roʊ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">21</td>
+              <td class="c">$\varrho$</td>
+              <td class="l">\varrho</td>
+              <td class="l">/roʊ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">22</td>
+              <td class="c">$\sigma$</td>
+              <td class="l">\sigma</td>
+              <td class="l">/ˈsɪɡmə/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">23</td>
+              <td class="c">$\varsigma$</td>
+              <td class="l">\varsigma</td>
+              <td class="l">/ˈsɪɡmə/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">24</td>
+              <td class="c">$\tau$</td>
+              <td class="l">\tau</td>
+              <td class="l">/taʊ, tɔː/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">25</td>
+              <td class="c">$\upsilon$</td>
+              <td class="l">\upsilon</td>
+              <td class="l">/ˈʌpsɪlɒn/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">26</td>
+              <td class="c">$\phi$</td>
+              <td class="l">\phi</td>
+              <td class="l">/faɪ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">27</td>
+              <td class="c">$\varphi$</td>
+              <td class="l">\varphi</td>
+              <td class="l">/faɪ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">28</td>
+              <td class="c">$\chi$</td>
+              <td class="l">\chi</td>
+              <td class="l">/kaɪ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">29</td>
+              <td class="c">$\psi$</td>
+              <td class="l">\psi</td>
+              <td class="l">/psaɪ/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="c">30</td>
+              <td class="c">$\omega$</td>
+              <td class="l">\omega</td>
+              <td class="l">/oʊˈmeɪɡə/</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p><strong>注意:</strong>
+        MathJax支持的大写希腊字母有限，如需其他（如大写Alpha），可使用<strong>罗马体</strong>转换，如<code>\mathrm{A}</code>表示大写Alpha：$\mathrm{A}$。</p>
+      <h5>2.1.2 希伯来字母 Hebrew alphabet</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="l">英文</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$\aleph$</td>
+              <td class="l">\aleph</td>
+              <td class="l">aleph</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\beth$</td>
+              <td class="l">\beth</td>
+              <td class="l">beth</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\gimel$</td>
+              <td class="l">\gimel</td>
+              <td class="l">gimel</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\daleth$</td>
+              <td class="l">\daleth</td>
+              <td class="l">daleth</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.1.3 二元运算符 Binary operations</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$+$</td>
+              <td class="l">+</td>
+              <td class="c">20</td>
+              <td class="c">$\bullet$</td>
+              <td class="l">\bullet</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$-$</td>
+              <td class="l">-</td>
+              <td class="c">21</td>
+              <td class="c">$\oplus$</td>
+              <td class="l">\oplus</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\times$</td>
+              <td class="l">\times</td>
+              <td class="c">22</td>
+              <td class="c">$\ominus$</td>
+              <td class="l">\ominus</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 -537 778 573"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                  <defs>
+                    <path id="MJX-727-TEX-N-F7"
+                      d="M318 466Q318 500 339 518T386 537Q418 537 438 517T458 466Q458 438 440 417T388 396Q355 396 337 417T318 466ZM56 237T56 250T70 270H706Q721 262 721 250T706 230H70Q56 237 56 250ZM318 34Q318 68 339 86T386 105Q418 105 438 85T458 34Q458 6 440 -15T388 -36Q355 -36 337 -15T318 34Z">
+                    </path>
+                  </defs>
+                  <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+                    <g data-mml-node="math">
+                      <g data-mml-node="mo">
+                        <use xlink:href="#MJX-727-TEX-N-F7"></use>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </td>
+              <td class="l">
+                \div <br />(在physics扩展开启状态下为<svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+                  viewBox="0 -686 1277 710" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                  <defs>
+                    <path id="MJX-759-TEX-B-2207"
+                      d="M56 673Q56 679 65 686H892Q901 679 901 673Q901 668 714 331T521 -15Q518 -18 506 -24H452Q440 -19 436 -15Q431 -8 337 162T150 501L57 669Q57 670 56 672V673ZM528 136L758 553H297Q298 551 414 341L528 136Z">
+                    </path>
+                    <path id="MJX-759-TEX-B-22C5"
+                      d="M74 251Q74 286 99 311T156 336Q200 336 222 308T245 250Q245 221 224 194T160 166T96 193T74 251Z">
+                    </path>
+                  </defs>
+                  <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+                    <g data-mml-node="math">
+                      <g data-mml-node="mi">
+                        <use xlink:href="#MJX-759-TEX-B-2207"></use>
+                      </g>
+                      <g data-mml-node="mi" transform="translate(958, 0)">
+                        <use xlink:href="#MJX-759-TEX-B-22C5"></use>
+                      </g>
+                    </g>
+                  </g>
+                </svg>)
+              </td>
+              <td class="c">23</td>
+              <td class="c">$\odot$</td>
+              <td class="l">\odot</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\pm$</td>
+              <td class="l">\pm</td>
+              <td class="c">24</td>
+              <td class="c">$\oslash$</td>
+              <td class="l">\oslash</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\mp$</td>
+              <td class="l">\mp</td>
+              <td class="c">25</td>
+              <td class="c">$\otimes$</td>
+              <td class="l">\otimes</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\triangleleft$</td>
+              <td class="l">\triangleleft</td>
+              <td class="c">26</td>
+              <td class="c">$\bigcirc$</td>
+              <td class="l">\bigcirc</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\triangleright$</td>
+              <td class="l">\triangleright</td>
+              <td class="c">27</td>
+              <td class="c">$\diamond$</td>
+              <td class="l">\diamond</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$\cdot$</td>
+              <td class="l">\cdot</td>
+              <td class="c">28</td>
+              <td class="c">$\uplus$</td>
+              <td class="l">\uplus</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\setminus$</td>
+              <td class="l">\setminus</td>
+              <td class="c">29</td>
+              <td class="c">$\bigtriangleup$</td>
+              <td class="l">\bigtriangleup</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\star$</td>
+              <td class="l">\star</td>
+              <td class="c">30</td>
+              <td class="c">$\bigtriangledown$</td>
+              <td class="l">\bigtriangledown</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\ast$</td>
+              <td class="l">\ast</td>
+              <td class="c">31</td>
+              <td class="c">$\lhd$</td>
+              <td class="l">\lhd</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\cup$</td>
+              <td class="l">\cup</td>
+              <td class="c">32</td>
+              <td class="c">$\rhd$</td>
+              <td class="l">\rhd</td>
+            </tr>
+            <tr>
+              <td class="c">14</td>
+              <td class="c">$\cap$</td>
+              <td class="l">\cap</td>
+              <td class="c">33</td>
+              <td class="c">$\unlhd$</td>
+              <td class="l">\unlhd</td>
+            </tr>
+            <tr>
+              <td class="c">15</td>
+              <td class="c">$\sqcup$</td>
+              <td class="l">\sqcup</td>
+              <td class="c">34</td>
+              <td class="c">$\unrhd$</td>
+              <td class="l">\unrhd</td>
+            </tr>
+            <tr>
+              <td class="c">16</td>
+              <td class="c">$\sqcap$</td>
+              <td class="l">\sqcap</td>
+              <td class="c">35</td>
+              <td class="c">$\amalg$</td>
+              <td class="l">\amalg</td>
+            </tr>
+            <tr>
+              <td class="c">17</td>
+              <td class="c">$\vee$</td>
+              <td class="l">\vee</td>
+              <td class="c">36</td>
+              <td class="c">$\wr$</td>
+              <td class="l">\wr</td>
+            </tr>
+            <tr>
+              <td class="c">18</td>
+              <td class="c">$\wedge$</td>
+              <td class="l">\wedge</td>
+              <td class="c">37</td>
+              <td class="c">$\dagger$</td>
+              <td class="l">\dagger</td>
+            </tr>
+            <tr>
+              <td class="c">19</td>
+              <td class="c">$\circ$</td>
+              <td class="l">\circ</td>
+              <td class="c">38</td>
+              <td class="c">$\ddagger$</td>
+              <td class="l">\ddagger</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.1.4 二元关系符 Binary relations</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$=$</td>
+              <td class="l">=</td>
+              <td class="c">49</td>
+              <td class="c">$\gneq$</td>
+              <td class="l">\gneq</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\ne$</td>
+              <td class="l">\ne</td>
+              <td class="c">50</td>
+              <td class="c">$\geqq$</td>
+              <td class="l">\geqq</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\neq$</td>
+              <td class="l">\neq</td>
+              <td class="c">51</td>
+              <td class="c">$\ngeq$</td>
+              <td class="l">\ngeq</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\equiv$</td>
+              <td class="l">\equiv</td>
+              <td class="c">52</td>
+              <td class="c">$\ngeqq$</td>
+              <td class="l">\ngeqq</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\not\equiv$</td>
+              <td class="l">\not\equiv</td>
+              <td class="c">53</td>
+              <td class="c">$\gneqq$</td>
+              <td class="l">\gneqq</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\doteq$</td>
+              <td class="l">\doteq</td>
+              <td class="c">54</td>
+              <td class="c">$\gvertneqq$</td>
+              <td class="l">\gvertneqq</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\doteqdot$</td>
+              <td class="l">\doteqdot</td>
+              <td class="c">55</td>
+              <td class="c">$\lessgtr$</td>
+              <td class="l">\lessgtr</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\overset{\underset{\mathrm{def}}{}}{=}$</td>
+              <td class="l">\overset{\underset{\mathrm{def}}{}}{=}</td>
+              <td class="c">56</td>
+              <td class="c">$\lesseqgtr$</td>
+              <td class="l">\lesseqgtr</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$:=$</td>
+              <td class="l">:=</td>
+              <td class="c">57</td>
+              <td class="c">$\lesseqqgtr$</td>
+              <td class="l">\lesseqqgtr</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\sim$</td>
+              <td class="l">\sim</td>
+              <td class="c">58</td>
+              <td class="c">$\gtrless$</td>
+              <td class="l">\gtrless</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\nsim$</td>
+              <td class="l">\nsim</td>
+              <td class="c">59</td>
+              <td class="c">$\gtreqless$</td>
+              <td class="l">\gtreqless</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\backsim$</td>
+              <td class="l">\backsim</td>
+              <td class="c">60</td>
+              <td class="c">$\gtreqqless$</td>
+              <td class="l">\gtreqqless</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\thicksim$</td>
+              <td class="l">\thicksim</td>
+              <td class="c">61</td>
+              <td class="c">$\leqslant$</td>
+              <td class="l">\leqslant</td>
+            </tr>
+            <tr>
+              <td class="c">14</td>
+              <td class="c">$\simeq$</td>
+              <td class="l">\simeq</td>
+              <td class="c">62</td>
+              <td class="c">$\nleqslant$</td>
+              <td class="l">\nleqslant</td>
+            </tr>
+            <tr>
+              <td class="c">15</td>
+              <td class="c">$\backsimeq$</td>
+              <td class="l">\backsimeq</td>
+              <td class="c">63</td>
+              <td class="c">$\eqslantless$</td>
+              <td class="l">\eqslantless</td>
+            </tr>
+            <tr>
+              <td class="c">16</td>
+              <td class="c">$\eqsim$</td>
+              <td class="l">\eqsim</td>
+              <td class="c">64</td>
+              <td class="c">$\geqslant$</td>
+              <td class="l">\geqslant</td>
+            </tr>
+            <tr>
+              <td class="c">17</td>
+              <td class="c">$\cong$</td>
+              <td class="l">\cong</td>
+              <td class="c">65</td>
+              <td class="c">$\ngeqslant$</td>
+              <td class="l">\ngeqslant</td>
+            </tr>
+            <tr>
+              <td class="c">18</td>
+              <td class="c">$\ncong$</td>
+              <td class="l">\ncong</td>
+              <td class="c">66</td>
+              <td class="c">$\eqslantgtr$</td>
+              <td class="l">\eqslantgtr</td>
+            </tr>
+            <tr>
+              <td class="c">19</td>
+              <td class="c">$\approx$</td>
+              <td class="l">\approx</td>
+              <td class="c">67</td>
+              <td class="c">$\lesssim$</td>
+              <td class="l">\lesssim</td>
+            </tr>
+            <tr>
+              <td class="c">20</td>
+              <td class="c">$\thickapprox$</td>
+              <td class="l">\thickapprox</td>
+              <td class="c">68</td>
+              <td class="c">$\lnsim$</td>
+              <td class="l">\lnsim</td>
+            </tr>
+            <tr>
+              <td class="c">21</td>
+              <td class="c">$\approxeq$</td>
+              <td class="l">\approxeq</td>
+              <td class="c">69</td>
+              <td class="c">$\lessapprox$</td>
+              <td class="l">\lessapprox</td>
+            </tr>
+            <tr>
+              <td class="c">22</td>
+              <td class="c">$\asymp$</td>
+              <td class="l">\asymp</td>
+              <td class="c">70</td>
+              <td class="c">$\lnapprox$</td>
+              <td class="l">\lnapprox</td>
+            </tr>
+            <tr>
+              <td class="c">23</td>
+              <td class="c">$\propto$</td>
+              <td class="l">\propto</td>
+              <td class="c">71</td>
+              <td class="c">$\gtrsim$</td>
+              <td class="l">\gtrsim</td>
+            </tr>
+            <tr>
+              <td class="c">24</td>
+              <td class="c">$\varpropto$</td>
+              <td class="l">\varpropto</td>
+              <td class="c">72</td>
+              <td class="c">$\gnsim$</td>
+              <td class="l">\gnsim</td>
+            </tr>
+            <tr>
+              <td class="c">25</td>
+              <td class="c">$<$< /td>
+              <td class="l">&lt;</td>
+              <td class="c">73</td>
+              <td class="c">$\gtrapprox$</td>
+              <td class="l">\gtrapprox</td>
+            </tr>
+            <tr>
+              <td class="c">26</td>
+              <td class="c">$\nless$</td>
+              <td class="l">\nless</td>
+              <td class="c">74</td>
+              <td class="c">$\gnapprox$</td>
+              <td class="l">\gnapprox</td>
+            </tr>
+            <tr>
+              <td class="c">27</td>
+              <td class="c">$\ll$</td>
+              <td class="l">\ll</td>
+              <td class="c">75</td>
+              <td class="c">$\prec$</td>
+              <td class="l">\prec</td>
+            </tr>
+            <tr>
+              <td class="c">28</td>
+              <td class="c">$\not\ll$</td>
+              <td class="l">\not\ll</td>
+              <td class="c">76</td>
+              <td class="c">$\nprec$</td>
+              <td class="l">\nprec</td>
+            </tr>
+            <tr>
+              <td class="c">29</td>
+              <td class="c">$\lll$</td>
+              <td class="l">\lll</td>
+              <td class="c">77</td>
+              <td class="c">$\preceq$</td>
+              <td class="l">\preceq</td>
+            </tr>
+            <tr>
+              <td class="c">30</td>
+              <td class="c">$\not\lll$</td>
+              <td class="l">\not\lll</td>
+              <td class="c">78</td>
+              <td class="c">$\npreceq$</td>
+              <td class="l">\npreceq</td>
+            </tr>
+            <tr>
+              <td class="c">31</td>
+              <td class="c">$\lessdot$</td>
+              <td class="l">\lessdot</td>
+              <td class="c">79</td>
+              <td class="c">$\precneqq$</td>
+              <td class="l">\precneqq</td>
+            </tr>
+            <tr>
+              <td class="c">32</td>
+              <td class="c">$>$</td>
+              <td class="l">&gt;</td>
+              <td class="c">80</td>
+              <td class="c">$\succ$</td>
+              <td class="l">\succ</td>
+            </tr>
+            <tr>
+              <td class="c">33</td>
+              <td class="c">$\ngtr$</td>
+              <td class="l">\ngtr</td>
+              <td class="c">81</td>
+              <td class="c">$\nsucc$</td>
+              <td class="l">\nsucc</td>
+            </tr>
+            <tr>
+              <td class="c">34</td>
+              <td class="c">$\gg$</td>
+              <td class="l">\gg</td>
+              <td class="c">82</td>
+              <td class="c">$\succeq$</td>
+              <td class="l">\succeq</td>
+            </tr>
+            <tr>
+              <td class="c">35</td>
+              <td class="c">$\not\gg$</td>
+              <td class="l">\not\gg</td>
+              <td class="c">83</td>
+              <td class="c">$\nsucceq$</td>
+              <td class="l">\nsucceq</td>
+            </tr>
+            <tr>
+              <td class="c">36</td>
+              <td class="c">$\ggg$</td>
+              <td class="l">\ggg</td>
+              <td class="c">84</td>
+              <td class="c">$\succneqq$</td>
+              <td class="l">\succneqq</td>
+            </tr>
+            <tr>
+              <td class="c">37</td>
+              <td class="c">$\not\ggg$</td>
+              <td class="l">\not\ggg</td>
+              <td class="c">85</td>
+              <td class="c">$\preccurlyeq$</td>
+              <td class="l">\preccurlyeq</td>
+            </tr>
+            <tr>
+              <td class="c">38</td>
+              <td class="c">$\gtrdot$</td>
+              <td class="l">\gtrdot</td>
+              <td class="c">86</td>
+              <td class="c">$\curlyeqprec$</td>
+              <td class="l">\curlyeqprec</td>
+            </tr>
+            <tr>
+              <td class="c">39</td>
+              <td class="c">$\le$</td>
+              <td class="l">\le</td>
+              <td class="c">87</td>
+              <td class="c">$\succcurlyeq$</td>
+              <td class="l">\succcurlyeq</td>
+            </tr>
+            <tr>
+              <td class="c">40</td>
+              <td class="c">$\leq$</td>
+              <td class="l">\leq</td>
+              <td class="c">88</td>
+              <td class="c">$\curlyeqsucc$</td>
+              <td class="l">\curlyeqsucc</td>
+            </tr>
+            <tr>
+              <td class="c">41</td>
+              <td class="c">$\lneq$</td>
+              <td class="l">\lneq</td>
+              <td class="c">89</td>
+              <td class="c">$\precsim$</td>
+              <td class="l">\precsim</td>
+            </tr>
+            <tr>
+              <td class="c">42</td>
+              <td class="c">$\leqq$</td>
+              <td class="l">\leqq</td>
+              <td class="c">90</td>
+              <td class="c">$\precnsim$</td>
+              <td class="l">\precnsim</td>
+            </tr>
+            <tr>
+              <td class="c">43</td>
+              <td class="c">$\nleq$</td>
+              <td class="l">\nleq</td>
+              <td class="c">91</td>
+              <td class="c">$\precapprox$</td>
+              <td class="l">\precapprox</td>
+            </tr>
+            <tr>
+              <td class="c">44</td>
+              <td class="c">$\nleqq$</td>
+              <td class="l">\nleqq</td>
+              <td class="c">92</td>
+              <td class="c">$\precnapprox$</td>
+              <td class="l">\precnapprox</td>
+            </tr>
+            <tr>
+              <td class="c">45</td>
+              <td class="c">$\lneqq$</td>
+              <td class="l">\lneqq</td>
+              <td class="c">93</td>
+              <td class="c">$\succsim$</td>
+              <td class="l">\succsim</td>
+            </tr>
+            <tr>
+              <td class="c">46</td>
+              <td class="c">$\lvertneqq$</td>
+              <td class="l">\lvertneqq</td>
+              <td class="c">94</td>
+              <td class="c">$\succnsim$</td>
+              <td class="l">\succnsim</td>
+            </tr>
+            <tr>
+              <td class="c">47</td>
+              <td class="c">$\ge$</td>
+              <td class="l">\ge</td>
+              <td class="c">95</td>
+              <td class="c">$\succapprox$</td>
+              <td class="l">\succapprox</td>
+            </tr>
+            <tr>
+              <td class="c">48</td>
+              <td class="c">$\geq$</td>
+              <td class="l">\geq</td>
+              <td class="c">96</td>
+              <td class="c">$\succnapprox$</td>
+              <td class="l">\succnapprox</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.1.5 几何符号 Geometric symbols</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$\parallel$</td>
+              <td class="l">\parallel</td>
+              <td class="c">14</td>
+              <td class="c">$\lozenge$</td>
+              <td class="l">\lozenge</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\nparallel$</td>
+              <td class="l">\nparallel</td>
+              <td class="c">15</td>
+              <td class="c">$\blacklozenge$</td>
+              <td class="l">\blacklozenge</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\shortparallel$</td>
+              <td class="l">\shortparallel</td>
+              <td class="c">16</td>
+              <td class="c">$\bigstar$</td>
+              <td class="l">\bigstar</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\nshortparallel$</td>
+              <td class="l">\nshortparallel</td>
+              <td class="c">17</td>
+              <td class="c">$\bigcirc$</td>
+              <td class="l">\bigcirc</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\perp$</td>
+              <td class="l">\perp</td>
+              <td class="c">18</td>
+              <td class="c">$\triangle$</td>
+              <td class="l">\triangle</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\angle$</td>
+              <td class="l">\angle</td>
+              <td class="c">19</td>
+              <td class="c">$\bigtriangleup$</td>
+              <td class="l">\bigtriangleup</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\sphericalangle$</td>
+              <td class="l">\sphericalangle</td>
+              <td class="c">20</td>
+              <td class="c">$\bigtriangledown$</td>
+              <td class="l">\bigtriangledown</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\measuredangle$</td>
+              <td class="l">\measuredangle</td>
+              <td class="c">21</td>
+              <td class="c">$\vartriangle$</td>
+              <td class="l">\vartriangle</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$45^\circ$</td>
+              <td class="l">45^\circ</td>
+              <td class="c">22</td>
+              <td class="c">$\triangledown$</td>
+              <td class="l">\triangledown</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\Box$</td>
+              <td class="l">\Box</td>
+              <td class="c">23</td>
+              <td class="c">$\blacktriangle$</td>
+              <td class="l">\blacktriangle</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\blacksquare$</td>
+              <td class="l">\blacksquare</td>
+              <td class="c">24</td>
+              <td class="c">$\blacktriangledown$</td>
+              <td class="l">\blacktriangledown</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\diamond$</td>
+              <td class="l">\diamond</td>
+              <td class="c">25</td>
+              <td class="c">$\blacktriangleleft$</td>
+              <td class="l">\blacktriangleleft</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\Diamond$</td>
+              <td class="l">\Diamond \lozenge</td>
+              <td class="c">26</td>
+              <td class="c">$\blacktriangleright$</td>
+              <td class="l">\blacktriangleright</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.1.6 逻辑符号 Logic symbols</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$\forall$</td>
+              <td class="l">\forall</td>
+              <td class="c">20</td>
+              <td class="c">$\neg$</td>
+              <td class="l">\neg</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\exists$</td>
+              <td class="l">\exists</td>
+              <td class="c">21</td>
+              <td class="c">$\not\operatorname{R}$</td>
+              <td class="l">\not\operatorname{R}</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\nexists$</td>
+              <td class="l">\nexists</td>
+              <td class="c">22</td>
+              <td class="c">$\bot$</td>
+              <td class="l">\bot</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\therefore$</td>
+              <td class="l">\therefore</td>
+              <td class="c">23</td>
+              <td class="c">$\top$</td>
+              <td class="l">\top</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\because$</td>
+              <td class="l">\because</td>
+              <td class="c">24</td>
+              <td class="c">$\vdash$</td>
+              <td class="l">\vdash</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\And$</td>
+              <td class="l">\And</td>
+              <td class="c">25</td>
+              <td class="c">$\dashv$</td>
+              <td class="l">\dashv</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\lor$</td>
+              <td class="l">\lor</td>
+              <td class="c">26</td>
+              <td class="c">$\vDash$</td>
+              <td class="l">\vDash</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\vee$</td>
+              <td class="l">\vee</td>
+              <td class="c">27</td>
+              <td class="c">$\Vdash$</td>
+              <td class="l">\Vdash</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$\curlyvee$</td>
+              <td class="l">\curlyvee</td>
+              <td class="c">28</td>
+              <td class="c">$\models$</td>
+              <td class="l">\models</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\bigvee$</td>
+              <td class="l">\bigvee</td>
+              <td class="c">29</td>
+              <td class="c">$\Vvdash$</td>
+              <td class="l">\Vvdash</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\land$</td>
+              <td class="l">\land</td>
+              <td class="c">30</td>
+              <td class="c">$\nvdash$</td>
+              <td class="l">\nvdash</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\wedge$</td>
+              <td class="l">\wedge</td>
+              <td class="c">31</td>
+              <td class="c">$\nVdash$</td>
+              <td class="l">\nVdash</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\curlywedge$</td>
+              <td class="l">\curlywedge</td>
+              <td class="c">32</td>
+              <td class="c">$\nvDash$</td>
+              <td class="l">\nvDash</td>
+            </tr>
+            <tr>
+              <td class="c">14</td>
+              <td class="c">$\bigwedge$</td>
+              <td class="l">\bigwedge</td>
+              <td class="c">33</td>
+              <td class="c">$\nVDash$</td>
+              <td class="l">\nVDash</td>
+            </tr>
+            <tr>
+              <td class="c">15</td>
+              <td class="c">$\bar{q}$</td>
+              <td class="l">\bar{q}</td>
+              <td class="c">34</td>
+              <td class="c">$\ulcorner$</td>
+              <td class="l">\ulcorner</td>
+            </tr>
+            <tr>
+              <td class="c">16</td>
+              <td class="c">$\bar{abc}$</td>
+              <td class="l">\bar{abc}</td>
+              <td class="c">35</td>
+              <td class="c">$\urcorner$</td>
+              <td class="l">\urcorner</td>
+            </tr>
+            <tr>
+              <td class="c">17</td>
+              <td class="c">$\overline{q}$</td>
+              <td class="l">\overline{q}</td>
+              <td class="c">36</td>
+              <td class="c">$\llcorner$</td>
+              <td class="l">\llcorner</td>
+            </tr>
+            <tr>
+              <td class="c">18</td>
+              <td class="c">$\overline{abc}$</td>
+              <td class="l">\overline{abc}</td>
+              <td class="c">37</td>
+              <td class="c">$\lrcorner$</td>
+              <td class="l">\lrcorner</td>
+            </tr>
+            <tr>
+              <td class="c">19</td>
+              <td class="c">$\lnot$</td>
+              <td class="l">\lnot</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.1.7 集合 Sets</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$\{\}$</td>
+              <td class="l">{}</td>
+              <td class="c">23</td>
+              <td class="c">$\sqsubset$</td>
+              <td class="l">\sqsubset</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\emptyset$</td>
+              <td class="l">\emptyset</td>
+              <td class="c">24</td>
+              <td class="c">$\supset$</td>
+              <td class="l">\supset</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\varnothing$</td>
+              <td class="l">\varnothing</td>
+              <td class="c">25</td>
+              <td class="c">$\Supset$</td>
+              <td class="l">\Supset</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\in$</td>
+              <td class="l">\in</td>
+              <td class="c">26</td>
+              <td class="c">$\sqsupset$</td>
+              <td class="l">\sqsupset</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\notin$</td>
+              <td class="l">\notin</td>
+              <td class="c">27</td>
+              <td class="c">$\subseteq$</td>
+              <td class="l">\subseteq</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\ni$</td>
+              <td class="l">\ni</td>
+              <td class="c">28</td>
+              <td class="c">$\nsubseteq$</td>
+              <td class="l">\nsubseteq</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\cap$</td>
+              <td class="l">\cap</td>
+              <td class="c">29</td>
+              <td class="c">$\subsetneq$</td>
+              <td class="l">\subsetneq</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\Cap$</td>
+              <td class="l">\Cap</td>
+              <td class="c">30</td>
+              <td class="c">$\varsubsetneq$</td>
+              <td class="l">\varsubsetneq</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$\sqcap$</td>
+              <td class="l">\sqcap</td>
+              <td class="c">31</td>
+              <td class="c">$\sqsubseteq$</td>
+              <td class="l">\sqsubseteq</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\bigcap$</td>
+              <td class="l">\bigcap</td>
+              <td class="c">32</td>
+              <td class="c">$\supseteq$</td>
+              <td class="l">\supseteq</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\cup$</td>
+              <td class="l">\cup</td>
+              <td class="c">33</td>
+              <td class="c">$\nsupseteq$</td>
+              <td class="l">\nsupseteq</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\Cup$</td>
+              <td class="l">\Cup</td>
+              <td class="c">34</td>
+              <td class="c">$\supsetneq$</td>
+              <td class="l">\supsetneq</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\sqcup$</td>
+              <td class="l">\sqcup</td>
+              <td class="c">35</td>
+              <td class="c">$\varsupsetneq$</td>
+              <td class="l">\varsupsetneq</td>
+            </tr>
+            <tr>
+              <td class="c">14</td>
+              <td class="c">$\bigcup$</td>
+              <td class="l">\bigcup</td>
+              <td class="c">36</td>
+              <td class="c">$\sqsupseteq$</td>
+              <td class="l">\sqsupseteq</td>
+            </tr>
+            <tr>
+              <td class="c">15</td>
+              <td class="c">$\bigsqcup$</td>
+              <td class="l">\bigsqcup</td>
+              <td class="c">37</td>
+              <td class="c">$\subseteqq$</td>
+              <td class="l">\subseteqq</td>
+            </tr>
+            <tr>
+              <td class="c">16</td>
+              <td class="c">$\uplus$</td>
+              <td class="l">\uplus</td>
+              <td class="c">38</td>
+              <td class="c">$\nsubseteqq$</td>
+              <td class="l">\nsubseteqq</td>
+            </tr>
+            <tr>
+              <td class="c">17</td>
+              <td class="c">$\biguplus$</td>
+              <td class="l">\biguplus</td>
+              <td class="c">39</td>
+              <td class="c">$\subsetneqq$</td>
+              <td class="l">\subsetneqq</td>
+            </tr>
+            <tr>
+              <td class="c">18</td>
+              <td class="c">$\setminus$</td>
+              <td class="l">\setminus</td>
+              <td class="c">40</td>
+              <td class="c">$\varsubsetneqq$</td>
+              <td class="l">\varsubsetneqq</td>
+            </tr>
+            <tr>
+              <td class="c">19</td>
+              <td class="c">$\smallsetminus$</td>
+              <td class="l">\smallsetminus</td>
+              <td class="c">41</td>
+              <td class="c">$\supseteqq$</td>
+              <td class="l">\supseteqq</td>
+            </tr>
+            <tr>
+              <td class="c">20</td>
+              <td class="c">$\times$</td>
+              <td class="l">\times</td>
+              <td class="c">42</td>
+              <td class="c">$\nsupseteqq$</td>
+              <td class="l">\nsupseteqq</td>
+            </tr>
+            <tr>
+              <td class="c">21</td>
+              <td class="c">$\subset$</td>
+              <td class="l">\subset</td>
+              <td class="c">43</td>
+              <td class="c">$\supsetneqq$</td>
+              <td class="l">\supsetneqq</td>
+            </tr>
+            <tr>
+              <td class="c">22</td>
+              <td class="c">$\Subset$</td>
+              <td class="l">\Subset</td>
+              <td class="c">44</td>
+              <td class="c">$\varsupsetneqq$</td>
+              <td class="l">\varsupsetneqq</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.1.8 箭头 Arrows</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$\Rrightarrow$</td>
+              <td class="l">\Rrightarrow</td>
+              <td class="c">36</td>
+              <td class="c">$\longmapsto$</td>
+              <td class="l">\longmapsto</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\Lleftarrow$</td>
+              <td class="l">\Lleftarrow</td>
+              <td class="c">37</td>
+              <td class="c">$\rightharpoonup$</td>
+              <td class="l">\rightharpoonup</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\Rightarrow$</td>
+              <td class="l">\Rightarrow</td>
+              <td class="c">38</td>
+              <td class="c">$\rightharpoondown$</td>
+              <td class="l">\rightharpoondown</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\nRightarrow$</td>
+              <td class="l">\nRightarrow</td>
+              <td class="c">39</td>
+              <td class="c">$\leftharpoonup$</td>
+              <td class="l">\leftharpoonup</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\Longrightarrow$</td>
+              <td class="l">\Longrightarrow</td>
+              <td class="c">40</td>
+              <td class="c">$\leftharpoondown$</td>
+              <td class="l">\leftharpoondown</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\implies$</td>
+              <td class="l">\implies</td>
+              <td class="c">41</td>
+              <td class="c">$\upharpoonleft$</td>
+              <td class="l">\upharpoonleft</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\Leftarrow$</td>
+              <td class="l">\Leftarrow</td>
+              <td class="c">42</td>
+              <td class="c">$\upharpoonright$</td>
+              <td class="l">\upharpoonright</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\nLeftarrow$</td>
+              <td class="l">\nLeftarrow</td>
+              <td class="c">43</td>
+              <td class="c">$\downharpoonleft$</td>
+              <td class="l">\downharpoonleft</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$\Longleftarrow$</td>
+              <td class="l">\Longleftarrow</td>
+              <td class="c">44</td>
+              <td class="c">$\downharpoonright$</td>
+              <td class="l">\downharpoonright</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\Leftrightarrow$</td>
+              <td class="l">\Leftrightarrow</td>
+              <td class="c">45</td>
+              <td class="c">$\rightleftharpoons$</td>
+              <td class="l">\rightleftharpoons</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\nLeftrightarrow$</td>
+              <td class="l">\nLeftrightarrow</td>
+              <td class="c">46</td>
+              <td class="c">$\leftrightharpoons$</td>
+              <td class="l">\leftrightharpoons</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\Longleftrightarrow$</td>
+              <td class="l">\Longleftrightarrow</td>
+              <td class="c">47</td>
+              <td class="c">$\curvearrowleft$</td>
+              <td class="l">\curvearrowleft</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\iff$</td>
+              <td class="l">\iff</td>
+              <td class="c">48</td>
+              <td class="c">$\circlearrowleft$</td>
+              <td class="l">\circlearrowleft</td>
+            </tr>
+            <tr>
+              <td class="c">14</td>
+              <td class="c">$\Uparrow$</td>
+              <td class="l">\Uparrow</td>
+              <td class="c">49</td>
+              <td class="c">$\Lsh$</td>
+              <td class="l">\Lsh</td>
+            </tr>
+            <tr>
+              <td class="c">15</td>
+              <td class="c">$\Downarrow$</td>
+              <td class="l">\Downarrow</td>
+              <td class="c">50</td>
+              <td class="c">$\upuparrows$</td>
+              <td class="l">\upuparrows</td>
+            </tr>
+            <tr>
+              <td class="c">16</td>
+              <td class="c">$\Updownarrow$</td>
+              <td class="l">\Updownarrow</td>
+              <td class="c">51</td>
+              <td class="c">$\rightrightarrows$</td>
+              <td class="l">\rightrightarrows</td>
+            </tr>
+            <tr>
+              <td class="c">17</td>
+              <td class="c">$\rightarrow$</td>
+              <td class="l">\rightarrow</td>
+              <td class="c">52</td>
+              <td class="c">$\rightleftarrows$</td>
+              <td class="l">\rightleftarrows</td>
+            </tr>
+            <tr>
+              <td class="c">18</td>
+              <td class="c">$\to$</td>
+              <td class="l">\to</td>
+              <td class="c">53</td>
+              <td class="c">$\rightarrowtail$</td>
+              <td class="l">\rightarrowtail</td>
+            </tr>
+            <tr>
+              <td class="c">19</td>
+              <td class="c">$\nrightarrow$</td>
+              <td class="l">\nrightarrow</td>
+              <td class="c">54</td>
+              <td class="c">$\looparrowright$</td>
+              <td class="l">\looparrowright</td>
+            </tr>
+            <tr>
+              <td class="c">20</td>
+              <td class="c">$\longrightarrow$</td>
+              <td class="l">\longrightarrow</td>
+              <td class="c">55</td>
+              <td class="c">$\curvearrowright$</td>
+              <td class="l">\curvearrowright</td>
+            </tr>
+            <tr>
+              <td class="c">21</td>
+              <td class="c">$\leftarrow$</td>
+              <td class="l">\leftarrow</td>
+              <td class="c">56</td>
+              <td class="c">$\circlearrowright$</td>
+              <td class="l">\circlearrowright</td>
+            </tr>
+            <tr>
+              <td class="c">22</td>
+              <td class="c">$\gets$</td>
+              <td class="l">\gets</td>
+              <td class="c">57</td>
+              <td class="c">$\Rsh$</td>
+              <td class="l">\Rsh</td>
+            </tr>
+            <tr>
+              <td class="c">23</td>
+              <td class="c">$\nleftarrow$</td>
+              <td class="l">\nleftarrow</td>
+              <td class="c">58</td>
+              <td class="c">$\downdownarrows$</td>
+              <td class="l">\downdownarrows</td>
+            </tr>
+            <tr>
+              <td class="c">24</td>
+              <td class="c">$\longleftarrow$</td>
+              <td class="l">\longleftarrow</td>
+              <td class="c">59</td>
+              <td class="c">$\leftleftarrows$</td>
+              <td class="l">\leftleftarrows</td>
+            </tr>
+            <tr>
+              <td class="c">25</td>
+              <td class="c">$\leftrightarrow$</td>
+              <td class="l">\leftrightarrow</td>
+              <td class="c">60</td>
+              <td class="c">$\leftrightarrows$</td>
+              <td class="l">\leftrightarrows</td>
+            </tr>
+            <tr>
+              <td class="c">26</td>
+              <td class="c">$\nleftrightarrow$</td>
+              <td class="l">\nleftrightarrow</td>
+              <td class="c">61</td>
+              <td class="c">$\leftarrowtail$</td>
+              <td class="l">\leftarrowtail</td>
+            </tr>
+            <tr>
+              <td class="c">27</td>
+              <td class="c">$\longleftrightarrow$</td>
+              <td class="l">\longleftrightarrow</td>
+              <td class="c">62</td>
+              <td class="c">$\looparrowleft$</td>
+              <td class="l">\looparrowleft</td>
+            </tr>
+            <tr>
+              <td class="c">28</td>
+              <td class="c">$\uparrow$</td>
+              <td class="l">\uparrow</td>
+              <td class="c">63</td>
+              <td class="c">$\hookrightarrow$</td>
+              <td class="l">\hookrightarrow</td>
+            </tr>
+            <tr>
+              <td class="c">29</td>
+              <td class="c">$\downarrow$</td>
+              <td class="l">\downarrow</td>
+              <td class="c">64</td>
+              <td class="c">$\hookleftarrow$</td>
+              <td class="l">\hookleftarrow</td>
+            </tr>
+            <tr>
+              <td class="c">30</td>
+              <td class="c">$\updownarrow$</td>
+              <td class="l">\updownarrow</td>
+              <td class="c">65</td>
+              <td class="c">$\multimap$</td>
+              <td class="l">\multimap</td>
+            </tr>
+            <tr>
+              <td class="c">31</td>
+              <td class="c">$\nearrow$</td>
+              <td class="l">\nearrow</td>
+              <td class="c">66</td>
+              <td class="c">$\leftrightsquigarrow$</td>
+              <td class="l">\leftrightsquigarrow</td>
+            </tr>
+            <tr>
+              <td class="c">32</td>
+              <td class="c">$\swarrow$</td>
+              <td class="l">\swarrow</td>
+              <td class="c">67</td>
+              <td class="c">$\rightsquigarrow$</td>
+              <td class="l">\rightsquigarrow</td>
+            </tr>
+            <tr>
+              <td class="c">33</td>
+              <td class="c">$\nwarrow$</td>
+              <td class="l">\nwarrow</td>
+              <td class="c">68</td>
+              <td class="c">$\twoheadrightarrow$</td>
+              <td class="l">\twoheadrightarrow</td>
+            </tr>
+            <tr>
+              <td class="c">34</td>
+              <td class="c">$\searrow$</td>
+              <td class="l">\searrow</td>
+              <td class="c">69</td>
+              <td class="c">$\twoheadleftarrow$</td>
+              <td class="l">\twoheadleftarrow</td>
+            </tr>
+            <tr>
+              <td class="c">35</td>
+              <td class="c">$\mapsto$</td>
+              <td class="l">\mapsto</td>
+              <td class="c">&nbsp;</td>
+              <td class="c">&nbsp;</td>
+              <td class="l">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.1.9 特殊 Special</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+              <th class="c">序号</th>
+              <th class="c">图标</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$\infty$</td>
+              <td class="l">\infty</td>
+              <td class="c">33</td>
+              <td class="c">$\flat$</td>
+              <td class="l">\flat</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$\aleph$</td>
+              <td class="l">\aleph</td>
+              <td class="c">34</td>
+              <td class="c">$\natural$</td>
+              <td class="l">\natural</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$\complement$</td>
+              <td class="l">\complement</td>
+              <td class="c">35</td>
+              <td class="c">$\sharp$</td>
+              <td class="l">\sharp</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$\backepsilon$</td>
+              <td class="l">\backepsilon</td>
+              <td class="c">36</td>
+              <td class="c">$\diagup$</td>
+              <td class="l">\diagup</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$\eth$</td>
+              <td class="l">\eth</td>
+              <td class="c">37</td>
+              <td class="c">$\diagdown$</td>
+              <td class="l">\diagdown</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$\Finv$</td>
+              <td class="l">\Finv</td>
+              <td class="c">38</td>
+              <td class="c">$\centerdot$</td>
+              <td class="l">\centerdot</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$\hbar$</td>
+              <td class="l">\hbar</td>
+              <td class="c">39</td>
+              <td class="c">$\ltimes$</td>
+              <td class="l">\ltimes</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$\Im$</td>
+              <td class="l">\Im</td>
+              <td class="c">40</td>
+              <td class="c">$\rtimes$</td>
+              <td class="l">\rtimes</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$\imath$</td>
+              <td class="l">\imath</td>
+              <td class="c">41</td>
+              <td class="c">$\leftthreetimes$</td>
+              <td class="l">\leftthreetimes</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$\jmath$</td>
+              <td class="l">\jmath</td>
+              <td class="c">42</td>
+              <td class="c">$\rightthreetimes$</td>
+              <td class="l">\rightthreetimes</td>
+            </tr>
+            <tr>
+              <td class="c">11</td>
+              <td class="c">$\Bbbk$</td>
+              <td class="l">\Bbbk</td>
+              <td class="c">43</td>
+              <td class="c">$\eqcirc$</td>
+              <td class="l">\eqcirc</td>
+            </tr>
+            <tr>
+              <td class="c">12</td>
+              <td class="c">$\ell$</td>
+              <td class="l">\ell</td>
+              <td class="c">44</td>
+              <td class="c">$\circeq$</td>
+              <td class="l">\circeq</td>
+            </tr>
+            <tr>
+              <td class="c">13</td>
+              <td class="c">$\mho$</td>
+              <td class="l">\mho</td>
+              <td class="c">45</td>
+              <td class="c">$\triangleq$</td>
+              <td class="l">\triangleq</td>
+            </tr>
+            <tr>
+              <td class="c">14</td>
+              <td class="c">$\wp$</td>
+              <td class="l">\wp</td>
+              <td class="c">46</td>
+              <td class="c">$\bumpeq$</td>
+              <td class="l">\bumpeq</td>
+            </tr>
+            <tr>
+              <td class="c">15</td>
+              <td class="c">$\Re$</td>
+              <td class="l">\Re</td>
+              <td class="c">47</td>
+              <td class="c">$\Bumpeq$</td>
+              <td class="l">\Bumpeq</td>
+            </tr>
+            <tr>
+              <td class="c">16</td>
+              <td class="c">$\circledS$</td>
+              <td class="l">\circledS</td>
+              <td class="c">48</td>
+              <td class="c">$\doteqdot$</td>
+              <td class="l">\doteqdot</td>
+            </tr>
+            <tr>
+              <td class="c">17</td>
+              <td class="c">$\amalg$</td>
+              <td class="l">\amalg</td>
+              <td class="c">49</td>
+              <td class="c">$\risingdotseq$</td>
+              <td class="l">\risingdotseq</td>
+            </tr>
+            <tr>
+              <td class="c">18</td>
+              <td class="c">$\%$</td>
+              <td class="l">\%</td>
+              <td class="c">50</td>
+              <td class="c">$\fallingdotseq$</td>
+              <td class="l">\fallingdotseq</td>
+            </tr>
+            <tr>
+              <td class="c">19</td>
+              <td class="c">$\dagger$</td>
+              <td class="l">\dagger</td>
+              <td class="c">51</td>
+              <td class="c">$\intercal$</td>
+              <td class="l">\intercal</td>
+            </tr>
+            <tr>
+              <td class="c">20</td>
+              <td class="c">$\ddagger$</td>
+              <td class="l">\ddagger</td>
+              <td class="c">52</td>
+              <td class="c">$\barwedge$</td>
+              <td class="l">\barwedge</td>
+            </tr>
+            <tr>
+              <td class="c">21</td>
+              <td class="c">$\ldots$</td>
+              <td class="l">\ldots</td>
+              <td class="c">53</td>
+              <td class="c">$\veebar$</td>
+              <td class="l">\veebar</td>
+            </tr>
+            <tr>
+              <td class="c">22</td>
+              <td class="c">$\cdots$</td>
+              <td class="l">\cdots</td>
+              <td class="c">54</td>
+              <td class="c">$\doublebarwedge$</td>
+              <td class="l">\doublebarwedge</td>
+            </tr>
+            <tr>
+              <td class="c">23</td>
+              <td class="c">$\smile$</td>
+              <td class="l">\smile</td>
+              <td class="c">55</td>
+              <td class="c">$\between$</td>
+              <td class="l">\between</td>
+            </tr>
+            <tr>
+              <td class="c">24</td>
+              <td class="c">$\frown$</td>
+              <td class="l">\frown</td>
+              <td class="c">56</td>
+              <td class="c">$\pitchfork$</td>
+              <td class="l">\pitchfork</td>
+            </tr>
+            <tr>
+              <td class="c">25</td>
+              <td class="c">$\wr$</td>
+              <td class="l">\wr</td>
+              <td class="c">57</td>
+              <td class="c">$\vartriangleleft$</td>
+              <td class="l">\vartriangleleft</td>
+            </tr>
+            <tr>
+              <td class="c">26</td>
+              <td class="c">$\triangleleft$</td>
+              <td class="l">\triangleleft</td>
+              <td class="c">58</td>
+              <td class="c">$\ntriangleleft$</td>
+              <td class="l">\ntriangleleft</td>
+            </tr>
+            <tr>
+              <td class="c">27</td>
+              <td class="c">$\triangleright$</td>
+              <td class="l">\triangleright</td>
+              <td class="c">59</td>
+              <td class="c">$\vartriangleright$</td>
+              <td class="l">\vartriangleright</td>
+            </tr>
+            <tr>
+              <td class="c">28</td>
+              <td class="c">$\diamondsuit$</td>
+              <td class="l">\diamondsuit</td>
+              <td class="c">60</td>
+              <td class="c">$\ntriangleright$</td>
+              <td class="l">\ntriangleright</td>
+            </tr>
+            <tr>
+              <td class="c">29</td>
+              <td class="c">$\heartsuit$</td>
+              <td class="l">\heartsuit</td>
+              <td class="c">61</td>
+              <td class="c">$\trianglelefteq$</td>
+              <td class="l">\trianglelefteq</td>
+            </tr>
+            <tr>
+              <td class="c">30</td>
+              <td class="c">$\clubsuit$</td>
+              <td class="l">\clubsuit</td>
+              <td class="c">62</td>
+              <td class="c">$\ntrianglelefteq$</td>
+              <td class="l">\ntrianglelefteq</td>
+            </tr>
+            <tr>
+              <td class="c">31</td>
+              <td class="c">$\spadesuit$</td>
+              <td class="l">\spadesuit</td>
+              <td class="c">63</td>
+              <td class="c">$\trianglerighteq$</td>
+              <td class="l">\trianglerighteq</td>
+            </tr>
+            <tr>
+              <td class="c">32</td>
+              <td class="c">$\Game$</td>
+              <td class="l">\Game</td>
+              <td class="c">64</td>
+              <td class="c">$\ntrianglerighteq$</td>
+              <td class="l">\ntrianglerighteq</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h4>2.2 运算与函数 Operations &amp; Functions</h4>
+      <h5>2.2.1 分数 Fractions</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">类型</th>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">分数<br />Fractions</td>
+              <td class="l">$\frac{2}{4}x=0.5x$</td>
+              <td class="l">\frac{2}{4}x=0.5x or {2 \over 4}x=0.5x</td>
+            </tr>
+            <tr>
+              <td class="l">小型分数<br />Small fractions (force \textstyle)</td>
+              <td class="l">$\tfrac{2}{4}x = 0.5x$</td>
+              <td class="l">\tfrac{2}{4}x = 0.5x</td>
+            </tr>
+            <tr>
+              <td class="l">大型分数（不嵌套）<br />Large (normal) fractions (force \displaystyle)</td>
+              <td class="l">$\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a$</td>
+              <td class="l">\dfrac{2}{4} = 0.5 \qquad \dfrac{2}{c + \dfrac{2}{d + \dfrac{2}{4}}} = a</td>
+            </tr>
+            <tr>
+              <td class="l">大型分数（嵌套）<br />Large (nested) fractions</td>
+              <td class="l">$\cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}} = a$</td>
+              <td class="l">\cfrac{2}{c + \cfrac{2}{d + \cfrac{2}{4}}} = a</td>
+            </tr>
+            <tr>
+              <td class="l">约分线的使用<br />Cancellations in fractions</td>
+              <td class="l">$\cfrac{x}{1 + \cfrac{\cancel{y}}{\cancel{y}}} = \cfrac{x}{2}$</td>
+              <td class="l">\cfrac{x}{1 + \cfrac{\cancel{y}}{\cancel{y}}} = \cfrac{x}{2}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p><strong>注意：</strong>
+        其中<code>\cancel</code>命令需要<strong>cancel扩展包</strong>支持，<strong>cancel扩展包</strong>是一款自定义宏包，如需使用请在公式页面右上角【设置】页面勾选后使用。
+      </p>
+      <h5>2.2.2 标准数值函数 Standard numerical functions</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">$\exp_a b = a^b, \exp b = e^b, 10^m$</td>
+              <td class="l">\exp_a b = a^b, \exp b = e^b, 10^m</td>
+            </tr>
+            <tr>
+              <td class="l">$\ln c, \lg d = \log e, \log_{10} f$</td>
+              <td class="l">\ln c, \lg d = \log e, \log_{10} f</td>
+            </tr>
+            <tr>
+              <td class="l">$\sin a, \cos b, \tan c, \cot d, \sec e, \csc f$</td>
+              <td class="l">\sin a, \cos b, \tan c, \cot d, \sec e, \csc f</td>
+            </tr>
+            <tr>
+              <td class="l">$\arcsin a, \arccos b, \arctan c$</td>
+              <td class="l">\arcsin a, \arccos b, \arctan c</td>
+            </tr>
+            <tr>
+              <td class="l">$\operatorname{arccot} d, \operatorname{arcsec} e, \operatorname{arccsc} f$</td>
+              <td class="l">\operatorname{arccot} d, \operatorname{arcsec} e, \operatorname{arccsc} f</td>
+            </tr>
+            <tr>
+              <td class="l">$\sinh a, \cosh b, \tanh c, \coth d$</td>
+              <td class="l">\sinh a, \cosh b, \tanh c, \coth d</td>
+            </tr>
+            <tr>
+              <td class="l">$\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n$</td>
+              <td class="l">\operatorname{sh}k, \operatorname{ch}l, \operatorname{th}m, \operatorname{coth}n</td>
+            </tr>
+            <tr>
+              <td class="l">$\operatorname{argsh}o, \operatorname{argch}p, \operatorname{argth}q$</td>
+              <td class="l">\operatorname{argsh}o, \operatorname{argch}p, \operatorname{argth}q</td>
+            </tr>
+            <tr>
+              <td class="l">$\operatorname{sgn}r, \left\vert s \right\vert$</td>
+              <td class="l">\operatorname{sgn}r, \left\vert s \right\vert</td>
+            </tr>
+            <tr>
+              <td class="l">$\min(x,y), \max(x,y)$</td>
+              <td class="l">\min(x,y), \max(x,y)</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p><strong>注意：</strong>LaTeX和MathJax支持的操作符有限，如有特殊操作符，可以使用<code>\operatorname{}</code> 命令自定义，例如</p>
+      <pre><code>\operatorname{mydefine}x
+        </code></pre>
+      <div>$$ \operatorname{mydefine}x $$</div>
+      <h5>2.2.3 根式 Radicals</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">$\surd$</td>
+              <td class="l">\surd</td>
+            </tr>
+            <tr>
+              <td class="l">$\sqrt{\pi}$</td>
+              <td class="l">\sqrt{\pi}</td>
+            </tr>
+            <tr>
+              <td class="l">$\sqrt[n]{\pi}$</td>
+              <td class="l">\sqrt[n]{\pi}</td>
+            </tr>
+            <tr>
+              <td class="l">$\sqrt[3]{\frac{x^3+y^3}{2}}$</td>
+              <td class="l">\sqrt[3]{\frac{x^3+y^3}{2}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.2.4 微分与导数 Differentials and derivatives</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">$dt, \mathrm{d}t, \partial t, \nabla\psi$</td>
+              <td class="l">dt, \mathrm{d}t, \partial t, \nabla\psi</td>
+            </tr>
+            <tr>
+              <td class="l">$dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x},
+                \frac{\partial^2}{\partial x_1\partial x_2}y$</td>
+              <td class="l">dy/dx, \mathrm{d}y/\mathrm{d}x, \frac{dy}{dx}, \frac{\mathrm{d}y}{\mathrm{d}x},
+                \frac{\partial^2}{\partial x_1\partial x_2}y</td>
+            </tr>
+            <tr>
+              <td class="l">$\prime, \backprime, f^\prime, f', f'', f^{(3)}, \dot y, \ddot y$</td>
+              <td class="l">\prime, \backprime, f^\prime, f&#39;, f&#39;&#39;, f^{(3)}, \dot y, \ddot y</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.2.5 同余与模算术 Modular arithmetic</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">$s_k \equiv 0 \pmod{m}$</td>
+              <td class="l">s_k \equiv 0 \pmod{m}</td>
+            </tr>
+            <tr>
+              <td class="l">$a \bmod b$</td>
+              <td class="l">a \bmod b</td>
+            </tr>
+            <tr>
+              <td class="l">$\gcd(m, n), \operatorname{lcm}(m, n)$</td>
+              <td class="l">\gcd(m, n), \operatorname{lcm}(m, n)</td>
+            </tr>
+            <tr>
+              <td class="l">$\mid, \nmid, \shortmid, \nshortmid$</td>
+              <td class="l">\mid, \nmid, \shortmid, \nshortmid</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.2.6 极限 Limits</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">$\lim_{n \to \infty}x_n$</td>
+              <td class="l">\lim_{n \to \infty}x_n</td>
+            </tr>
+            <tr>
+              <td class="l">$\textstyle \lim_{n \to \infty}x_n$</td>
+              <td class="l">\textstyle \lim_{n \to \infty}x_n</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.2.7 界限与投影 Bounds and Projections</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">$\min x, \max y, \inf s, \sup t$</td>
+              <td class="l">\min x, \max y, \inf s, \sup t</td>
+            </tr>
+            <tr>
+              <td class="l">$\lim u, \liminf v, \limsup w$</td>
+              <td class="l">\lim u, \liminf v, \limsup w</td>
+            </tr>
+            <tr>
+              <td class="l">$\dim p, \deg q, \det m, \ker\phi$</td>
+              <td class="l">\dim p, \deg q, \det m, \ker\phi</td>
+            </tr>
+            <tr>
+              <td class="l">$\Pr j, \hom l, \lVert z \rVert, \arg z$</td>
+              <td class="l">\Pr j, \hom l, \lVert z \rVert, \arg z</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.2.8 积分 Integral</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">$\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx$</td>
+              <td class="l">\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+              <td class="l">$\int_{1}^{3}\frac{e^3/x}{x^2}\, dx$</td>
+              <td class="l">\int_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+              <td class="l">$\textstyle \int\limits_{-N}^{N} e^x dx$</td>
+              <td class="l">\textstyle \int\limits_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+              <td class="l">$\textstyle \int_{-N}^{N} e^x dx$</td>
+              <td class="l">\textstyle \int_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+              <td class="l">$\iint\limits_D dx\,dy$</td>
+              <td class="l">\iint\limits_D dx\,dy</td>
+            </tr>
+            <tr>
+              <td class="l">$\iiint\limits_E dx\,dy\,dz$</td>
+              <td class="l">\iiint\limits_E dx\,dy\,dz</td>
+            </tr>
+            <tr>
+              <td class="l">$\iiiint\limits_F dx\,dy\,dz\,dt$</td>
+              <td class="l">\iiiint\limits_F dx\,dy\,dz\,dt</td>
+            </tr>
+            <tr>
+              <td class="l">$\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy$</td>
+              <td class="l">\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+            <tr>
+              <td class="l">$\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy$</td>
+              <td class="l">\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p>
+        <strong>注意：</strong>积分符号可以使用<code>\int_{}^{}</code>命令调用，如需双重积分符号只需将<code>int</code>替换成<code>iint</code>即可，以此类推，最高支持四重。曲线积分可使用<code>\oint</code>命令调用，但曲面积分符号在MathJax环境中并不支持<code>\oiint</code>的用法，但仍可通过<code>\unicode{}</code>命令，即Unicode代码的方式进行调用（前提是您需要在设置中打开Unicode扩展），具体使用方法如下：
+      </p>
+      <pre><code>\unicode{8751} \unicode{x222F}_C %曲面积分符号的Unicode码十进制为8751,十六进制为x222F(注意x标识符)
+        </code></pre>
+      <p class="c">$\Large\unicode{8751} \quad \unicode{x222F}_C %曲面积分符号的Unicode码十进制为8751,十六进制为x222F(注意x标识符)$</p>
+      <pre><code>\unicode{8752} \unicode{x2230}_C %三维曲面积分符号的Unicode码十进制为8752,十六进制为x2230
+        </code></pre>
+      <p class="c">$\Large\unicode{8752} \quad \unicode{x2230}_C %三维曲面积分符号的Unicode码十进制为8752,十六进制为x2230$</p>
+      <p>其他积分符号：</p>
+      <pre><code>\unicode{8753} \unicode{x2231}_c
+          \unicode{8754} \unicode{x2232}_c
+          \unicode{8755} \unicode{x2233}_c
+        </code></pre>
+      <p class="c">$\Large\unicode{8753} \qquad \unicode{x2231}_c \qquad \unicode{8754} \qquad \unicode{x2232}_c \qquad
+        \unicode{8755} \qquad \unicode{x2233}_c $</p>
+      <p>&nbsp;</p>
+      <h5>2.2.9 其他大型运算 Large operators</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">类别</th>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">求和 Summation</td>
+              <td class="l">$$\sum_{a}^{b}$$</td>
+              <td class="l">\sum_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">求和 Summation</td>
+              <td class="l">$$\textstyle \sum_{a}^{b}$$</td>
+              <td class="l">\textstyle \sum_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">连乘积 Product</td>
+              <td class="l">$$\prod_{a}^{b}$$</td>
+              <td class="l">\prod_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">连乘积 Product</td>
+              <td class="l">$$\textstyle \prod_{a}^{b}$$</td>
+              <td class="l">\textstyle \prod_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">余积 Coproduct</td>
+              <td class="l">$$\coprod_{a}^{b}$$</td>
+              <td class="l">\coprod_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">余积 Coproduct</td>
+              <td class="l">$$\textstyle \coprod_{a}^{b}$$</td>
+              <td class="l">\textstyle \coprod_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">并集 Union</td>
+              <td class="l">$$\bigcup_{a}^{b}$$</td>
+              <td class="l">\bigcup_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">并集 Union</td>
+              <td class="l">$$\textstyle \bigcup_{a}^{b}$$</td>
+              <td class="l">\textstyle \bigcup_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">交集 Intersection</td>
+              <td class="l">$$\bigcap_{a}^{b}$$</td>
+              <td class="l">\bigcap_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">交集 Intersection</td>
+              <td class="l">$$\textstyle \bigcap_{a}^{b}$$</td>
+              <td class="l">\textstyle \bigcap_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">析取 Disjunction</td>
+              <td class="l">$$\bigvee_{a}^{b}$$</td>
+              <td class="l">\bigvee_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">析取 Disjunction</td>
+              <td class="l">$$\textstyle \bigvee_{a}^{b}$$</td>
+              <td class="l">\textstyle \bigvee_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">合取 Conjunction</td>
+              <td class="l">$$\bigwedge_{a}^{b}$$</td>
+              <td class="l">\bigwedge_{a}^{b}</td>
+            </tr>
+            <tr>
+              <td class="l">合取 Conjunction</td>
+              <td class="l">$$\textstyle \bigwedge_{a}^{b}$$</td>
+              <td class="l">\textstyle \bigwedge_{a}^{b}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p>&nbsp;</p>
+      <h4>2.3 上下标 Sub &amp; Super</h4>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">类型</th>
+              <th class="l">样式</th>
+              <th class="l">代码</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">上标<br />Superscript</td>
+              <td class="l">$a^2, a^{x+3}$</td>
+              <td class="l">a^2, a^{x+3}</td>
+            </tr>
+            <tr>
+              <td class="l">下标<br />Subscript</td>
+              <td class="l">$a_2$</td>
+              <td class="l">a_2</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="2">组合<br />Grouping</td>
+              <td class="l">$10^{30} a^{2+2}$</td>
+              <td class="l">10^{30} a^{2+2}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$a_{i,j} b_{f'}$</td>
+              <td class="l">a<em>{i,j} b</em>{f&#39;}</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="2">上下标混合<br />Combining sub &amp; super</td>
+              <td class="l">$x_2^3$</td>
+              <td class="l">x_2^3</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">${x_2}^3$</td>
+              <td class="l">{x_2}^3</td>
+            </tr>
+            <tr>
+              <td class="l">上标的上标<br />Super super</td>
+              <td class="l">$10^{10^{8}}$</td>
+              <td class="l">10^{10^{8}}</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="2">混合标识<br />Preceding and/or additional sub &amp; super</td>
+              <td class="l">$\sideset{_1^2}{_3^4}X_a^b$</td>
+              <td class="l">\sideset{<em>1^2}{</em>3^4}X_a^b</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">${}_1^2\!\Omega_3^4$</td>
+              <td class="l">{}_1^2!\Omega_3^4</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="4">顶标底标<br />Stacking</td>
+              <td class="l">$\overset{\alpha}{\omega}$</td>
+              <td class="l">\overset{\alpha}{\omega}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\underset{\alpha}{\omega}$</td>
+              <td class="l">\underset{\alpha}{\omega}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\overset{\alpha}{\underset{\gamma}{\omega}}$</td>
+              <td class="l">\overset{\alpha}{\underset{\gamma}{\omega}}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\stackrel{\alpha}{\omega}$</td>
+              <td class="l">\stackrel{\alpha}{\omega}</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="2">导数<br />Derivatives</td>
+              <td class="l">$x', y'', f', f''$</td>
+              <td class="l">x&#39;, y&#39;&#39;, f&#39;, f&#39;&#39;</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$x^\prime, y^{\prime\prime}$</td>
+              <td class="l">x^\prime, y^{\prime\prime}</td>
+            </tr>
+            <tr>
+              <td class="l">导数<br />Derivative dots</td>
+              <td class="l">$\dot{x}, \ddot{x}$</td>
+              <td class="l">\dot{x}, \ddot{x}</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="3">下划线、上划线与向量<br />Underlines, overlines, vectors</td>
+              <td class="l">$\hat a \ \bar b \ \vec c$</td>
+              <td class="l">\hat a \ \bar b \ \vec c</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\overrightarrow{a b} \ \overleftarrow{c d} \ \widehat{d e f}$</td>
+              <td class="l">\overrightarrow{a b} \ \overleftarrow{c d} \ \widehat{d e f}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\overline{g h i} \ \underline{j k l}$</td>
+              <td class="l">\overline{g h i} \ \underline{j k l}</td>
+            </tr>
+            <tr>
+              <td class="l">弧度<br />Arc (workaround)</td>
+              <td class="l">$\overset{\frown} {AB}$</td>
+              <td class="l">\overset{\frown} {AB}</td>
+            </tr>
+            <tr>
+              <td class="l">箭头<br />Arrows</td>
+              <td class="l">$A \xleftarrow{n+\mu-1} B \xrightarrow[T]{n\pm i-1} C$</td>
+              <td class="l">A \xleftarrow{n+\mu-1} B \xrightarrow[T]{n\pm i-1} C</td>
+            </tr>
+            <tr>
+              <td class="l">大括号<br />Overbraces</td>
+              <td class="l">$\overbrace{ 1+2+\cdots+100 }^{5050}$</td>
+              <td class="l">\overbrace{ 1+2+\cdots+100 }^{5050}</td>
+            </tr>
+            <tr>
+              <td class="l">底部大括号<br />Underbraces</td>
+              <td class="l">$\underbrace{ a+b+\cdots+z }_{26}$</td>
+              <td class="l">\underbrace{ a+b+\cdots+z }_{26}</td>
+            </tr>
+            <tr>
+              <td class="l">求和运算<br />Sum</td>
+              <td class="l">$$\sum_{k=1}^N k^2$$</td>
+              <td class="l">\sum_{k=1}^N k^2</td>
+            </tr>
+            <tr>
+              <td class="l">文本模式下的求和运算<br />Sum (force \textstyle)</td>
+              <td class="l">$$\textstyle \sum_{k=1}^N k^2$$</td>
+              <td class="l">\textstyle \sum_{k=1}^N k^2</td>
+            </tr>
+            <tr>
+              <td class="l">分式中的求和运算<br />Sum in a fraction (default \textstyle)</td>
+              <td class="l">$$\frac{\sum_{k=1}^N k^2}{a}$$</td>
+              <td class="l">\frac{\sum_{k=1}^N k^2}{a}</td>
+            </tr>
+            <tr>
+              <td class="l">分式中的求和运算<br />Sum in a fraction (force \displaystyle)</td>
+              <td class="l">$$\frac{\displaystyle \sum_{k=1}^N k^2}{a}$$</td>
+              <td class="l">\frac{\displaystyle \sum_{k=1}^N k^2}{a}</td>
+            </tr>
+            <tr>
+              <td class="l">分式中的求和运算<br />Sum in a fraction (alternative limits style)</td>
+              <td class="l">$$\frac{\sum\limits^{^N}_{k=1} k^2}{a}$$</td>
+              <td class="l">\frac{\sum\limits^{^N}_{k=1} k^2}{a}</td>
+            </tr>
+            <tr>
+              <td class="l">乘积运算<br />Product</td>
+              <td class="l">$$\prod_{i=1}^N x_i$$</td>
+              <td class="l">\prod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+              <td class="l">乘积运算<br />Product (force \textstyle)</td>
+              <td class="l">$$\textstyle \prod_{i=1}^N x_i$$</td>
+              <td class="l">\textstyle \prod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+              <td class="l">副乘运算<br />Coproduct</td>
+              <td class="l">$$\coprod_{i=1}^N x_i$$</td>
+              <td class="l">\coprod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+              <td class="l">副乘运算<br />Coproduct (force \textstyle)</td>
+              <td class="l">$$\textstyle \coprod_{i=1}^N x_i$$</td>
+              <td class="l">\textstyle \coprod_{i=1}^N x_i</td>
+            </tr>
+            <tr>
+              <td class="l">极限<br />Limit</td>
+              <td class="l">$$\lim_{n \to \infty}x_n$$</td>
+              <td class="l">\lim_{n \to \infty}x_n</td>
+            </tr>
+            <tr>
+              <td class="l">极限<br />Limit (force \textstyle)</td>
+              <td class="l">$$\textstyle \lim_{n \to \infty}x_n$$</td>
+              <td class="l">\textstyle \lim_{n \to \infty}x_n</td>
+            </tr>
+            <tr>
+              <td class="l">积分<br />Integral</td>
+              <td class="l">$$\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx$$</td>
+              <td class="l">\int\limits_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+              <td class="l">积分<br />Integral (alternative limits style)</td>
+              <td class="l">$$\int_{1}^{3}\frac{e^3/x}{x^2}\, dx$$</td>
+              <td class="l">\int_{1}^{3}\frac{e^3/x}{x^2}\, dx</td>
+            </tr>
+            <tr>
+              <td class="l">积分<br />Integral (force \textstyle)</td>
+              <td class="l">$$\textstyle \int\limits_{-N}^{N} e^x dx$$</td>
+              <td class="l">\textstyle \int\limits_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+              <td class="l">积分<br />Integral (force \textstyle, alternative limits style)</td>
+              <td class="l">$$\textstyle \int_{-N}^{N} e^x dx$$</td>
+              <td class="l">\textstyle \int_{-N}^{N} e^x dx</td>
+            </tr>
+            <tr>
+              <td class="l">双重积分<br />Double integral</td>
+              <td class="l">$$\iint\limits_D dx\,dy$$</td>
+              <td class="l">\iint\limits_D dx\,dy</td>
+            </tr>
+            <tr>
+              <td class="l">三重积分<br />Triple integral</td>
+              <td class="l">$$\iiint\limits_E dx\,dy\,dz$$</td>
+              <td class="l">\iiint\limits_E dx\,dy\,dz</td>
+            </tr>
+            <tr>
+              <td class="l">四重积分<br />Quadruple integral</td>
+              <td class="l">$$\iiiint\limits_F dx\,dy\,dz\,dt$$</td>
+              <td class="l">\iiiint\limits_F dx\,dy\,dz\,dt</td>
+            </tr>
+            <tr>
+              <td class="l">路径积分<br />Line or path integral</td>
+              <td class="l">$$\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy$$</td>
+              <td class="l">\int_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+            <tr>
+              <td class="l">环路积分<br />Closed line or path integral</td>
+              <td class="l">$$\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy$$</td>
+              <td class="l">\oint_{(x,y)\in C} x^3\, dx + 4y^2\, dy</td>
+            </tr>
+            <tr>
+              <td class="l">交集<br />Intersections</td>
+              <td class="l">$$\bigcap_{i=1}^n E_i$$</td>
+              <td class="l">\bigcap_{i=1}^n E_i</td>
+            </tr>
+            <tr>
+              <td class="l">并集<br />Unions</td>
+              <td class="l">$$\bigcup_{i=1}^n E_i$$</td>
+              <td class="l">\bigcup_{i=1}^n E_i</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p>&nbsp;</p>
+      <h4>2.4 矩阵与多行列式 Matrices &amp; Multilines</h4>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">类型</th>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">二项式系数<br />Binomial coefficients</td>
+              <td class="l">$\binom{n}{k}$</td>
+              <td class="l ig">\binom{n}{k}</td>
+            </tr>
+            <tr>
+              <td class="l">小型二项式系数<br />Small binomial coefficients (force \textstyle)</td>
+              <td class="l">$\tbinom{n}{k}$</td>
+              <td class="l ig">\tbinom{n}{k}</td>
+            </tr>
+            <tr>
+              <td class="l">大型二项式系数<br />Large (normal) binomial coefficients (force \displaystyle)</td>
+              <td class="l">$\dbinom{n}{k}$</td>
+              <td class="l ig">\dbinom{n}{k}</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="7">矩阵<br />Matrices</td>
+              <td class="l">$\begin{matrix} x & y \\z & v\end{matrix}$</td>
+              <td class="l ig">\begin{matrix}<br />x &amp; y \\ <br />z &amp; v<br />\end{matrix}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{vmatrix} x & y \\ z & v \end{vmatrix}$</td>
+              <td class="l ig">\begin{vmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{vmatrix}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{Vmatrix} x & y \\ z & v \end{Vmatrix} $</td>
+              <td class="l ig">\begin{Vmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{Vmatrix}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{bmatrix} 0 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & 0 \end{bmatrix}$
+              </td>
+              <td class="l ig">\begin{bmatrix}<br />0 &amp; \cdots &amp; 0 \\<br />\vdots &amp; \ddots &amp; \vdots
+                \\<br />0 &amp; \cdots &amp; 0<br />\end{bmatrix}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{Bmatrix} x & y \\ z & v \end{Bmatrix}$</td>
+              <td class="l ig">\begin{Bmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{Bmatrix}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{pmatrix} x & y \\ z & v \end{pmatrix}$</td>
+              <td class="l ig">\begin{pmatrix}<br />x &amp; y \\<br />z &amp; v<br />\end{pmatrix}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\bigl( \begin{smallmatrix} a&b\\ c&d \end{smallmatrix} \bigr)$</td>
+              <td class="l ig">\bigl( \begin{smallmatrix}<br />a&amp;b\\ <br />c&amp;d<br />\end{smallmatrix} \bigr)
+              </td>
+            </tr>
+            <tr>
+              <td class="l">条件定义<br />Case distinctions</td>
+              <td class="l">$f(n) =\begin{cases} n/2, & \text{if }n\text{ is even} \\ 3n+1, & \text{if }n\text{ is odd}
+                \end{cases}$</td>
+              <td class="l ig">f(n) =<br />\begin{cases}<br />n/2, &amp; \text{if }n\text{ is even} \\<br />3n+1, &amp;
+                \text{if }n\text{ is odd}<br />\end{cases}</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="4">多行等式<br />Multiline equations</td>
+              <td class="l">$\begin{align} f(x) & = (a+b)^2 \nonumber \\ & = a^2+2ab+b^2 \nonumber \end{align}$</td>
+              <td class="l ig">\begin{align} <br />f(x) &amp; = (a+b)^2\\<br />&amp; = a^2+2ab+b^2 <br />\end{align}
+              </td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{alignat}{2} f(x) & = (a-b)^2 \nonumber \\ & = a^2-2ab+b^2 \nonumber \end{alignat}$
+              </td>
+              <td class="l ig">\begin{alignat}{2}<br />f(x) &amp; = (a-b)^2 \\<br />&amp; = a^2-2ab+b^2
+                <br />\end{alignat}
+              </td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{array}{lcl} z & = & a \\ f(x,y,z) & = & x + y + z \end{array}$</td>
+              <td class="l ig">\begin{array}{lcl}<br />z &amp; = &amp; a \\<br />f(x,y,z) &amp; = &amp; x + y +
+                z<br />\end{array}</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\begin{array}{lcr} z & = & a \\ f(x,y,z) & = & x + y + z \end{array}$</td>
+              <td class="l ig">\begin{array}{lcr}<br />z &amp; = &amp; a \\<br />f(x,y,z) &amp; = &amp; x + y +
+                z<br />\end{array}</td>
+            </tr>
+            <tr>
+              <td class="l">方程组<br />Simultaneous equations</td>
+              <td class="l">$\begin{cases} 3x + 5y + z \\ 7x - 2y + 4z \\ -6x + 3y + 2z \end{cases}$</td>
+              <td class="l ig">\begin{cases}<br />3x + 5y + z \\<br />7x - 2y + 4z \\<br />-6x + 3y +
+                2z<br />\end{cases}</td>
+            </tr>
+            <tr>
+              <td class="l">数组<br />Arrays</td>
+              <td class="l">$\begin{array}{ | c | c | c | } a & b & S \\ \hline 0&0&1\\ 0&1&1\\ 1&0&1\\ 1&1&0
+                \end{array}$</td>
+              <td class="l ig">\begin{array}{ | c | c | c | } <br />a &amp; b &amp; S \\<br />\hline<br />0 &amp; 0
+                &amp; 1 \\<br />0 &amp; 1 &amp; 1 \\<br />1 &amp; 0 &amp; 1 \\<br />1 &amp; 1 &amp; 0 <br />\end{array}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h4>2.5 括号 Brackets</h4>
+      <p>常用的括号符号例如<code>( )[ ]{ }……</code>这些也可以在输入环境中直接使用：</p>
+      <pre><code>2(x+y)=z
+        </code></pre>
+      <div>$$ 2(x+y)=z $$</div>
+      <p>但如果是在较大的表达式中这些符号就显得不合适了</p>
+      <pre><code>( \frac{\pi}{2} )^n
+        </code></pre>
+      <div>$$ ( \frac{\pi}{2} )^n $$</div>
+      <p>正确用法应配合<code>\left</code>和<code>\right</code>命令使用。</p>
+      <pre><code>\left ( \frac{\pi}{2} \right )^n
+        </code></pre>
+      <div>$$ \left ( \frac{\pi}{2} \right )^n $$</div>
+      <p>具体可参考下表。</p>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">类型</th>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">圆括号、小括号<br />Parentheses</td>
+              <td class="l">$\left ( \frac{a}{b} \right )$</td>
+              <td class="l">\left ( \frac{a}{b} \right )</td>
+            </tr>
+            <tr>
+              <td class="l">方括号、中括号<br />Brackets</td>
+              <td class="l">$\left [ \frac{a}{b} \right ] \quad \left \lbrack \frac{a}{b} \right \rbrack$</td>
+              <td class="l">\left [ \frac{a}{b} \right ] \quad<br />\left \lbrack \frac{a}{b} \right \rbrack</td>
+            </tr>
+            <tr>
+              <td class="l">花括号、大括号<br />Braces</td>
+              <td class="l">$\left \{ \frac{a}{b} \right \} \quad \left \lbrace \frac{a}{b} \right \rbrace$</td>
+              <td class="l">\left { \frac{a}{b} \right } \quad<br />\left \lbrace \frac{a}{b} \right \rbrace</td>
+            </tr>
+            <tr>
+              <td class="l">角括号<br />Angle brackets</td>
+              <td class="l">$\left \langle \frac{a}{b} \right \rangle$</td>
+              <td class="l">\left \langle \frac{a}{b} \right \rangle</td>
+            </tr>
+            <tr>
+              <td class="l">单竖线和双竖线<br />Bars and double bars</td>
+              <td class="l">$\left | \frac{a}{b} \right \vert \quad \left \Vert \frac{c}{d} \right \|$</td>
+              <td class="l">\left | \frac{a}{b} \right \vert \quad \left \Vert \frac{c}{d} \right |</td>
+            </tr>
+            <tr>
+              <td class="l">取整函数与取顶函数<br />Floor and ceiling functions:</td>
+              <td class="l">$\left \lfloor \frac{a}{b} \right \rfloor \quad \left \lceil \frac{c}{d} \right \rceil$</td>
+              <td class="l">\left \lfloor \frac{a}{b} \right \rfloor \quad<br />\left \lceil \frac{c}{d} \right \rceil
+              </td>
+            </tr>
+            <tr>
+              <td class="l">斜线与反斜线<br />Slashes and backslashes</td>
+              <td class="l">$\left / \frac{a}{b} \right \backslash$</td>
+              <td class="l">\left / \frac{a}{b} \right \backslash</td>
+            </tr>
+            <tr>
+              <td class="l">上下箭头<br />Up, down, and up-down arrows</td>
+              <td class="l">$\left \uparrow \frac{a}{b} \right \downarrow \quad \left \Uparrow \frac{a}{b} \right
+                \Downarrow \quad \left \updownarrow \frac{a}{b} \right \Updownarrow$</td>
+              <td class="l">\left \uparrow \frac{a}{b} \right \downarrow \quad<br />\left \Uparrow \frac{a}{b} \right
+                \Downarrow \quad<br />\left \updownarrow \frac{a}{b} \right \Updownarrow</td>
+            </tr>
+            <tr>
+              <td class="l">混合括号<br />Delimiters can be mixed,as long as \left and \right match</td>
+              <td class="l">$\left [ 0,1 \right ) \left \langle \psi \right | $</td>
+              <td class="l">\left [ 0,1 \right )<br />\left \langle \psi \right |</td>
+            </tr>
+            <tr>
+              <td class="l">如果您不希望某一侧括号显示，可以使用\left. 和 \right.（带有英文句号）<br />Use \left. and \right. if you do not want a
+                delimiter to appear</td>
+              <td class="l">$\left . \frac{A}{B} \right \} \to X$</td>
+              <td class="l">\left . \frac{A}{B} \right } \to X</td>
+            </tr>
+            <tr>
+              <td class="l" rowspan="7">括号的大小<br />Size of the delimiters (add &quot;l&quot; or &quot;r&quot; to
+                indicate the side for proper spacing)</td>
+              <td class="l">$( \bigl( \Bigl( \biggl( \Biggl( \dots \Biggr] \biggr] \Bigr] \bigr] ]$</td>
+              <td class="l">( \bigl( \Bigl( \biggl( \Biggl( \dots \Biggr] \biggr] \Bigr] \bigr] ]</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\{ \bigl\{ \Bigl\{ \biggl\{ \Biggl\{ \dots \Biggr\rangle \biggr\rangle \Bigr\rangle
+                \bigr\rangle \rangle$</td>
+              <td class="l">{ \bigl{ \Bigl{ \biggl{ \Biggl{ \dots<br />\Biggr\rangle \biggr\rangle \Bigr\rangle
+                \bigr\rangle \rangle</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\| \big\| \Big\| \bigg\| \Bigg\| \dots \Bigg | \bigg | \Big | \big | |$</td>
+              <td class="l">| \big| \Big| \bigg| \Bigg| \dots \Bigg | \bigg | \Big | \big |</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\lfloor \bigl\lfloor \Bigl\lfloor \biggl\lfloor \Biggl\lfloor \dots \Biggr\rceil
+                \biggr\rceil \Bigr\rceil \bigr\rceil \rceil$</td>
+              <td class="l">\lfloor \bigl\lfloor \Bigl\lfloor \biggl\lfloor \Biggl\lfloor \dots<br />\Biggr\rceil
+                \biggr\rceil \Bigr\rceil \bigr\rceil \rceil</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\uparrow \big\uparrow \Big\uparrow \bigg\uparrow \Bigg\uparrow \dots \Bigg\Downarrow
+                \bigg\Downarrow \Big\Downarrow \big\Downarrow \Downarrow$</td>
+              <td class="l">\uparrow \big\uparrow \Big\uparrow \bigg\uparrow \Bigg\uparrow \dots<br />\Bigg\Downarrow
+                \bigg\Downarrow \Big\Downarrow \big\Downarrow \Downarrow</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$\updownarrow \big\updownarrow \Big\updownarrow \bigg\updownarrow \Bigg\updownarrow \dots
+                \Bigg\Updownarrow \bigg\Updownarrow \Big\Updownarrow \big\Updownarrow \Updownarrow$</td>
+              <td class="l">\updownarrow \big\updownarrow \Big\updownarrow \bigg\updownarrow \Bigg\updownarrow
+                \dots<br />\Bigg\Updownarrow \bigg\Updownarrow \Big\Updownarrow \big\Updownarrow \Updownarrow</td>
+            </tr>
+            <tr>
+              <!-- <td class="l">&nbsp;</td> -->
+              <td class="l">$/ \big/ \Big/ \bigg/ \Bigg/ \dots \Bigg\backslash \bigg\backslash \Big\backslash
+                \big\backslash \backslash$</td>
+              <td class="l">/ \big/ \Big/ \bigg/ \Bigg/ \dots <br />\Bigg\backslash \bigg\backslash \Big\backslash
+                \big\backslash \backslash</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p>&nbsp;</p>
+      <h4>2.6 空格与换行 Spacing &amp; Line breaking</h4>
+      <h5>2.6.1 空格 Spacing</h5>
+      <p>MathJax能够自动处理大多数空格间距的大小，但如果您需要自己控制，可参考下表。</p>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c">序号</th>
+              <th class="c">样式</th>
+              <th class="l">LaTeX</th>
+              <th class="l">中文说明英文说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c">1</td>
+              <td class="c">$a \qquad b$</td>
+              <td class="l">a \qquad b</td>
+              <td class="l">双空格</td>
+            </tr>
+            <tr>
+              <td class="c">2</td>
+              <td class="c">$a \quad b$</td>
+              <td class="l">a \quad b</td>
+              <td class="l">单空格</td>
+            </tr>
+            <tr>
+              <td class="c">3</td>
+              <td class="c">$a\ b$</td>
+              <td class="l">a\ b</td>
+              <td class="l">字符空格</td>
+            </tr>
+            <tr>
+              <td class="c">4</td>
+              <td class="c">$a \text{ } b$</td>
+              <td class="l">a \text{ } b</td>
+              <td class="l">文本模式中的字符空格</td>
+            </tr>
+            <tr>
+              <td class="c">5</td>
+              <td class="c">$a\;b$</td>
+              <td class="l">a\;b</td>
+              <td class="l">大空格</td>
+            </tr>
+            <tr>
+              <td class="c">6</td>
+              <td class="c">$a\,b$</td>
+              <td class="l">a\,b</td>
+              <td class="l">小空格</td>
+            </tr>
+            <tr>
+              <td class="c">7</td>
+              <td class="c">$ab$</td>
+              <td class="l">ab</td>
+              <td class="l">极小空格(用于乘因子)</td>
+            </tr>
+            <tr>
+              <td class="c">8</td>
+              <td class="c">$a b$</td>
+              <td class="l">a b</td>
+              <td class="l">极小空格(用于区分其它语法)</td>
+            </tr>
+            <tr>
+              <td class="c">9</td>
+              <td class="c">$\mathit{ab}$</td>
+              <td class="l">\mathit{ab}</td>
+              <td class="l">没有空格(用于多字母变量)</td>
+            </tr>
+            <tr>
+              <td class="c">10</td>
+              <td class="c">$a\!b$</td>
+              <td class="l">a!b</td>
+              <td class="l">负空格</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.6.2 换行 Line breaking</h5>
+      <p>
+        在MathJax3.0中取消了使用<code>\\</code>进行强制换行的功能，因此本页面也采取同样的逻辑，默认为单行公式环境。<code>\\</code>强制换行命令只在支持多行编辑的数学环境中才起作用，如<code>eqnarray</code>环境、<code>align</code>环境、<code>array</code>环境、<code>matrix</code>环境等等。如您需要显示多行公式，建议在此类环境中输入公式，具体用法参见章节<a
+          href="#d50">2.10</a>。</p>
+      <p>或者您可直接在<code>\displaylines{}</code>显示行命令中使用<code>\\</code>强制换行命令，例如：</p>
+      <pre><code>\displaylines{y=1729x \\ y=1729-x}
+        </code></pre>
+      <div>$$ \displaylines{y=1729x \\ y=1729-x} $$</div>
+      <h4>2.7 颜色 Colors</h4>
+      <h5>2.7.1 字体颜色 Font colors</h5>
+      <p>在公式中可以使用<code>\color{options}{math}</code>来调用颜色命令，第一个参数为颜色，第二个参数为公式或文本内容。例如:</p>
+      <pre><code>{\color{Blue}x^2}+{\color{Orange}2x}-{\color{LimeGreen}1}
+        </code></pre>
+      <div>$$ {\color{Blue}x^2}+{\color{Orange}2x}-{\color{LimeGreen}1} $$</div>
+      <pre><code>x_{1,2}=\frac{{\color{Blue}-b}\pm\sqrt{\color{Red}b^2-4ac}}{\color{Green}2a }
+        </code></pre>
+      <div>$$ x_{1,2}=\frac{{\color{Blue}-b}\pm\sqrt{\color{Red}b^2-4ac}}{\color{Green}2a } $$</div>
+      <p><strong>注意：</strong> 使用<code>\color</code>命令时，请将需要设置颜色的部分用<code>{ }</code>整体扩住，以表明<code>\color</code>函数作用范围。
+      </p>
+      <h5>2.7.2 背景颜色 Background color</h5>
+      <p>在文本环境中可以使用<code>\colorbox{options}{text}</code>来调用背景颜色命令，第一个参数为颜色，第二个颜色为文本内容。例如：</p>
+      <pre><code>\colorbox{yellow}{Thistext}
+        </code></pre>
+      <div>$$ \colorbox{yellow}{Thistext} $$</div>
+      <p><strong>注意：</strong> 若需要在数学环境中使用<code>\colorbox{}{}</code>，请在第二个参数内加入<code>$\displaystyle + 公式$</code>，例如：</p>
+      <pre><code>\colorbox{yellow}{$\displaystyle \frac{a}{b}$}
+        </code></pre>
+      <div>$$ \colorbox{yellow}{$\displaystyle \frac{a}{b}$} $$</div>
+      <p>或者您可以使用 <strong>Bbox扩展</strong> 来替换<code>\colorbox</code>命令，详见下条2.7.3。</p>
+      <h5>2.7.3 用Bbox扩展设置背景颜色 Setting background color with Bbox</h5>
+      <p>Bbox扩展是一款自定义宏包，如需使用请在公式页面右上角【设置】处勾选后使用。 具体用法如下：</p>
+      <h6>2.7.3.1 设置背景颜色 Setting Background color</h6>
+      <p>在公式中可以使用<code>\bbox[options]{math}</code>来调用背景颜色命令，第一个参数为颜色或大小，需注意用<code>[ ]</code>包围，第二个参数为公式。例如:</p>
+      <pre><code>\bbox[red]{x+y}
+        </code></pre>
+      <p class="c">$\bbox[red]{x+y}$</p>
+      <h6>2.7.3.2 调整背景大小 Setting Background Size</h6>
+      <p>默认情况下，背景大小为作用范围的最大边界，如需扩大背景，可在第一个参数中加入大小信息，例如：</p>
+      <pre><code>\bbox[2pt]{x+y} %设置透明背景，并增加2pt额外距离
+        </code></pre>
+      <p class="c">$\bbox[2pt]{x+y} %设置透明背景，并增加2pt额外距离$</p>
+      <pre><code>\bbox[red,5pt]{x+y} %设置红色背景，并增加5pt额外距离
+        </code></pre>
+      <p class="c">$\bbox[red,5pt]{x+y} %设置红色背景，并增加5pt额外距离$</p>
+      <h5>2.7.4 默认支持颜色 Colors supported</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="c" colspan="4">支持颜色</th>
+              <!-- <th class="l">持</th> -->
+              <!-- <th class="l">颜</th> -->
+              <!-- <th class="l">色</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">${\color{Apricot}Apricot}$</td>
+              <td class="l">${\color{Emerald}Emerald}$</td>
+              <td class="l">${\color{OliveGreen}OliveGreen}$</td>
+              <td class="l">${\color{RubineRed}RubineRed}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Aquamarine}Aquamarine}$</td>
+              <td class="l">${\color{ForestGreen}ForestGreen}$</td>
+              <td class="l">${\color{Orange}Orange}$</td>
+              <td class="l">${\color{Salmon}Salmon}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Bittersweet}Bittersweet}$</td>
+              <td class="l">${\color{Fuchsia}Fuchsia}$</td>
+              <td class="l">${\color{OrangeRed}OrangeRed}$</td>
+              <td class="l">${\color{SeaGreen}SeaGreen}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Black}Black}$</td>
+              <td class="l">${\color{Goldenrod}Goldenrod}$</td>
+              <td class="l">${\color{Orchid}Orchid}$</td>
+              <td class="l">${\color{Sepia}Sepia}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Blue}Blue}$</td>
+              <td class="l">${\color{Gray}Gray}$</td>
+              <td class="l">${\color{Peach}Peach}$</td>
+              <td class="l">${\color{SkyBlue}SkyBlue}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{BlueGreen}BlueGreen}$</td>
+              <td class="l">${\color{Green}Green}$</td>
+              <td class="l">${\color{Periwinkle}Periwinkle}$</td>
+              <td class="l">${\color{SpringGreen}SpringGreen}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{BlueViolet}BlueViolet}$</td>
+              <td class="l">${\color{GreenYellow}GreenYellow}$</td>
+              <td class="l">${\color{PineGreen}PineGreen}$</td>
+              <td class="l">${\color{Tan}Tan}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{BrickRed}BrickRed}$</td>
+              <td class="l">${\color{JungleGreen}JungleGreen}$</td>
+              <td class="l">${\color{Plum}Plum}$</td>
+              <td class="l">${\color{TealBlue}TealBlue}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Brown}Brown}$</td>
+              <td class="l">${\color{Lavender}Lavender}$</td>
+              <td class="l">${\color{ProcessBlue}ProcessBlue}$</td>
+              <td class="l">${\color{Thistle}Thistle}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{BurntOrange}BurntOrange}$</td>
+              <td class="l">${\color{LimeGreen}LimeGreen}$</td>
+              <td class="l">${\color{Purple}Purple}$</td>
+              <td class="l">${\color{Turquoise}Turquoise}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{CadetBlue}CadetBlue}$</td>
+              <td class="l">${\color{Magenta}Magenta}$</td>
+              <td class="l">${\color{RawSienna}RawSienna}$</td>
+              <td class="l">${\color{Violet}Violet}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{CarnationPink}CarnationPink}$</td>
+              <td class="l">${\color{Mahogany}Mahogany}$</td>
+              <td class="l">${\color{Red}Red}$</td>
+              <td class="l">${\color{VioletRed}VioletRed}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Cerulean}Cerulean}$</td>
+              <td class="l">${\color{Maroon}Maroon}$</td>
+              <td class="l">${\color{RedOrange}RedOrange}$</td>
+              <td class="l">${\color{White}White}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{CornflowerBlue}CornflowerBlue}$</td>
+              <td class="l">${\color{Melon}Melon}$</td>
+              <td class="l">${\color{RedViolet}RedViolet}$</td>
+              <td class="l">${\color{WildStrawberry}WildStrawberry}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Cyan}Cyan}$</td>
+              <td class="l">${\color{MidnightBlue}MidnightBlue}$</td>
+              <td class="l">${\color{Rhodamine}Rhodamine}$</td>
+              <td class="l">${\color{Yellow}Yellow}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{Dandelion}Dandelion}$</td>
+              <td class="l">${\color{Mulberry}Mulberry}$</td>
+              <td class="l">${\color{RoyalBlue}RoyalBlue}$</td>
+              <td class="l">${\color{YellowGreen}YellowGreen}$</td>
+            </tr>
+            <tr>
+              <td class="l">${\color{DarkOrchid}DarkOrchid}$</td>
+              <td class="l">${\color{NavyBlue}NavyBlue}$</td>
+              <td class="l">${\color{RoyalPurple}RoyalPurple}$</td>
+              <td class="l">${\color{YellowOrange}YellowOrange}$</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.7.5 使用RGB颜色 Use RGB color</h5>
+      <p>如需在<code>\color</code>命令中使用自选RGB颜色，可使用<code>{\color[RGB]{0,0,0} }</code>命令，例如：</p>
+      <pre><code>{\color[RGB]{0,200,0} e^{i \pi} + 1 = 0}
+        </code></pre>
+      <div>$$ {\color[RGB]{0,200,0} e^{i \pi} + 1 = 0} $$</div>
+      <h5>2.7.6 自定义颜色 Custom colors</h5>
+      <p>可使用<code>\definecolor</code>命令进行自定义颜色，例如：</p>
+      <pre><code>\definecolor{mygreen}{RGB}{0,200,0} {\color{mygreen}e^{i \pi} + 1 = 0 }
+        </code></pre>
+      <div>$$ \definecolor{mygreen}{RGB}{0,200,0} {\color{mygreen}e^{i \pi} + 1 = 0 } $$</div>
+      <h4>2.8 字体字号 Fonts &amp; Size</h4>
+      <h5>2.8.1 字体 Fonts</h5>
+      <p>如您需要替换公式内容的字体，可以点击工具栏下方的<strong>【字体】</strong>按钮进行相关操作。因有一些特定代码Mathjax3.0并没有相关支持，所以下表仅做参考。</p>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c blod" colspan="2">希腊字母 Greek alphabet</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta$</td>
+              <td class="l">\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi$</td>
+              <td class="l">\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega$</td>
+              <td class="l">\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega</td>
+            </tr>
+            <tr>
+              <td class="l">$\alpha \beta \gamma \delta \epsilon \zeta \eta \theta$</td>
+              <td class="l">\alpha \beta \gamma \delta \epsilon \zeta \eta \theta</td>
+            </tr>
+            <tr>
+              <td class="l">$\iota \kappa \lambda \mu \nu \xi \omicron \pi$</td>
+              <td class="l">\iota \kappa \lambda \mu \nu \xi \omicron \pi</td>
+            </tr>
+            <tr>
+              <td class="l">$\rho \sigma \tau \upsilon \phi \chi \psi \omega$</td>
+              <td class="l">\rho \sigma \tau \upsilon \phi \chi \psi \omega</td>
+            </tr>
+            <tr>
+              <td class="l">
+                $\varGamma \varDelta \varTheta \varLambda \varXi \varPi \varSigma \varPhi \varUpsilon \varOmega$</td>
+              <td class="l">
+                \varGamma \varDelta \varTheta \varLambda \varXi \varPi \varSigma \varPhi \varUpsilon \varOmega</td>
+            </tr>
+            <tr>
+              <td class="l">$\varepsilon \digamma \varkappa \varpi \varrho \varsigma \vartheta \varphi$</td>
+              <td class="l">\varepsilon \digamma \varkappa \varpi \varrho \varsigma \vartheta \varphi</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">希伯来字母 Hebrew symbols</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\aleph \beth \gimel \daleth$</td>
+              <td class="l">\aleph \beth \gimel \daleth</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">黑板报体 Blackboard bold/scripts</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathbb{ABCDEFGHI}$</td>
+              <td class="l">\mathbb{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathbb{JKLMNOPQR}$</td>
+              <td class="l">\mathbb{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathbb{STUVWXYZ}$</td>
+              <td class="l">\mathbb{STUVWXYZ}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">粗体 Boldface</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathbf{ABCDEFGHI}$</td>
+              <td class="l">\mathbf{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathbf{JKLMNOPQR}$</td>
+              <td class="l">\mathbf{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathbf{STUVWXYZ}$</td>
+              <td class="l">\mathbf{STUVWXYZ}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathbf{abcdefghijklm}$</td>
+              <td class="l">\mathbf{abcdefghijklm}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathbf{nopqrstuvwxyz}$</td>
+              <td class="l">\mathbf{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathbf{0123456789}$</td>
+              <td class="l">\mathbf{0123456789}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">粗体希腊字母 Boldface (Greek)</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta}$
+              </td>
+              <td class="l">\boldsymbol{\mathrm{A} \mathrm{B} \Gamma \Delta \mathrm{E} \mathrm{Z} \mathrm{H} \Theta}
+              </td>
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi}$</td>
+              <td class="l">\boldsymbol{\mathrm{I} \mathrm{K} \Lambda \mathrm{M} \mathrm{N} \Xi \mathrm{O} \Pi}</td>
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega}$</td>
+              <td class="l">\boldsymbol{\mathrm{R} \Sigma \mathrm{T} \Upsilon \Phi \mathrm{X} \Psi \Omega}</td>
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\alpha \beta \gamma \delta \epsilon \zeta \eta \theta}$</td>
+              <td class="l">\boldsymbol{\alpha \beta \gamma \delta \epsilon \zeta \eta \theta}</td>
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\iota \kappa \lambda \mu \nu \xi \omicron \pi}$</td>
+              <td class="l">\boldsymbol{\iota \kappa \lambda \mu \nu \xi \omicron \pi}</td>
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\rho \sigma \tau \upsilon \phi \chi \psi \omega}$</td>
+              <td class="l">\boldsymbol{\rho \sigma \tau \upsilon \phi \chi \psi \omega}</td>
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\varepsilon\digamma\varkappa\varpi}$</td>
+              <td class="l">\boldsymbol{\varepsilon\digamma\varkappa\varpi}</td>
+            </tr>
+            <tr>
+              <td class="l">$\boldsymbol{\varrho\varsigma\vartheta\varphi}$</td>
+              <td class="l">\boldsymbol{\varrho\varsigma\vartheta\varphi}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">斜体 Italics (拉丁字母默认default for Latin alphabet)</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathit{0123456789}$</td>
+              <td class="l">\mathit{0123456789}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">罗马体 Roman typeface</td>
+              <!-- <td class="l">Roman typeface</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{ABCDEFGHI}$</td>
+              <td class="l">\mathrm{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{JKLMNOPQR}$</td>
+              <td class="l">\mathrm{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{STUVWXYZ}$</td>
+              <td class="l">\mathrm{STUVWXYZ}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{abcdefghijklm}$</td>
+              <td class="l">\mathrm{abcdefghijklm}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{nopqrstuvwxyz}$</td>
+              <td class="l">\mathrm{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathrm{0123456789}$</td>
+              <td class="l">\mathrm{0123456789}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">无衬线体 Sans serif</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathsf{ABCDEFGHI}$</td>
+              <td class="l">\mathsf{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathsf{JKLMNOPQR}$</td>
+              <td class="l">\mathsf{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathsf{STUVWXYZ}$</td>
+              <td class="l">\mathsf{STUVWXYZ}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathsf{abcdefghijklm}$</td>
+              <td class="l">\mathsf{abcdefghijklm}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathsf{nopqrstuvwxyz}$</td>
+              <td class="l">\mathsf{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathsf{0123456789}$</td>
+              <td class="l">\mathsf{0123456789}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">手写体 Calligraphy/花体 script</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathcal{ABCDEFGHI}$</td>
+              <td class="l">\mathcal{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathcal{JKLMNOPQR}$</td>
+              <td class="l">\mathcal{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathcal{STUVWXYZ}$</td>
+              <td class="l">\mathcal{STUVWXYZ}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">德文尖角体 Fraktur typeface</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">$\mathfrak{ABCDEFGHI}$</td>
+              <td class="l">\mathfrak{ABCDEFGHI}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathfrak{JKLMNOPQR}$</td>
+              <td class="l">\mathfrak{JKLMNOPQR}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathfrak{STUVWXYZ}$</td>
+              <td class="l">\mathfrak{STUVWXYZ}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathfrak{abcdefghijklm}$</td>
+              <td class="l">\mathfrak{abcdefghijklm}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathfrak{nopqrstuvwxyz}$</td>
+              <td class="l">\mathfrak{nopqrstuvwxyz}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mathfrak{0123456789}$</td>
+              <td class="l">\mathfrak{0123456789}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">小型手写体 Small scriptstyle text</td>
+              <!-- <td class="l">&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td class="l">${\scriptstyle\text{abcdefghijklm}}$</td>
+              <td class="l">{\scriptstyle\text{abcdefghijklm}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <h5>2.8.2 字号 Size</h5>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="l">${\tiny abc巨小tiny}$</td>
+              <td class="l">{\tiny abc巨小tiny}</td>
+            </tr>
+            <tr>
+              <td class="l">${\scriptsize abc超小scriptsize}$</td>
+              <td class="l">{\scriptsize abc超小scriptsize}</td>
+            </tr>
+            <tr>
+              <td class="l">${\small abc小small}$</td>
+              <td class="l">{\small abc小small}</td>
+            </tr>
+            <tr>
+              <td class="l">${\normalsize abc正常normal}$</td>
+              <td class="l">{\normalsize abc正常normal}</td>
+            </tr>
+            <tr>
+              <td class="l">${\large abc大large}$</td>
+              <td class="l">{\large abc大large}</td>
+            </tr>
+            <tr>
+              <td class="l">${\Large abc超大Large}$</td>
+              <td class="l">{\Large abc超大Large}</td>
+            </tr>
+            <tr>
+              <td class="l">${\LARGE abc特大LARGE}$</td>
+              <td class="l">{\LARGE abc特大LARGE}</td>
+            </tr>
+            <tr>
+              <td class="l">${\huge abc巨大huge}$</td>
+              <td class="l">{\huge abc巨大huge}</td>
+            </tr>
+            <tr>
+              <td class="l">${\Huge abc巨无霸Huge}$</td>
+              <td class="l">{\Huge abc巨无霸Huge}</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p>
+        <strong>注意：</strong>如您导出<strong>SVG格式</strong>，理论上字体的整体大小并无用处，因为<strong>SVG</strong>为矢量图，所以大可不必担心图片不清晰的问题，即便是您选择下载<strong>PNG格式</strong>的公式图片，图片整体尺寸也被默认设定为<strong>4K</strong>。所以此处的字号命令只为设置公式<strong>相对大小</strong>时使用，例如：
+      </p>
+      <pre><code>{\tiny x+y=z}x+y=z{\Huge x+y=z}
+        </code></pre>
+      <div>$$ {\tiny x+y=z}x+y=z{\Huge x+y=z} $$</div>
+      <p>&nbsp;</p>
+      <h4>2.9 方程式编号 Equation numbering</h4>
+      <p>本页面可采用开启AMS宏包的方式获得方程自动编号，AMS拓展包的具体开启方式请参考<a href="#d59">2.11.4</a>。</p>
+      <p>默认自动编号只在部分环境中起作用，如{equation}、{eqnarray}等，例如：</p>
+      <p>在AMS包开启状态下，会在公式后进行自动编号：</p>
+      <pre><code>\begin{eqnarray}
+          E = mc^2 \\
+          e^{i\pi}+1=0
+          \end{eqnarray}
+        </code></pre>
+      <div>$$ \begin{eqnarray} E = mc^2 \tag{1}\\ e^{i\pi}+1=0 \tag{2} \end{eqnarray} $$</div>
+      <p>如您在开启了AMS包状态下，整个公式均不希望出现编号，可使用{equation*}、或者{eqnarray*}环境；或单个方程不希望出现编号，可以在指定方程后面添加<code>\nonumber</code>命令，如：
+      </p>
+      <pre><code>\begin{eqnarray*}
+          E = mc^2 \\
+          e^{i\pi}+1=0
+          \end{eqnarray*}
+        </code></pre>
+      <div>$$ \begin{eqnarray*} E = mc^2 \\ e^{i\pi}+1=0 \end{eqnarray*} $$</div>
+      <pre><code>\begin{eqnarray}
+          E = mc^2 \\
+          e^{i\pi}+1=0 \nonumber
+          \end{eqnarray}
+        </code></pre>
+      <div>$$ \begin{eqnarray} E = mc^2 \tag{1} \\ e^{i\pi}+1=0 \nonumber \end{eqnarray} $$</div>
+      <p>如您在开启了AMS包状态下，个别公式不希望出现编号，或者个别公式希望出现特有编号，可在公式后面使用<code>\tag{}</code>或者<code>\notag</code>命令，如：</p>
+      <pre><code>\begin{eqnarray}
+          E = mc^2 \notag\\
+          e^{i\pi}+1=0 \tag{b}
+          \end{eqnarray}
+        </code></pre>
+      <div>$$ \begin{eqnarray} E = mc^2 \notag\\ e^{i\pi}+1=0 \tag{b} \end{eqnarray} $$</div>
+      <p>&nbsp;</p>
+      <h4>2.10 LaTeX环境 LaTeX environments</h4>
+      <p>
+        环境通常是对代码段的整体描述，用于表达此段代码的角色，如，是矩阵？单行公式？多行公式？还是对齐公式等（本页面不支持文档环境），不同的环境起到的作用不同。以<code>\begin{environments}</code>开始，<code>\end{environments}</code>结束。如最常用的矩阵命令，也是环境的一种，用法如下：
+      </p>
+      <pre><code>\begin{bmatrix}
+          1 &amp; 0 \\
+          0 &amp; 1
+          \end{bmatrix}
+        </code></pre>
+      <div>$$ \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} $$</div>
+      <p>具体矩阵用法可参考章节<a href="#d34">2.4</a>，下面给出几种其它常用环境的具体用法：</p>
+      <h5>2.10.1 equation环境</h5>
+      <p>
+        <code>\begin{equation}</code>是单行公式环境，这意味着在此环境中只可以输入单行公式，同时<code>\\</code>等强制换行命令失效。如需对单行长公式进行强制换行，可使用<code>\begin{split}</code>环境进行嵌套，并用<code>&amp;</code>字符表示对齐位置，如：
+      </p>
+      <pre><code>\begin{equation}
+          \begin{split}
+          e ^ { x } = &amp; 1 + \frac { x } { 1 ! } + \frac { x ^ { 2 } } { 2 ! } + \frac { x ^ { 3 } } { 3 ! } + \cdots
+          \\
+          &amp; - \infty &lt; x &lt; \infty
+          \end{split}
+          \end{equation}
+        </code></pre>
+      <div>$$ \begin{equation*} \begin{split} e ^ { x } = &amp; 1 + \frac { x } { 1 ! } + \frac { x ^ { 2 } } { 2 ! } +
+        \frac { x ^ { 3 } } { 3 ! } + \cdots \\ &amp; - \infty &lt; x &lt; \infty \end{split} \end{equation*} $$</div>
+      <p><code>\begin{equation}</code>环境在排版时可能会出现重影错误，可通过对整体添加<code>{
+          }</code>解决，如<code>{\begin{equation}……\end{equation}}.</code></p>
+      <p>&nbsp;</p>
+      <h5>2.10.2 eqnarray环境</h5>
+      <p><code>\begin{eqnarray}</code>是多行公式环境，环境内的所有公式默认右对齐，由LaTeX内核提供。</p>
+      <h5>2.10.3 align环境</h5>
+      <p><code>\begin{align}</code>是多行公式环境，环境内的所有公式默认右对齐，由amsmath提供，排版较为灵活，如需表示多行公式推荐使用此环境。</p>
+      <pre><code>\begin{align}
+          y = x \\
+          y = 3x^2 + 5x + 2
+          \end{align}
+        </code></pre>
+      <div>$$ \begin{align*} y = x \\ y = 3x^2 + 5x + 2 \end{align*} $$</div>
+      <p>可使用<code>&amp;</code>字符调整对齐位置。</p>
+      <pre><code>\begin{align}
+          y &amp; = x \\
+          y &amp; = 3x^2 + 5x + 2
+          \end{align}
+        </code></pre>
+      <div>$$ \begin{align*} y &amp; = x \\ y &amp; = 3x^2 + 5x + 2 \end{align*} $$</div>
+      <p>&nbsp;</p>
+      <h5>2.10.4 array环境</h5>
+      <p><code>\begin{array}{}</code>是数组环境，需手动输入对齐参数：</p>
+      <pre><code>\begin{array}{|c|l|r|}
+          a &amp; b &amp; S \\
+          \hline
+          0 &amp; 0 &amp; 1 \\
+          0 &amp; 1 &amp; 1 \\
+          1 &amp; 0 &amp; 1 \\
+          1 &amp; 1 &amp; 0 \\
+          \end{array}
+        </code></pre>
+      <div>$$ \begin{array}{|c|l|r|} a &amp; b &amp; S \\ \hline 00 &amp; 00 &amp; 10 \\ 0 &amp; 1 &amp; 1 \\ 1 &amp; 0
+        &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ \end{array} $$</div>
+      <p>对齐参数使用<code>c l r</code>分别表示居中、居左和居右，如需竖线边框可直接在对齐参数区域输入<code>|</code>即可，如需横线边框可使用<code>\hline</code>命令。</p>
+      <p>更多环境使用可参考章节<a href="#d31">2.4</a>。</p>
+      <p>&nbsp;</p>
+      <h4>2.11 TeX扩展包使用 TeX and LaTeX extensions</h4>
+      <h5>2.11.1 physics扩展包</h5>
+      <p>physics是一款便携输入物理符号、矩阵及方程的拓展包，使用前需要在设置中手动勾选。</p>
+      <p>目前已知问题：</p>
+      <p>
+        LaTeX默认除号命令<code>\div</code>在physics包中有新的含义，表示<svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
+          viewBox="0 -686 1277 710" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+          <defs>
+            <path id="MJX-759-TEX-B-2207"
+              d="M56 673Q56 679 65 686H892Q901 679 901 673Q901 668 714 331T521 -15Q518 -18 506 -24H452Q440 -19 436 -15Q431 -8 337 162T150 501L57 669Q57 670 56 672V673ZM528 136L758 553H297Q298 551 414 341L528 136Z">
+            </path>
+            <path id="MJX-759-TEX-B-22C5"
+              d="M74 251Q74 286 99 311T156 336Q200 336 222 308T245 250Q245 221 224 194T160 166T96 193T74 251Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+            <g data-mml-node="math">
+              <g data-mml-node="mi">
+                <use xlink:href="#MJX-759-TEX-B-2207"></use>
+              </g>
+              <g data-mml-node="mi" transform="translate(958, 0)">
+                <use xlink:href="#MJX-759-TEX-B-22C5"></use>
+              </g>
+            </g>
+          </g>
+        </svg>。但直接输入<code>\div</code>可能会出现排版错误问题，此时可用<code>{\div}</code>替换，来解决排版问题。若需在physics包开启状态下显示默认除号，在其他LaTeX环境下可使用<code>\divisionsmybol</code>表示，但MathJax似乎并不支持此用法。替代解决办法为：①直接在输入框中输入<code>÷</code>字符。②在unicode扩展开启状态下，输入<code>\unicode{x00f7}</code>。
+      </p>
+      <p>以下参考样式请<strong>手动打开physics扩展查看</strong>。</p>
+      <figure>
+        <table>
+          <thead>
+            <tr>
+              <th class="l">样式（需开启physics扩展查看）</th>
+              <th class="l">LaTeX</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c blod" colspan="2">括号 Automatic Bracing</td>
+              <!--<td></td>-->
+            </tr>
+            <tr>
+              <td class="l">$ \quantity{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td class="l">\quantity{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\qty{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td>\qty{ }</td>
+            </tr>
+            <tr>
+              <td class="l" class="l">$\pqty{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td class="l">\pqty{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\bqty{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td class="l">\bqty{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vqty{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td class="l">\vqty{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\absolutevalue{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td class="l">\absolutevalue{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\abs{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td class="l">\abs{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\norm{ \frac{1}{1+\frac{1}{2}} }$</td>
+              <td class="l">\norm{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\evaluated{ \frac{1}{1+\frac{1}{2}} }_1^2$</td>
+              <td class="l">\evaluated{ }_1^2</td>
+            </tr>
+            <tr>
+              <td class="l">$\eval{ \frac{1}{1+\frac{1}{2}} }_1^2$</td>
+              <td class="l">\eval{ }_1^2</td>
+            </tr>
+            <tr>
+              <td class="l">$\order{ \frac{x}{2} }$</td>
+              <td class="l">\order{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\commutator{A} {B}$</td>
+              <td class="l">\commutator{A} {B}</td>
+            </tr>
+            <tr>
+              <td class="l">$\comm{A} {B}$</td>
+              <td class="l">\comm{A} {B}</td>
+            </tr>
+            <tr>
+              <td class="l">$\anticommutator{A} {B}$</td>
+              <td class="l">\anticommutator{A} {B}</td>
+            </tr>
+            <tr>
+              <td class="l">$\acomm{A} {B}$</td>
+              <td class="l">\acomm{A} {B}</td>
+            </tr>
+            <tr>
+              <td class="l">$\poissonbracket{A} {B}$</td>
+              <td class="l">\poissonbracket{A} {B}</td>
+            </tr>
+            <tr>
+              <td class="l">$\pb{A} {B}$</td>
+              <td class="l">\pb{A} {B}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">矢量符号 Vector Notation</td>
+              <!--<td></td>-->
+            </tr>
+            <tr>
+              <td class="l">$\vectorbold{ a }$</td>
+              <td class="l">\vectorbold{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vb{ a }$</td>
+              <td class="l">\vb{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vb{ \psi }$</td>
+              <td class="l">\vb{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vb*{ a }$</td>
+              <td class="l">\vb*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vb*{ \psi }$</td>
+              <td class="l">\vb*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vectorarrow{ a }$</td>
+              <td class="l">\vectorarrow{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\va{ a }$</td>
+              <td class="l">\va{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\va{ \psi }$</td>
+              <td class="l">\va{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\va*{ a }$</td>
+              <td class="l">\va*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\va*{ \psi }$</td>
+              <td class="l">\va*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vectorunit{ a }$</td>
+              <td class="l">\vectorunit{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vu{ a }$</td>
+              <td class="l">\vu{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vu{ \psi }$</td>
+              <td class="l">\vu{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vu*{ a }$</td>
+              <td class="l">\vu*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\vu*{ \psi }$</td>
+              <td class="l">\vu*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\dotproduct$</td>
+              <td class="l">\dotproduct</td>
+            </tr>
+            <tr>
+              <td class="l">$\vdot$</td>
+              <td class="l">\vdot</td>
+            </tr>
+            <tr>
+              <td class="l">$\crossproduct$</td>
+              <td class="l">\crossproduct</td>
+            </tr>
+            <tr>
+              <td class="l">$\cross$</td>
+              <td class="l">\cross</td>
+            </tr>
+            <tr>
+              <td class="l">$\cp$</td>
+              <td class="l">\cp</td>
+            </tr>
+            <tr>
+              <td class="l">$\gradient( \psi )$</td>
+              <td class="l">\gradient( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\grad( \psi )$</td>
+              <td class="l">\grad( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\grad[ \psi ]$</td>
+              <td class="l">\grad[ ]</td>
+            </tr>
+            <tr>
+              <td class="l">$\grad{ \psi }$</td>
+              <td class="l">\grad{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\divergence( \psi )$</td>
+              <td class="l">\divergence( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\div( \psi )$</td>
+              <td class="l">\div( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\div[ \psi ]$</td>
+              <td class="l">\div[ ]</td>
+            </tr>
+            <tr>
+              <td class="l">$\div{ \psi }$</td>
+              <td class="l">\div{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\curl( \psi )$</td>
+              <td class="l">\curl( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\curl[ \psi ]$</td>
+              <td class="l">\curl[ ]</td>
+            </tr>
+            <tr>
+              <td class="l">$\curl{ \psi }$</td>
+              <td class="l">\curl{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\laplacian( \psi )$</td>
+              <td class="l">\laplacian( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\laplacian[ \psi ]$</td>
+              <td class="l">\laplacian[ ]</td>
+            </tr>
+            <tr>
+              <td class="l">$\laplacian{ \psi }$</td>
+              <td class="l">\laplacian{ }</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">运算符 Operators</td>
+              <!--<td></td>-->
+            </tr>
+            <tr>
+              <td class="l">$\sin x$</td>
+              <td class="l">\sin</td>
+            </tr>
+            <tr>
+              <td class="l">$\sin( x )$</td>
+              <td class="l">\sin( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\sin[2]( x )$</td>
+              <td class="l">\sin[2]( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\tr \rho$</td>
+              <td class="l">\tr</td>
+            </tr>
+            <tr>
+              <td class="l">$\Tr \rho$</td>
+              <td class="l">\Tr</td>
+            </tr>
+            <tr>
+              <td class="l">$\rank M$</td>
+              <td class="l">\rank</td>
+            </tr>
+            <tr>
+              <td class="l">$\erf( x )$</td>
+              <td class="l">\erf( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\Res[ f(z) ]$</td>
+              <td class="l">\Res[ ]</td>
+            </tr>
+            <tr>
+              <td class="l">$\principalvalue{ \int f(z) \dd{z} }$</td>
+              <td class="l">\principalvalue{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\pv{ \int f(z) \dd{z} }$</td>
+              <td class="l">\pv{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\PV{ \int f(z) \dd{z} }$</td>
+              <td class="l">\PV{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\Re{ \frac{1}{1+\frac{i}{2}} }$</td>
+              <td class="l">\Re{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\Im{ \frac{1}{1+\frac{i}{2}} }$</td>
+              <td class="l">\Im{ }</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">快速文本 Quick Quad Text</td>
+              <!--<td></td>-->
+            </tr>
+            <tr>
+              <td class="l">$\qqtext{ some texts }$</td>
+              <td class="l">\qqtext{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\qq{ some texts }$</td>
+              <td class="l">\qq{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\qq*{ some texts }$</td>
+              <td class="l">\qq*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\qcomma$</td>
+              <td class="l">\qcomma</td>
+            </tr>
+            <tr>
+              <td class="l">$\qc$</td>
+              <td class="l">\qc</td>
+            </tr>
+            <tr>
+              <td class="l">$\qcc $</td>
+              <td class="l">\qcc</td>
+            </tr>
+            <tr>
+              <td class="l">$\qif $</td>
+              <td class="l">\qif</td>
+            </tr>
+            <tr>
+              <td class="l">$\qthen$</td>
+              <td class="l">\qthen</td>
+            </tr>
+            <tr>
+              <td class="l">$\qelse$</td>
+              <td class="l">\qelse</td>
+            </tr>
+            <tr>
+              <td class="l">$\qotherwise$</td>
+              <td class="l">\qotherwise</td>
+            </tr>
+            <tr>
+              <td class="l">$\qunless $</td>
+              <td class="l">\qunless</td>
+            </tr>
+            <tr>
+              <td class="l">$\qgiven$</td>
+              <td class="l">\qgiven</td>
+            </tr>
+            <tr>
+              <td class="l">$\qusing$</td>
+              <td class="l">\qusing</td>
+            </tr>
+            <tr>
+              <td class="l">$\qassume $</td>
+              <td class="l">\qassume</td>
+            </tr>
+            <tr>
+              <td class="l">$\qlet$</td>
+              <td class="l">\qlet</td>
+            </tr>
+            <tr>
+              <td class="l">$\qfor$</td>
+              <td class="l">\qfor</td>
+            </tr>
+            <tr>
+              <td class="l">$\qall$</td>
+              <td class="l">\qall</td>
+            </tr>
+            <tr>
+              <td class="l">$\qeven$</td>
+              <td class="l">\qeven</td>
+            </tr>
+            <tr>
+              <td class="l">$\qodd$</td>
+              <td class="l">\qodd</td>
+            </tr>
+            <tr>
+              <td class="l">$\qinteger$</td>
+              <td class="l">\qinteger</td>
+            </tr>
+            <tr>
+              <td class="l">$\qand$</td>
+              <td class="l">\qand</td>
+            </tr>
+            <tr>
+              <td class="l">$\qor $</td>
+              <td class="l">\qor</td>
+            </tr>
+            <tr>
+              <td class="l">$\qas $</td>
+              <td class="l">\qas</td>
+            </tr>
+            <tr>
+              <td class="l">$\qin $</td>
+              <td class="l">\qin</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">导数 Derivatives</td>
+              <!--<td></td>-->
+            </tr>
+            <tr>
+              <td class="l">$\differential{ x }$</td>
+              <td class="l">\differential{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\dd{ x }$</td>
+              <td class="l">\dd{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\dd[3] {x}$</td>
+              <td class="l">\dd[3] {x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\dd( \cos\theta )$</td>
+              <td class="l">\dd( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\dv{ x }$</td>
+              <td class="l">\dv{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\derivative{ f }{x}$</td>
+              <td class="l">\derivative{ }{x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\dv{ f }{x}$</td>
+              <td class="l">\dv{ }{x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\dv[ n ]{f}{x}$</td>
+              <td class="l">\dv[ ]{f}{x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\dv{x}( x^2+x^3 )$</td>
+              <td class="l">\dv{x}( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\dv*{ f }{x}$</td>
+              <td class="l">\dv*{ }{x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\pdv{ x }$</td>
+              <td class="l">\pdv{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\partialderivative{ f }{x}$</td>
+              <td class="l">\partialderivative{ }{x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\pdv{ f }{x}$</td>
+              <td class="l">\pdv{ }{x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\pdv[ n ]{f}{x}$</td>
+              <td class="l">\pdv[ ]{f}{x}</td>
+            </tr>
+            <tr>
+              <td class="l">$\pdv{x}( x^2+x^3 )$</td>
+              <td class="l">\pdv{x}( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\pdv{ f }{x}{y}$</td>
+              <td class="l">\pdv{ }{x}{y}</td>
+            </tr>
+            <tr>
+              <td class="l">$\variation{ F[g(x)] }$</td>
+              <td class="l">\variation{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\var{ F[g(x)] }$</td>
+              <td class="l">\var{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\var( E-TS )$</td>
+              <td class="l">\var( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\fdv{ g }$</td>
+              <td class="l">\fdv{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\functionalderivative{ F }{g}$</td>
+              <td class="l">\functionalderivative{ }{g}</td>
+            </tr>
+            <tr>
+              <td class="l">$\fdv{ F }{g}$</td>
+              <td class="l">\fdv{ }{g}</td>
+            </tr>
+            <tr>
+              <td class="l">$\fdv{V}( E-TS )$</td>
+              <td class="l">\fdv{V}( )</td>
+            </tr>
+            <tr>
+              <td class="l">$\fdv*{ F }{x}$</td>
+              <td class="l">\fdv*{ }{x}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">狄拉克符号 Dirac Bracket Notation</td>
+              <!--<td></td>-->
+            </tr>
+            <tr>
+              <td class="l">$\ket{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\ket{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\ket*{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\ket*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\bra{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\bra{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\bra*{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\bra*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\innerproduct{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\innerproduct{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\braket{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\braket{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\braket*{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\braket*{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\braket{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\braket{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\outerproduct{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\outerproduct{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\dyad{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\dyad{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\ketbra{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\ketbra{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\op{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\op{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\ketbra*{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}$</td>
+              <td class="l">\ketbra*{\frac{\psi + \phi}{2}}{\frac{\psi + \phi}{2}}</td>
+            </tr>
+            <tr>
+              <td class="l">$\ketbra{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\ketbra{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\expectationvalue{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\expectationvalue{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\expval{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\expval{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\ev{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\ev{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\ev{ \frac{A+B}{2} }{\psi}$</td>
+              <td class="l">\ev{ }{\psi}</td>
+            </tr>
+            <tr>
+              <td class="l">$\ev*{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\ev*{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\ev**{ \frac{\psi + \phi}{2} }$</td>
+              <td class="l">\ev**{ }</td>
+            </tr>
+            <tr>
+              <td class="l">$\matrixelement{m}{ \frac{A+B}{2} }{n}$</td>
+              <td class="l">\matrixelement{m}{ }{n}</td>
+            </tr>
+            <tr>
+              <td class="l">$\matrixel{m}{ \frac{A+B}{2} }{n}$</td>
+              <td class="l">\matrixel{m}{ }{n}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mel{m}{ \frac{A+B}{2} }{n}$</td>
+              <td class="l">\mel{m}{ }{n}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mel*{m}{ \frac{A+B}{2} }{n}$</td>
+              <td class="l">\mel*{m}{ }{n}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mel**{m}{ \frac{A+B}{2} }{n}$</td>
+              <td class="l">\mel**{m}{ }{n}</td>
+            </tr>
+            <tr>
+              <td class="c blod" colspan="2">矩阵宏 Matrix macros</td>
+              <!--<td></td>-->
+            </tr>
+            <tr>
+              <td class="l">$\mqty{a & b \\ c & d}$</td>
+              <td class="l ig">\mqty{a & b \\ c & d}</td>
+            </tr>
+            <tr>
+              <td class="l">$\mqty(a & b \\ c & d)$</td>
+              <td class="l ig">\mqty(a & b \\ c & d)</td>
+            </tr>
+            <tr>
+              <td class="l">$\mqty*(a & b \\ c & d)$</td>
+              <td class="l ig">\mqty*(a & b \\ c & d)</td>
+            </tr>
+            <tr>
+              <td class="l">$\mqty[a & b \\ c & d]$</td>
+              <td class="l ig">\mqty[a & b \\ c & d]</td>
+            </tr>
+            <tr>
+              <td class="l">$\mqty|a & b \\ c & d|$</td>
+              <td class="l ig">\mqty|a & b \\ c & d|</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty{a & b \\ c & d}$</td>
+              <td class="l ig">\smqty{a & b \\ c & d}</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\imat{3})$</td>
+              <td class="l ig">\smqty(\imat{3})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\xmat{1}{2}{3})$</td>
+              <td class="l ig">\smqty(\xmat{1}{2}{3})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\xmat*{a}{3}{3})$</td>
+              <td class="l ig">\smqty(\xmat*{a}{3}{3})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\xmat*{a}{3}{1})$</td>
+              <td class="l ig">\smqty(\xmat*{a}{3}{1})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\xmat*{a}{1}{3})$</td>
+              <td class="l ig">\smqty(\xmat*{a}{1}{3})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\zmat{2}{2})$</td>
+              <td class="l ig">\smqty(\zmat{2}{2})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\pmat{0})$</td>
+              <td class="l ig">\smqty(\pmat{0})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\pmat{1})$</td>
+              <td class="l ig">\smqty(\pmat{1})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\pmat{2})$</td>
+              <td class="l ig">\smqty(\pmat{2})</td>
+            </tr>
+            <tr>
+              <td class="l">$\smqty(\pmat{3})$</td>
+              <td class="l ig">\smqty(\pmat{3})</td>
+            </tr>
+            <tr>
+              <td class="l">$\mqty(\dmat{1,2,3})$</td>
+              <td class="l ig">\mqty(\dmat{1,2,3})</td>
+            </tr>
+            <tr>
+              <td class="l">$\mqty(\dmat{1,2&3\\4&5})$</td>
+              <td class="l ig">\mqty(\dmat{1,2&3\\4&5})</td>
+            </tr>
+            <tr>
+              <td class="l">$\mqty(\admat{1,2,3})$</td>
+              <td class="l ig">\mqty(\admat{1,2,3})</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+      <p>其它具体用法可参考<a href="http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/physics/physics.pdf"
+          target="_blank">physics扩展官方文档</a>。</p>
+      <h5>2.11.2 mhchem扩展包</h5>
+      <p>mhchem是一款便捷输入化学方程式的扩展包，使用前需要在设置中手动勾选。其具体用法如下：</p>
+      <h6>2.11.2.1 引用</h6>
+      <p>基本命令为<code>\ce{}</code>，可在<code>{}</code>中输入化学相关符号。</p>
+      <h6>2.11.2.2 化学式</h6>
+      <p>在化学环境中，数字<code>0123456789</code>默认为下标，<code>+-</code>默认为上标，如需强制上标可使用<code>^</code>符号，例如</p>
+      <pre><code>\ce{H2O} \ce{Sb2O3} \ce{H+} \ce{CrO4^2-} \ce{[AgCl2]-} \ce{Y^99+} \ce{Y^{99+}}
+        </code></pre>
+      <p class="c">$\ce{H2O} \quad \ce{Sb2O3} \quad \ce{H+} \quad \ce{CrO4^2-} \quad \ce{[AgCl2]-} \quad \ce{Y^99+}
+        \quad \ce{Y^{99+}}$</p>
+      <h6>2.11.2.3 化学计量数</h6>
+      <p>
+        在化学环境中，计量数应与前面的大写字母使用<strong>空格</strong>分割，对于分数计量数，只需输入<code>1/2</code>即可显示$\frac{1}{2}$的效果，如特殊情况需要显示<code>1/2</code>格式，请用<code>(
+          )</code>扩起。</p>
+      <pre><code>\ce{2H2O} \ce{0.5 H2O} \ce{1/2H2O} \ce{(1/2)H2O} \ce{$n$ H2O}
+        </code></pre>
+      <p class="c">$\ce{2H2O} \quad \ce{0.5 H2O} \quad \ce{1/2H2O} \quad \ce{(1/2)H2O} \quad \ce{n H2O}$</p>
+      <h6>2.11.2.4 同位素</h6>
+      <pre><code>\ce{^{227}_{90}Th+} \ce{^227_90Th+} \ce{^{0}_{-1}n^{-}} \ce{^0_-1n-}
+        </code></pre>
+      <p class="c">$\ce{^{227}_{90}Th+} \quad \ce{^227_90Th+} \quad \ce{^{0}_{-1}n^{-}} \quad \ce{^0_-1n-}$</p>
+      <p>在一个复杂的化学式中，上标属于左侧元素还是右侧元素可能并不会明显的体现出来，但为了规范输入，建议使用<code>{}</code>分隔符作为区分：</p>
+      <pre><code>\ce{H{}^3HO} \ce{H^3HO}
+        </code></pre>
+      <p class="c">$\ce{H{}^3HO} \quad \ce{H^3HO}$</p>
+      <h6>2.11.2.5 反应箭头</h6>
+      <p>mhchem提供了方便的反应箭头输入模式</p>
+      <pre><code>\ce{A -&gt; B} \ce{A &lt;- B} \ce{A &lt;-&gt; B}
+        </code></pre>
+      <p class="c">$\ce{A -&gt; B} \ce{A &lt;- B} \ce{A &lt;-&gt; B} $</p>
+      <pre><code>\ce{A &lt;--&gt; B} \ce{A &lt;=&gt; B} \ce{A &lt;=&gt;&gt; B} \ce{A &lt;&lt;=&gt; B}
+        </code></pre>
+      <p class="c">$\ce{A &lt;--&gt; B} \ce{A &lt;=&gt; B} \ce{A &lt;=&gt;&gt; B} \ce{A &lt;&lt;=&gt; B}$</p>
+      <p>箭头可以带有两个参数，即<code>-&gt;[][]</code>，第一个<code>[]</code>表示上方参数，第二个<code>[]</code>表示下方参数</p>
+      <pre><code>\ce{A -&gt;[H2O] B} \ce{A -&gt;[{上方文字}][{下方文字}] B}
+        </code></pre>
+      <p class="c">$\ce{A -&gt;[H2O] B} \ce{A -&gt;[{上方文字}][{下方文字}] B}$</p>
+      <h6>2.11.2.6 气体和沉淀</h6>
+      <p>在化学环境中可使用独立的<code>^</code>表示气体$\uparrow$，使用独立的<code>v</code>(小写字母v)表示沉淀$\downarrow$</p>
+      <pre><code>\ce{SO4^2- + Ba^2+ -&gt; BaSO4 v}
+        </code></pre>
+      <p class="c">$\ce{SO4^2- + Ba^2+ -&gt; BaSO4 v}$</p>
+      <pre><code>\ce{A v B (v) -&gt; B ^ B (^)}
+        </code></pre>
+      <p class="c">$\ce{A v B (v) -&gt; B ^ B (^)}$</p>
+      <h6>2.11.2.7 一些复杂的例子</h6>
+      <pre><code>\ce{Zn^2+ &lt;=&gt;[+ 2OH-][+ 2H+] $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$ &lt;=&gt;[+
+          2OH-][+ 2H+] $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$}
+        </code></pre>
+      <p class="c">$\ce{Zn^2+ &lt;=&gt;[+ 2OH-][+ 2H+] $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$
+        &lt;=&gt;[+ 2OH-][+ 2H+] $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$}$</p>
+      <pre><code>\ce{$K = \frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}$}
+        </code></pre>
+      <p class="c">$\ce{$K = \frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}$}$</p>
+      <pre><code>\ce{$K = \ce{\frac{[Hg^2+][Hg]}{[Hg2^2+]}}$}
+        </code></pre>
+      <p class="c">$\ce{$K = \ce{\frac{[Hg^2+][Hg]}{[Hg2^2+]}}$}$</p>
+      <pre><code>\ce{Hg^2+ -&gt;[I-] $\underset{\mathrm{red}}{\ce{HgI2}}$ -&gt;[I-]
+          $\underset{\mathrm{red}}{\ce{[Hg^{II}I4]^2-}}$}
+        </code></pre>
+      <p class="c">$\ce{Hg^2+ -&gt;[I-] $\underset{\mathrm{red}}{\ce{HgI2}}$ -&gt;[I-]
+        $\underset{\mathrm{red}}{\ce{[Hg^{II}I4]^2-}}$}$</p>
+      <p>&nbsp;</p>
+      <h5>2.11.3 cancel扩展包</h5>
+      <p>cancel扩展包为显示分数中<strong>约分线</strong>的TeX宏包，或显示其他划除效果，基本命令为<code>\cancel{}</code>，例如：</p>
+      <pre><code>\cfrac{x}{1 + \cfrac{\cancel{y}}{\cancel{y}}} = \cfrac{x}{2}
+        </code></pre>
+      <p class="c">$\cfrac{x}{1 + \cfrac{\cancel{y}}{\cancel{y}}} = \cfrac{x}{2}$</p>
+      <pre><code>\cancel{e^{i \pi} + 1 =0}
+        </code></pre>
+      <p class="c">$\cancel{e^{i \pi} + 1 =0}$</p>
+      <p>&nbsp;</p>
+      <h5>2.11.4 Ams扩展包</h5>
+      <p>本页面集成了大部分ams命令，即默认已打开。本拓展只为自动显示公式序号使用。</p>
+      <p>如，以下代码：</p>
+      <pre><code>\begin{equation}
+          E = mc^2
+          \end{equation}
+        </code></pre>
+      <p>&nbsp;</p>
+      <p>在ams包未开启状态下：</p>
+      <div>$$ \begin{equation*} E = mc^2 \end{equation*} $$</div>
+      <p>在ams包开启状态下：</p>
+      <div>$$ \begin{equation} E = mc^2 \tag{1} \end{equation} $$</div>
+      <p>具体自动编号用法请参考章节<a href="#d49">2.9</a>。</p>
+      <h5>2.11.5 AmsCd扩展包</h5>
+      <p>amsCd扩展包是一款生成矩阵图的TeX宏包环境，基本环境命令为<code>\begin{CD}</code> <code>\end{CD}</code>，基本用法如下：</p>
+      <p><code>@&lt;&lt;&lt;</code>表示左箭头；</p>
+      <p><code>@&gt;&gt;&gt;</code>表示右箭头；</p>
+      <p><code>@AAA</code>表示上箭头；</p>
+      <p><code>@VVV</code>表示下箭头；</p>
+      <p><code>@=</code>表示水平等号；</p>
+      <p><code>@|</code>表示竖直等号；</p>
+      <p><code>@.</code>表示空箭头（占位）。</p>
+      <p>以<code>@</code>表示箭头开始，以<code>&lt;、&gt;、A、V</code>等表示箭头方向。如需在箭头上或下插入变量，直接在第一和第二，或第二和第三个箭头方向符号中插入即可，用法实例如下：</p>
+      <pre><code>\begin{CD}
+          A @&gt;a&gt;&gt; B\\
+          @VVbV @VVcV\\
+          C @&gt;d&gt;&gt; D
+          \end{CD}
+        </code></pre>
+      <p class="c">$\begin{CD} A @&gt;a&gt;&gt; B\\ @VVbV @VVcV\\ C @&gt;d&gt;&gt; D \end{CD}$</p>
+      <pre><code>\begin{CD}
+          A @&gt;a&gt;b&gt; B\\
+          @VlVrV @AlArA\\
+          C @&lt;a&lt;b&lt; D
+          \end{CD}
+        </code></pre>
+      <p class="c">$\begin{CD} A @&gt;a&gt;b&gt; B\\ @VlVrV @AlArA\\ C @&lt;a&lt;b&lt; D \end{CD}$</p>
+      <p>&nbsp;</p>
+      <h5>2.11.6 Unicode扩展包</h5>
+      <p>
+        Unicode扩展包一款显示Unicode字符的TeX宏包，基本命令为<code>\unicode{}</code>，<code>{}</code>中参数应输入指定字符的<strong>十进制</strong>或<strong>十六进制</strong>Unicode代码，注意十六进制编码需在前面添加标识位<code>x</code>，例如：
+      </p>
+      <pre><code>\unicode{8751} \unicode{x220f}
+        </code></pre>
+      <p class="c">$\unicode{8751} \quad \unicode{x220f}$</p>
+      <p>&nbsp;</p>
+      <h5>2.11.7 Bbox扩展包</h5>
+      <p>Bbox扩展包一款用于设置公式背景颜色的TeX宏包，具体用法参见<a href="#d42">2.7.3</a></p>
+      <h5>2.11.8 NoErrors扩展包</h5>
+      <p>NoErrors扩展包是一款阻止显示 TeX 错误消息的宏包，使用后将不会显示代码具体错误，而只会显示原始 TeX 代码。</p>
+      <h5>2.11.9 NewCommand扩展包</h5>
+      <p>Newcommand扩展包提供了<code>\def,
+          \newcommand，\renewcommand，\let，\newenvironment</code>和<code>\renewenvironment</code>宏命令，用于在TeX中创建新的宏和环境。例如：
+      </p>
+      <pre><code>\def\RR{{\bf R}} %将{\bf R}（加粗的R）定义为\RR<br />\RR&nbsp;%调用\RR命令</code></pre>
+      <p class="c">$\def\RR{{\bf R}} \RR$</p>
+      <h3>3 关于 About</h3>
+      <p>如遇到任何问题或者Bug，欢迎点击页面下方的邮箱图标向我们反馈，感谢您的使用！</p>
+      <h3>4 参考文献 Reference</h3>
+      <p>
+        <a class="br" href="../home">1. LaTeX公式编辑器</a>
+        <a class="br" href="https://docs.mathjax.org/en/latest/index.html" target="_blank">2. MathJax Documentation</a>
+        <a class="br" href="https://en.wikipedia.org/wiki/Help:Displaying_a_formula" target="_blank">3. Displaying a
+          formula</a>
+        <a class="br" href="https://github.com/mathjax/MathJax" target="_blank">4. mathjax/MathJax: Beautiful math in
+          all browsers - GitHub</a>
+        <a class="br" href="https://mhchem.github.io/MathJax-mhchem/" target="_blank">5. mhchem for MathJax</a>
+      </p>
+      <p>&nbsp;</p>
+      <br /><br /><br /><br /><br /><br /><br />
+    </div>
+  </div>
+  <!-- #endregion -->
+
+  <script src="../js/common/common_40.js" id="common_40"></script>
+  <script src="../js/common/common_50.js" id="common_50"></script>
+</body>
+
+</html>

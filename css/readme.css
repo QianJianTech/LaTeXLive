@@ -1,0 +1,98 @@
+
+/* #region 说明文档 */
+#toc-doc {
+    top:5rem;
+    bottom: 0;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 25%;
+    padding-bottom: 10rem;
+    height: 80%;
+  }
+  #wrap_readme_parent {
+    top: 5rem;
+    bottom: 0;
+    position: sticky;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+    width: 74%;
+    margin-left: 26%;
+  }
+  #wrap_readme {
+    padding: 2rem;
+    max-width: 1600px;
+    margin-left: 0;
+  }
+  #wrap_readme h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  #wrap_readme .blod {
+    font-weight: 900;
+  }
+  #wrap_readme p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  #wrap_readme pre {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  #wrap_readme code {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  #wrap_readme pre code {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  #wrap_readme table {
+    /* width: 100%; */
+    margin-bottom: 1rem;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-radius: 1px;
+    table-layout: fixed;
+  }
+  #wrap_readme th,
+  #wrap_readme td {
+    padding: 0.75rem;
+    vertical-align: center;
+    border-top: 1px solid #dee2e6;
+    border: 1px solid #dee2e6;
+    /* white-space: nowrap; */
+    word-break: break-all;
+  }
+  #wrap_readme thead th,
+  #wrap_readme thead td {
+    border-bottom-width: 2px;
+  }
+  #wrap_readme thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+  #wrap_readme tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+  #wrap_readme tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  #wrap_readme .c {
+    text-align: center;
+  }
+  #wrap_readme .l {
+    text-align: left;
+  }
+  #wrap_readme .r {
+    text-align: right;
+  }
+  #wrap_readme a.br {
+    display: block;
+  }
+  
+  /* #endregion */

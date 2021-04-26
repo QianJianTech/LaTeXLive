@@ -1,0 +1,55 @@
+
+#footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    min-width: 278px;
+  }
+  #footer .contractme a {
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: auto 1rem auto 1rem;
+    opacity: 0.4;
+  }
+  #footer .contractme a img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  #wrap_wechat {
+    display: inline-block;
+    position: relative;
+  }
+  #eqcode_wechat {
+    visibility: hidden;
+    position: absolute;
+    top: -10rem;
+    left: -3.2rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+  }
+  #eqcode_wechat img {
+    width: 10rem;
+    height: 10rem;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -khtml-user-select: auto;
+    -ms-user-select: auto;
+  }
+  #footer .copyright {
+    opacity: 0.5;
+    margin-top: 1rem;
+  }
+  #footer .copyright p,
+  #footer .copyright span {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+  #footer .copyright a {
+    color: black;
+  }
+  #footer .copyright a img {
+    width: 1rem;
+    height: 1rem;
+  }

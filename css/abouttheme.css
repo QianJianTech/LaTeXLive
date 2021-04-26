@@ -1,0 +1,307 @@
+/* #region 主题相关  */
+  
+.theme-list-dontuse {
+    color: #5e5e5e;
+    color: #e8e8e8;
+    color: #363636;
+    color: #3e3e3e;
+    color: #2e2e2e;
+    color: #1e1e1e;
+  
+    color: #e2edf7;
+    color: #cce1f3;
+    color: #9cc2e2;
+    color: #77a2c7;
+    color: #325f86;
+  
+    color: #f8eaf8;
+    color: #ecdaec;
+    color: #ddb9dd;
+    color: #d49cd4;
+    color: #be64be;
+  }
+  /* 默认 */
+  .btn-light:hover p {
+    color: #5ebcff;
+  }
+  .btn-light:hover img:not(.control-color) {
+    filter: brightness(120%);
+  }
+  .btn-light:hover .control-color {
+    filter: brightness(130%);
+  }
+  /* 黑色 */
+  .theme-dark-autocomp-main {
+    background-color: #363636;
+    color: #e8e8e8;
+  }
+  .theme-dark-autocomp-ico {
+    color: #b8b8b8;
+  }
+  .theme-dark-autocomp-active {
+    /* border: 1px solid #fff; */
+    background-color: #e8e8e8;
+  }
+  .theme-dark-autocomp-active .autocomp-tg {
+    background-color: transparent;
+    color: #363636;
+    font-weight: bold;
+  }
+  .theme-dark-autocomp-active .autocomp-ico {
+    color: #363636;
+  }
+  
+  .theme-dark-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #3e3e3e #5e5e5e;
+    /* cursor: default; */
+  }
+  .theme-dark-scroll::-webkit-scrollbar {
+    width: 18px;
+    /* cursor: default; */
+  }
+  .theme-dark-scroll::-webkit-scrollbar-track {
+    background: #3e3e3e;
+    cursor: default;
+  }
+  .theme-dark-scroll::-webkit-scrollbar-thumb {
+    background-color: #5e5e5e;
+    border-radius: 2px;
+    border: 1px solid #3e3e3e;
+    cursor: default;
+  }
+  
+  .theme-dark-button {
+    color: #e8e8e8;
+    background-color: #2e2e2e;
+    border-color: #2e2e2e;
+  }
+  .theme-dark-button img:not(.control-color) {
+    filter: invert(100%) brightness(80%);
+  }
+  .theme-dark-button p {
+    color: #e8e8e8;
+  }
+  .theme-dark-button:hover {
+    color: #fff;
+    background-color: #1e1e1e;
+    border-color: #0e0e0e;
+  }
+  .theme-dark-button:hover img:not(.control-color) {
+    filter: invert(100%) brightness(110%);
+  }
+  .theme-dark-button:hover .control-color {
+    filter: brightness(130%);
+  }
+  .theme-dark-button:hover p {
+    color: #be730f;
+  }
+  .theme-dark-outline-button {
+    color: #97692d;
+    border-color: #97692d;
+  }
+  .theme-dark-outline-button:hover {
+    color: #fff;
+    background-color: #be730f;
+    border-color: #be730f;
+  }
+  
+  /* 蓝色 */
+  .theme-blue-autocomp-main {
+    background-color: #cce1f3;
+    color: #1e1e1e;
+  }
+  .theme-blue-autocomp-ico {
+    color: #a0a0a0;
+  }
+  .theme-blue-autocomp-active {
+    background-color: #5890b4;
+  }
+  .theme-blue-autocomp-active .autocomp-tg {
+    background-color: transparent;
+    color: #fff;
+  }
+  .theme-blue-autocomp-active .autocomp-ico {
+    color: #fff;
+  }
+  
+  .theme-blue-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #cce1f3 #9cc2e2;
+  }
+  .theme-blue-scroll::-webkit-scrollbar {
+    width: 18px;
+  }
+  .theme-blue-scroll::-webkit-scrollbar-track {
+    background: #9cc2e2;
+    cursor: default;
+  }
+  .theme-blue-scroll::-webkit-scrollbar-thumb {
+    background-color: #cce1f3;
+    border-radius: 2px;
+    border: 1px solid #9cc2e2;
+    cursor: default;
+  }
+  
+  .theme-blue-button {
+    color: #325f86;
+    background-color: #9cc2e2;
+    border-color: #9cc2e2;
+  }
+  .theme-blue-button img {
+    filter: invert(0%);
+  }
+  .theme-blue-button:hover {
+    color: #e8e8e8;
+    background-color: #77a2c7;
+    border-color: #6487a7;
+  }
+  .theme-blue-button:hover .layer1-img {
+    filter: grayscale(100%) invert(100%) brightness(200%);
+  }
+  .theme-blue-button:hover img:not(.layer1-img):not(.control-color) {
+    filter: invert(100%) brightness(100%);
+  }
+  .theme-blue-button:hover .control-color {
+    filter: invert(0%) brightness(130%);
+  }
+  .theme-blue-button:hover p {
+    color: #ffffff;
+  }
+  .theme-blue-outline-button {
+    color: #77a2c7;
+    border-color: #77a2c7;
+  }
+  .theme-blue-outline-button:hover {
+    color: #fff;
+    background-color: #77a2c7;
+    border-color: #77a2c7;
+  }
+  
+  /* 粉色 */
+  .theme-pink-autocomp-main {
+    background-color: #ecdaec;
+    color: #1e1e1e;
+  }
+  .theme-pink-autocomp-ico {
+    color: #a0a0a0;
+  }
+  .theme-pink-autocomp-active {
+    background-color: #d49cd4;
+  }
+  .theme-pink-autocomp-active .autocomp-tg {
+    background-color: transparent;
+    color: #fff;
+  }
+  .theme-pink-autocomp-active .autocomp-ico {
+    color: #fff;
+  }
+  
+  .theme-pink-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #ecdaec #ddb9dd;
+  }
+  .theme-pink-scroll::-webkit-scrollbar {
+    width: 18px;
+  }
+  .theme-pink-scroll::-webkit-scrollbar-track {
+    background: #ddb9dd;
+    cursor: default;
+  }
+  .theme-pink-scroll::-webkit-scrollbar-thumb {
+    background-color: #ecdaec;
+    border-radius: 2px;
+    border: 1px solid #ddb9dd;
+    cursor: default;
+  }
+  
+  .theme-pink-button {
+    color: #be64be;
+    background-color: #ddb9dd;
+    border-color: #ddb9dd;
+  }
+  .theme-pink-button .layer1-img {
+    filter: hue-rotate(75deg) brightness(90%);
+  }
+  .theme-pink-button:hover {
+    color: #e8e8e8;
+    background-color: #d49cd4;
+    border-color: #b382b3;
+  }
+  .theme-pink-button:hover .layer1-img {
+    filter: grayscale(100%) invert(100%) brightness(200%);
+  }
+  .theme-pink-button:hover img:not(.layer1-img):not(.control-color) {
+    filter: invert(100%) brightness(100%);
+  }
+  .theme-pink-button:hover .control-color {
+    filter: invert(0%) brightness(130%);
+  }
+  .theme-pink-button:hover p {
+    color: #ffffff;
+  }
+  .theme-pink-outline-button {
+    color: #d49cd4;
+    border-color: #d49cd4;
+  }
+  .theme-pink-outline-button:hover {
+    color: #fff;
+    background-color: #d49cd4;
+    border-color: #d49cd4;
+  }
+  
+  /* 黑白色 */
+  .theme-simple-autocomp-main {
+    background-color: #fff;
+    color: #000;
+  }
+  .theme-simple-autocomp-ico {
+    color: #5e5e5e;
+  }
+  .theme-simple-autocomp-active {
+    border: 1px solid #000;
+  }
+  
+  .theme-simple-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #aeaeae #eee;
+  }
+  .theme-simple-scroll::-webkit-scrollbar {
+    width: 18px;
+  }
+  .theme-simple-scroll::-webkit-scrollbar-track {
+    background: #eee;
+  }
+  .theme-simple-scroll::-webkit-scrollbar-thumb {
+    background-color: #aeaeae;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    cursor: default;
+  }
+  
+  .theme-simple-button,
+  .theme-simple-outline-button {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  .theme-simple-button .layer1-img,
+  .theme-simple-outline-button .layer1-img {
+    filter: grayscale(100%) brightness(40%);
+  }
+  .theme-simple-button:hover,
+  .theme-simple-outline-button:hover {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #fff;
+  }
+  .theme-simple-button:hover .layer1-img {
+    filter: invert(100%) grayscale(100%) brightness(300%);
+  }
+  .theme-simple-button:hover img:not(.layer1-img):not(.control-color) {
+    filter: invert(100%) grayscale(100%);
+  }
+  .theme-simple-button:hover .control-color {
+    filter: brightness(150%);
+  }
+  /* #endregion */

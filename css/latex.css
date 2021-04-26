@@ -1,0 +1,351 @@
+/* #region 半屏模态框 */
+.screenmodal {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: -80%;
+  min-width: 260px;
+  background: white;
+  top: 0;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+}
+.screenmodal.screenmodal-open {
+  left: 0;
+}
+.screenmodal-mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 500;
+}
+.screenmodal .backtop {
+  position: fixed;
+  bottom: 50px;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  background-color: #007bff;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 1002;
+  font-size: 2rem;
+  color: white;
+  visibility: hidden;
+}
+.backtop-open {
+  right: 35%;
+  transition: all 0.4s;
+}
+.backtop-close {
+  right: 110%;
+  transition: all 0.4s;
+}
+.screenmodal .backtop:hover {
+  background-color: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+.screenmodal .backtop i {
+  margin: 0;
+  padding: 0;
+}
+
+/* #endregion */
+
+/* #region 编辑器媒体查询 */
+@media screen and (max-width: 279px) {
+  .container {
+    padding: 0;
+  }
+  .area {
+    width: 278px;
+    padding: 0;
+  }
+  .area .card {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 349px) {
+  .container {
+    padding: 0;
+  }
+  .area {
+    width: 100%;
+    padding: 0;
+  }
+  .area .card {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 575px) {
+  .container {
+    padding: 0;
+  }
+  .area {
+    width: 100%;
+    padding: 0;
+  }
+  .area .card {
+    width: 100%;
+    border-width: 1px 0 1px 0;
+    border-radius: 0;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+@media screen and (min-width: 1200px) {
+}
+/* #endregion */
+
+/* #region 编辑器全局 */
+html {
+  zoom: 1;
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* #endregion */
+
+/* #region 区域 */
+.area {
+  margin-top: 2rem;
+}
+.area h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.area h2 span {
+  margin: auto auto auto 0.5rem;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.area h3 {
+  font-size: 1.2rem;
+}
+.area .card-header {
+  padding: 0.4rem 1rem;
+  margin-bottom: -0.1rem;
+}
+
+/* #endregion*/
+
+/* #region 输入容器 */
+#input-area .card-header > h2,
+#input-area .card-header > button {
+  display: inline;
+}
+#input-area h2 i {
+  position: relative;
+  top: 1px;
+}
+#wrap_immediate {
+  margin: 1rem -0.3rem 0.3rem -0.3rem;
+}
+#wrap_immediate button {
+  margin: 0.1rem 0.3rem;
+  font-size: 0.7rem;
+}
+#wrap_txtainput {
+  position: relative;
+}
+
+.twins {
+  height: 16rem;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  font-family: Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 1.1rem;
+}
+
+#txta_input {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.01);
+  caret-color: #000;
+  position: absolute;
+  z-index: 2;
+  height: 16rem;
+  top: 0rem;
+  left: 0rem;
+}
+#div_copy {
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  top: 0rem;
+  left: 0rem;
+  white-space: nowrap;
+  padding: 0.375rem 0.75rem;
+}
+
+#btn_clearqb {
+  position: absolute;
+  top: 0.2rem;
+  right: -1rem;
+  z-index: 3;
+  opacity: 0;
+  width: 0.9rem;
+  height: 1.1rem;
+}
+#img_clear {
+  position: absolute;
+  top: 0.2rem;
+  right: -1.2rem;
+  z-index: 1;
+  opacity: 0.8;
+  width: 1.2rem;
+  height: 1.5rem;
+}
+/* #endregion */
+
+/* #region 输出容器 */
+#wrap_output {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 2rem auto 1.5rem auto;
+  text-align: center;
+  min-height: 200px;
+  background: url("../img/empty1.png") center center no-repeat;
+}
+#wrap_output img {
+  opacity: 0.05;
+  width: 25%;
+}
+.scroll-formac::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+.scroll-formac::-webkit-scrollbar-thumb:horizontal {
+  background-color: #a6a6a6;
+  border-radius: 3px;
+}
+.scroll-formac::-webkit-scrollbar-track-piece:horizontal:decrement,
+.scroll-formac::-webkit-scrollbar-track-piece:horizontal:increment {
+  background-color: rgba(166, 166, 166, 0.2);
+}
+/* #endregion*/
+
+/* #region mathjax元素 */
+.MathJax,
+.MathJax_Display {
+  font-size: 200% !important;
+  /* color: white !important; */
+  /* background-color: black !important; */
+}
+/* #endregion */
+
+/* #region 设置面板&按钮 */
+#btn_setting {
+  float: right;
+}
+#wrap_setting,
+#wrap_extend {
+  padding: 1rem;
+}
+#wrap_setting p,
+#wrap_extend p,
+#wrap_theme p {
+  font-size: 20px;
+}
+/* #endregion */
+
+/* #region “正在识别”的遮罩 */
+#loadingModal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.01);
+  display: none;
+}
+#loadingModal > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 15rem;
+  width: 12rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  margin-left: -6rem;
+  margin-top: -7.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+#loadingModal > div > p {
+  color: white;
+  font-size: 1.5rem;
+}
+.progress {
+  width: 80%;
+  margin: 6rem auto auto auto;
+}
+/* #endregion */
+
+/* #region 自动补全 */
+.autocomplete-menu {
+  width: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: 0 1.5rem 0.5rem 0.5rem;
+  background-color: #fafafa;
+  max-height: 12rem;
+  max-width: 20rem;
+  width: 20%;
+  min-width: 150px;
+  overflow-y: auto;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 4px 1px;
+}
+.autocomp {
+  margin: 0.1rem auto 0.1rem auto;
+  padding: 0 3px 0 2px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.autocomp-tg {
+  margin: 0;
+  padding: 0;
+  color: #1e1e1e;
+}
+.autocomp-ico {
+  float: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+.autocomp-active {
+  background-color: #77cebb;
+  /* background-color: #aeaeae; */
+}
+.autocomp-active .autocomp-tg {
+  color: #fff;
+}
+.autocomp-active .autocomp-ico {
+  color: #fff;
+}
+.reg-bold {
+  color: #3c86d4;
+  font-weight: bold;
+}
+
+/* #endregion */

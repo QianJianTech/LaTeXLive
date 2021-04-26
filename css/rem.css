@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* #region 媒体查询 */
+@media screen and (max-width: 279px) {
+  html {
+    font-size: 3px;
+    /* background-color: red; */
+  }
+}
+@media screen and (min-width: 280px) and (max-width: 349px) {
+  html {
+    font-size: 6px;
+    /* background-color: orange; */
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 575px) {
+  html {
+    font-size: 8px;
+    /* background-color: yellow; */
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 10px;
+    /* background-color: green; */
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 12px;
+    /* background-color: lightblue; */
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 15px;
+    /* background-color: blue; */
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+    /* background-color: blueviolet; */
+  }
+}
+/* #endregion */
+
