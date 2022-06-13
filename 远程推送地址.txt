@@ -1,2 +1,0 @@
-https://gitee.com/yuetao_1011/la-te-xlive.git
-https://github.com/mommytalkltd/LaTeXLive.git
