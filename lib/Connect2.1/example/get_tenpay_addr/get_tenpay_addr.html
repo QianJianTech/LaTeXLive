@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<ul>
+<?php
+foreach($ret as $k => $v){
+?>
+<li><?=$k?>: &nbsp; <script type='text/javascript'>document.write("<?=$v?>");</script></li>
+<?php
+}
+?>
+</form>	
+</body>
+</html>

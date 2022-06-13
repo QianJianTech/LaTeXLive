@@ -1,0 +1,70 @@
+.slidetounlock {
+    font-size: 12px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, #fff), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slidetounlock 3s infinite;
+    -webkit-text-size-adjust: none
+}
+
+@-webkit-keyframes slidetounlock {
+    0% {
+        background-position: -200px 0
+    }
+    100% {
+        background-position: 200px 0
+    }
+}
+
+#wrapper {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+}
+
+#drag {
+    position: relative;
+    background-color: #e8e8e8;
+    width: 381px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#drag .handler {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 34px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.handler_bg {
+    background: #fff url("../img/slider.png") no-repeat center;
+}
+
+.handler_ok_bg {
+    background: #fff url("../img/complet.png") no-repeat center;
+}
+
+#drag .drag_bg {
+    background-color: #3c66c2;
+    height: 34px;
+    width: 0px;
+}
+
+#drag .drag_text {
+    position: absolute;
+    top: 0px;
+    width: 381px;
+    color: #9c9c9c;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    font-size: 12px; 
+}

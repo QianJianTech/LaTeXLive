@@ -1,0 +1,18 @@
+export var element = {
+  id_navtabs: "ul_navtabs",
+  el_input: document.getElementById("txta_input"),
+  el_copydiv: document.getElementById("div_copy"),
+  el_output: document.getElementById("wrap_output"),
+  el_shortcut: document.getElementById("wrap_shortcut"),
+  el_immediate: document.getElementById("wrap_immediate"),
+  el_setting: document.getElementById("wrap_setting"),
+  el_settingmask: document.getElementById("mask_setting"),
+  el_settingbtn: document.getElementById("btn_setting"),
+  el_action: document.getElementById("wrap_action"),
+  el_wechatlink: document.getElementById("a_wechat"),
+  el_wechatimg: document.getElementById("eqcode_wechat"),
+  el_flat_container: document.querySelectorAll(".flat-container"),
+  el_flat_row: document.querySelectorAll(".flat-row"),
+  el_flat_col: document.querySelectorAll(".flat-col"),
+  el_flat_header_container: document.getElementById("wrap_header_container"),
+};

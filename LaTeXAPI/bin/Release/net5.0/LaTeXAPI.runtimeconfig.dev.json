@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\yueta\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\yueta\\.nuget\\packages"
+    ]
+  }
+}

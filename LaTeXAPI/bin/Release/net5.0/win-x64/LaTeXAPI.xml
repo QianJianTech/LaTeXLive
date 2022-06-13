@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LaTeXAPI</name>
+    </assembly>
+    <members>
+        <member name="T:LaTeXAPI.Class.Account">
+            <summary>
+            账号密码登录类
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.#ctor(Microsoft.Extensions.Configuration.IConfiguration,ToolsOfPanda.Interface.IDBTool,LaTeXAPI.Models.latexliveContext)">
+            <summary>
+            账号密码登录类实例化
+            </summary>
+        </member>
+        <member name="T:LaTeXAPI.Class.Account.LoginType">
+            <summary>
+            登录名类型
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.Login(System.String,System.String)">
+            <summary>
+            通过账号登录
+            </summary>
+            <param name="loginname"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.Add(LaTeXAPI.Models.Client)">
+            <summary>
+            增加新用户
+            </summary>
+            <param name="client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.Update(LaTeXAPI.Models.Client)">
+            <summary>
+            修改用户信息
+            </summary>
+            <param name="new_client"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.Remove(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.SwitchLoginType(System.String)">
+            <summary>
+            判断登录类型
+            </summary>
+            <param name="loginname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.ValidaityLoginname(LaTeXAPI.Class.Account.LoginType,System.String)">
+            <summary>
+            检查登录名合法性
+            </summary>
+            <param name="type"></param>
+            <param name="loginname"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.ValidaityPassword(System.String)">
+            <summary>
+            检查密码合法性
+            </summary>
+            <param name="password"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.AlreadyExist(LaTeXAPI.Class.Account.LoginType,System.String)">
+            <summary>
+            登录名是否已经存在
+            </summary>
+            <param name="type"></param>
+            <param name="loginname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.Account.GetUserInfoById(System.Int32)">
+            <summary>
+            根据id获取用户信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.#ctor(Microsoft.Extensions.Configuration.IConfiguration,ToolsOfPanda.Interface.IDBTool,LaTeXAPI.Models.latexliveContext,ToolsOfPanda.Interface.IHttpTool,LaTeXAPI.Interface.IPermission)">
+            <summary>
+            mathpix操作接口实例化
+            </summary>
+            <param name="configuration"></param>
+            <param name="db"></param>
+            <param name="context"></param>
+            <param name="http"></param>
+            <param name="permission"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.ReSetAllTime">
+            <summary>
+            在午夜0点按照用户权限重置mathpix调用次数
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.GetAllClientAndPermission">
+            <summary>
+            获取所有用户权限列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.RequireMathPix(System.Int32,System.String)">
+            <summary>
+            请求mathpix接口
+            </summary>
+            <param name="clientid">用户id</param>
+            <param name="src">base64码流</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.GetTime(System.Int32)">
+            <summary>
+            获取用户当前剩余次数
+            </summary>
+            <param name="clientid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.SetTime(LaTeXAPI.Models.ClientMathpix)">
+            <summary>
+            设置更新次数
+            </summary>
+            <param name="clientMathpix"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.AddNewTimeRecord(System.Int32)">
+            <summary>
+            增加新的一条次数记录
+            </summary>
+            <param name="clientid"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.GetDefaultTime(System.Int32)">
+            <summary>
+            获得用户默认次数
+            </summary>
+            <param name="clientid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MathPix.PostToMathPixAPI(System.String,LaTeXAPI.Models.ClientMathpix,System.Action{LaTeXAPI.Models.ClientMathpix})">
+            <summary>
+            向mathpix接口请求识别
+            </summary>
+            <param name="src"></param>
+            <param name="action"></param>
+            <param name="clientMathpix"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LaTeXAPI.Class.MessageCode">
+            <summary>
+            短信登录类
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.#ctor(Microsoft.Extensions.Configuration.IConfiguration,ToolsOfPanda.Interface.IDBTool,ToolsOfPanda.Interface.IRedisTool,ToolsOfPanda.Interface.IAliyunMessageCodeTool,LaTeXAPI.Models.latexliveContext)">
+            <summary>
+            短信登录接口实例化
+            </summary>
+            <param name="configuration"></param>
+            <param name="db"></param>
+            <param name="redis"></param>
+            <param name="message"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.Login(System.String,System.String)">
+            <summary>
+            通过短信验证码登录
+            </summary>
+            <param name="tel"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.Identity(System.Int32,System.String,System.String)">
+            <summary>
+            验证身份
+            </summary>
+            <param name="id"></param>
+            <param name="tel"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.SendVerifyCode(System.String,System.String)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="tel"></param>
+            <param name="templatecode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.GetRemainTime(System.String)">
+            <summary>
+            一分钟禁止发送剩余秒数
+            </summary>
+            <param name="tel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.GetVerifyCode(System.String)">
+            <summary>
+            生成验证码
+            </summary>
+            <param name="tel">指定手机号</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.IsVerifyCodeOK(System.String,System.String)">
+            <summary>
+            判断验证码是否正确
+            </summary>
+            <param name="tel"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.ClearVerifyCode(System.String)">
+            <summary>
+            清除缓存中的验证码
+            </summary>
+            <param name="tel"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.MessageCode.IsPhoneNumber(System.String)">
+            <summary>
+            手机号格式是否正确
+            </summary>
+            <param name="tel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LaTeXAPI.Class.AliyunMessage">
+            <summary>
+            阿里云短信接口返回对象
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.AliyunMessage.RequestId">
+            <summary>
+            请求ID
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.AliyunMessage.Message">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.AliyunMessage.BizId">
+            <summary>
+            未知字段
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.AliyunMessage.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="T:LaTeXAPI.Class.MyToken">
+            <summary>
+            mytoken
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.MyToken.#ctor(Microsoft.Extensions.Configuration.IConfiguration,ToolsOfPanda.Interface.IDBTool,ToolsOfPanda.Interface.IRedisTool,ToolsOfPanda.Interface.ITokenTool,LaTeXAPI.Models.latexliveContext)">
+            <summary>
+            构造函数（初始化jwttool）
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.MyToken.Login(System.String,System.String)">
+            <summary>
+            通过mytoken登录
+            </summary>
+            <param name="token">mytoken</param>
+            <param name="nothing">不填</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MyToken.ValidateMyToken(System.String)">
+            <summary>
+            通过mytoken获取id
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.MyToken.GetNewMyToken(System.Int32)">
+            <summary>
+            通过Id、时间戳获得新的mytoken
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.RoleManage.AddRole(System.Int32,System.Int32)">
+            <summary>
+            赋予用户角色
+            </summary>
+            <param name="clientid">用户id</param>
+            <param name="roleid">角色id</param>
+        </member>
+        <member name="M:LaTeXAPI.Class.RoleManage.RemoveRole(System.Int32,System.Int32)">
+            <summary>
+            剥夺用户的角色(角色id默认值剥夺所有角色，即删除用户)
+            </summary>
+            <param name="clientid">用户id</param>
+            <param name="roleid">角色id</param>
+        </member>
+        <member name="M:LaTeXAPI.Class.RoleManage.GetPermission(System.Int32)">
+            <summary>
+            按照用户id获取其权限列表
+            </summary>
+            <param name="clientid">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.RoleManage.IsRoleExist(System.Int32,System.Int32)">
+            <summary>
+            用户是否拥有某角色
+            </summary>
+            <param name="clientid">用户id</param>
+            <param name="roleid">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.TimedExecutService.DoAtTheTime">
+            <summary>
+            凌晨0时执行重置
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.TimedExecutService.ResetAllMathPixTime">
+            <summary>
+            重置
+            </summary>
+        </member>
+        <member name="T:LaTeXAPI.Class.WX">
+            <summary>
+            微信登录接口类
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Class.WX.#ctor(Microsoft.Extensions.Configuration.IConfiguration,ToolsOfPanda.Interface.IDBTool,ToolsOfPanda.Interface.IHttpTool,LaTeXAPI.Models.latexliveContext)">
+            <summary>
+            微信登录接口实例化
+            </summary>
+            <param name="configuration"></param>
+            <param name="db"></param>
+            <param name="http"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:LaTeXAPI.Class.WX.Login(System.String,System.String)">
+            <summary>
+            通过微信Code登录
+            </summary>
+            <param name="WXcode">微信code</param>
+            <param name="nothing">不填</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.WX.GetWXUserInfo(LaTeXAPI.Class.WXToken)">
+            <summary>
+            获得微信用户信息
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Class.WX.GetWXToken(System.String)">
+            <summary>
+            获得微信token
+            </summary>
+            <param name="WXcode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LaTeXAPI.Class.WXToken">
+            <summary>
+            微信返回微信token对象
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXToken.access_token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXToken.expires_in">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXToken.refresh_token">
+            <summary>
+            刷新Token用的token
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXToken.openid">
+            <summary>
+            用户唯一id
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXToken.scop">
+            <summary>
+            防跨域攻击参数
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXToken.unionid">
+            <summary>
+            同一微信开放平台唯一id
+            </summary>
+        </member>
+        <member name="T:LaTeXAPI.Class.WXUserInfo">
+            <summary>
+            微信返回微信账户信息对象
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.openid">
+            <summary>
+            用户唯一id
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.nickname">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.sex">
+            <summary>
+            用户性别
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.province">
+            <summary>
+            用户省份
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.city">
+            <summary>
+            用户城市
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.country">
+            <summary>
+            用户国家
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.headimgurl">
+            <summary>
+            用户头像url
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.privilege">
+            <summary>
+            用户微信特权
+            </summary>
+        </member>
+        <member name="P:LaTeXAPI.Class.WXUserInfo.unionid">
+            <summary>
+            同一微信开放账号下唯一id
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.ExecuteAtTimeMiddleware.DoAtTheTime(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            凌晨0时执行重置
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.ExecuteAtTimeMiddleware.ResetAllMathPixTime(System.Object)">
+            <summary>
+            重置并回调0时执行
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.LoginByMyToken(LaTeXAPI.Models.MyTokenRequest)">
+            <summary>
+            用客户端存储的mytoken登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.LoginByAccount(LaTeXAPI.Models.AccountLoginRequest)">
+            <summary>
+            用账号密码登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.RegByAccount(LaTeXAPI.Models.AccountRegRequest)">
+            <summary>
+            注册新用户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.UpdateUser(LaTeXAPI.Models.ClientUpdateRequest)">
+            <summary>
+            修改用户信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.RemoveUser(LaTeXAPI.Models.ClientRemoveRequest)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.LoginByWX(LaTeXAPI.Models.WXCodeLoginRequest)">
+            <summary>
+            微信登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.WXBind(LaTeXAPI.Models.WXBindRequest)">
+            <summary>
+            新绑定微信
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.LoginByMessage(LaTeXAPI.Models.MessageCodeLoginRequest)">
+            <summary>
+            短信验证码登录
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.SendMessageCode_Identity(LaTeXAPI.Models.SendIdentityMessageCodeRequest)">
+            <summary>
+            发送短信验证码
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.SendMessageCode_Login(LaTeXAPI.Models.SendLoginMessageCodeRequest)">
+            <summary>
+            发送短信验证码
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.ClientController.GetRemainTime(LaTeXAPI.Models.GetMessageCodeRemainTimeRequest)">
+            <summary>
+            一分钟禁止发送剩余秒数
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.MathPixController.GetLaTexFromMathPix(LaTeXAPI.Models.GetLaTexFromMathPixRequest)">
+            <summary>
+            从MathPix接口获取LaTeX语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.MathPixController.ResetHandOperation(System.String)">
+            <summary>
+            手动操作重置所有会员的每日接口调用次数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMathPix.RequireMathPix(System.Int32,System.String)">
+            <summary>
+            请求mathpix接口
+            </summary>
+            <param name="clientid">用户id</param>
+            <param name="src">base64码流</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMathPix.GetTime(System.Int32)">
+            <summary>
+            获取用户当前剩余次数
+            </summary>
+            <param name="clientid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMathPix.GetDefaultTime(System.Int32)">
+            <summary>
+            获得用户默认次数
+            </summary>
+            <param name="clientid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMathPix.ReSetAllTime">
+            <summary>
+            在午夜0点按照用户权限重置mathpix调用次数
+            </summary>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMessageCode.SendVerifyCode(System.String,System.String)">
+            <summary>
+            发送验证码
+            </summary>
+            <param name="tel">接收验证码的手机号</param>
+            <param name="templatecode">阿里云短信模板码</param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMessageCode.GetRemainTime(System.String)">
+            <summary>
+            一分钟禁止发送剩余秒数
+            </summary>
+            <param name="tel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMessageCode.Identity(System.Int32,System.String,System.String)">
+            <summary>
+            验证身份
+            </summary>
+            <param name="id"></param>
+            <param name="tel"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMessageCode.ClearVerifyCode(System.String)">
+            <summary>
+            清除缓存中的验证码
+            </summary>
+            <param name="tel"></param>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMyToken.ValidateMyToken(System.String)">
+            <summary>
+            验证MyToken的合法性
+            </summary>
+            <param name="mytoken">传递的Token</param>
+            <returns>用户Id</returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IMyToken.GetNewMyToken(System.Int32)">
+            <summary>
+            根据ID获取新的MyToken
+            </summary>
+            <param name="id">用户Id</param>
+            <returns>一个新的Token</returns>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IPermission.AddRole(System.Int32,System.Int32)">
+            <summary>
+            赋予用户角色
+            </summary>
+            <param name="clientid">用户id</param>
+            <param name="roleid">角色id</param>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IPermission.RemoveRole(System.Int32,System.Int32)">
+            <summary>
+            剥夺用户的角色
+            </summary>
+            <param name="clientid">用户id</param>
+            <param name="roleid">角色id</param>
+        </member>
+        <member name="M:LaTeXAPI.Interface.IPermission.GetPermission(System.Int32)">
+            <summary>
+            按照用户id获取其权限列表
+            </summary>
+            <param name="clientid">用户id</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# IDE0052: 删除未读的私有成员
+dotnet_diagnostic.IDE0052.severity = none
+
+# IDE0060: 删除未使用的参数
+dotnet_diagnostic.IDE0060.severity = none
+
+# IDE1006: 命名样式
+dotnet_diagnostic.IDE1006.severity = none

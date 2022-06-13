@@ -1,0 +1,285 @@
+/* 登录banner */
+.banner-login {
+  width: 100%;
+  height: 600px;
+  margin-top: -20px;
+  background: #337ab7 url("../../../img/img_login/login_background.png") no-repeat center;
+}
+
+/* 登录框容器 */
+.container-box-login {
+  width: 100%;
+}
+
+/* 登录框 */
+.box-login {
+  height: 550px;
+  max-width: 500px;
+  background-color: #fff;
+  top: -430px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #707070;
+}
+
+/* 登录框自适应占位 */
+.box-login-trans {
+  height: 550px;
+  background-color: #fff;
+  top: -430px;
+  background: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+/* 首图 */
+.box-login-trans > div > img {
+  width: 100%;
+  min-width: 300px;
+  max-width: 550px;
+  position: relative;
+  top: 50px;
+}
+
+/* 登录框logo容器 */
+.box-login-logo {
+  width: 120px;
+  margin: 50px auto 0 auto;
+}
+
+/* 登录框logo */
+.box-login-logo img {
+  width: 100%;
+  height: 70px;
+}
+
+/* 登录框分割线容器 */
+.box-login-hr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 登录框分割线 */
+.box-login-hr hr {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 登录框登录选择类型容器 */
+.box-login-type{
+  width: 95%;
+  margin-top: 25px;
+}
+
+/* 登录框控件容器 */
+.box-login-control {
+  width: 90%;
+  margin-top: 30px;
+}
+
+/* 登录框输入框容器 */
+.box-login-control-input {
+  margin: 5px 0 5px 0;
+  padding: 2px;
+}
+
+/* 登录框错误信息容器 */
+.box-login-errinfo {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #c26a71;
+  margin-top: 5px;
+  margin-left: 4px;
+  text-align: left;
+  position: relative;
+  visibility: hidden;
+}
+
+/* 登录框错误信息图标 */
+.box-login-errinfo img {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: -2px;
+  left: 0;
+}
+
+/* 登录框错误信息红边框 */
+.redborder-login-errinfo {
+  border-color: #c26a71;
+}
+
+/* 验证滑块 */
+#vermod {
+  width: 88%;
+  margin: 0 auto;
+}
+.slidetounlock {
+  font-size: 12px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(0.4, #4d4d4d), color-stop(0.5, #fff), color-stop(0.6, #4d4d4d), color-stop(1, #4d4d4d));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: slidetounlock 3s infinite;
+  -webkit-text-size-adjust: none;
+}
+@-webkit-keyframes slidetounlock {
+  0% {
+    background-position: -200px 0;
+  }
+
+  100% {
+    background-position: 200px 0;
+  }
+}
+#drag {
+  position: relative;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}
+#drag .handler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 34px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.handler_bg {
+  background: #fff url("../verblock/img/slider.png") no-repeat center;
+}
+.handler_ok_bg {
+  background: #fff url("../verblock/img/complet.png") no-repeat center;
+}
+#drag .drag_bg {
+  background-color: #337ab7;
+  height: 34px;
+  width: 0;
+}
+#drag,
+#drag .handler,
+#drag {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#drag .drag_text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #9c9c9c;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  font-size: 12px;
+}
+
+/* 登录按钮容器 */
+.box-login-control-button {
+  width: 90%;
+  margin: 5px auto 10px auto;
+}
+
+/* 重写bootstrap按钮默认宽度 */
+.btn {
+  width: 100%;
+}
+
+/* 协议声明容器 */
+.box-login-agree {
+  width: 90%;
+  margin-top: 30px;
+  margin-left: 15px;
+  text-align: center;
+}
+
+/* 协议声明复选框 */
+#chk-agree {
+  /* width: 15px; */
+  /* top: -10px; */
+}
+
+/* 协议声明复选框去除焦点默认边框 */
+#chk-agree:focus {
+  border-color: #ccc;
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+
+/* 协议模态框 */
+.modal-body {
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* 协议模态框段间距 */
+.modal-body p {
+  margin: 10px auto;
+}
+
+/* 版权信息容器 */
+.container-copyright {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  top: -320px;
+}
+
+/* 版权信息图标 */
+.container-copyright img {
+  width: 15px;
+  margin: 0 2px 5px 0;
+}
+
+/* 版权信息内容 */
+.container-copyright p {
+  font-size: small;
+}
+
+/* 手机竖屏适配 */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  /* 登录框 */
+  .box-login {
+    top: -490px;
+    border-radius: 0;
+    box-shadow: 0 0 0 #fff;
+  }
+  /* 版权信息容器 */
+  .container-copyright {
+    top: -450px;
+  }
+  /* 协议模态框 */
+  .modal-body {
+    height: 400px;
+  }
+}
+
+/* 手机横屏适配 */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* 登录框 */
+  .box-login {
+    max-width: 400px;
+    top: -470px;
+    float: right;
+    margin-right: 30px;
+  }
+  /* 版权信息容器 */
+  .container-copyright {
+    top: -420px;
+  }
+}
+
+/* 首图高度适配 */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+  .box-login-trans > div > img {
+    position: relative;
+    top: 100px;
+  }
+}

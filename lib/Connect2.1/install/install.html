@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+  <style type="text/css">
+body{
+  width:1003px;
+  margin:0 auto;
+  background:#ccc;
+}
+h2{
+  text-align:center;
+}
+li{
+  list-style:none;
+  clear:both;
+  margin:20px;
+}
+lable{
+  width:200px;
+  display:block;
+  float:left;
+}
+.scope{
+  display:block;
+  float:left;
+  width:600px;
+  height:150px;
+}
+.scope label{
+  margin-left:10px;
+}
+  </style>
+</head>
+<body>
+<h2>欢迎使用QQ Connect SDK For PHP 2.1</h2>
+请填写以下配置项
+<form action="./" method="post">
+  <ul>
+    <li>
+      <lable>appid</lable>
+    <input type="" name="appid" />
+    </li>
+    <li>
+      <lable>appkey</lable>
+    <input type="" name="appkey" />
+    </li>
+    <li>
+      <lable>callback</lable>
+    <input type="" name="callback" /> example演示请填写到   example/oauth/callback.php
+    </li>
+    <li>
+      <lable>请求授权列表</lable>
+      <span class='scope'>
+<?php
+$scope = array("get_user_info","add_share","list_album","add_album","upload_pic","add_topic","add_one_blog","add_weibo","check_page_fans","add_t","add_pic_t","del_t","get_repost_list","get_info","get_other_info","get_fanslist","get_idolist","add_idol","del_idol","get_tenpay_addr");
+$scopeArr = $scope;
+foreach($scopeArr as $val){
+?>
+<input type="checkbox" name="scope[]" value="<?=$val?>" id="<?=$val?>"/><label for="<?=$val?>"><?=$val?></label>&nbsp;
+<?php
+}
+?>
+<br />
+<input type='button' value='全选' id="choiceAll"/>
+</span>
+    </li>
+    <li>
+    <lable>是否开户调试</lable>
+    <input type="radio" name="errorReport" value="true" checked="checked"/>是 
+    <input type="radio" name="errorReport" value="false"/>否 
+    </li>
+     <li>
+      <lable></lable>
+    <input type="submit" value="配置"/>
+    </li>
+  </ul>
+</form>
+<div style="color: red">intall目录下为方便填写配置项，不可发布到外网，配置成功后请删除intall目录下文件，并且只保留API目录</div>
+<script type="text/javascript">
+var choiceAll = document.getElementById("choiceAll");
+choiceAll.onclick = function(){
+  var checkBox = document.getElementsByName("scope[]");
+  for(var i = 0;i < checkBox.length;i ++){
+    checkBox[i].checked = "checked";
+  }
+}
+</script>
+</body>
+</html>

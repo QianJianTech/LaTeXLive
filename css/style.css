@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/**
+ * @Copyright: Copyright © 2019
+ * @Created on 2019-12-22
+ * @Author:Panda_YueTao
+ * @Version 1.15
+ * @Title: 妈叔出品-LaTeX公式编辑器样式表
+ */
+
+/* #region textarea禁止拖动改变大小 */
+textarea {
+  resize: none;
+  cursor: text;
+}
+/* #endregion */
+
+/* #region 图片不可圈选、宽度100% */
+img {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+.card {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+/* #endregion */
+
+/* #region 禁用bootstrap点击按钮时边框高亮样式 */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-group .btn-outline-primary.myactive {
+  background-color: #007bff;
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+}
+/* #endregion */
+
+/* #region placeholder字体颜色 */
+.form-control::-webkit-input-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+
+.form-control::placeholder {
+  color: #ddd;
+  opacity: 1;
+}
+/* #endregion */
+
+/* #region 字体图标向左偏移 */
+i {
+  margin: auto 0.4rem auto 0.1rem;
+}
+/* #endregion */
+
+/* #region 禁用bootstrap焦点时边框高亮样式 */
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ced4da;
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, 0.25);
+}
+/* #endregion */
+
+/* #region 对齐 */
+.c {
+  text-align: center;
+}
+
+.l {
+  text-align: left;
+}
+
+.r {
+  text-align: right;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+/* #endregion */
+
+/* #region tooltip泡泡 */
+.tippy-box[data-theme~="mythem"] {
+  background-color: #000;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.tippy-box[data-theme~="mythem"][data-placement^="top"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+.tippy-box[data-theme~="mythem"][data-placement^="right"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+.tippy-box[data-theme~="mythem"][data-placement^="bottom"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+.tippy-box[data-theme~="mythem"][data-placement^="left"] > .tippy-arrow::before {
+  border-right-color: #000;
+  opacity: 0.7;
+}
+/* #endregion */
+
+/* #region 弹出框 */
+.qback {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999999999;
+}
+.alertBox {
+  width: 452px;
+  height: auto;
+  padding: 0 15px 20px 15px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: -167px 0 0 -226px;
+  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.alertHead {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #99bafa;
+  font-size: 18px;
+  color: #333;
+  line-height: 45px;
+  text-align: left;
+}
+.alertMes {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 25px 40px 35px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  line-height: 28px;
+}
+.alertBtn {
+  display: block;
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  background-color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  text-align: center;
+}
+.ConBtn {
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 84px;
+  margin-right: 47px;
+  padding-bottom: 0.2rem auto;
+}
+.cancel {
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 0.2rem auto;
+}
+.ToastBox {
+  width: 452px;
+  height: auto;
+  padding: 15px 20px;
+  text-align: center;
+  /* background: rgba(0, 0, 0, 0.4); */
+  /* color: #fff; */
+  font-size: 16px;
+  border-radius: 8px;
+  line-height: 24px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: 0px 0px 0px -226px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+.ToastBox-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.ToastBox-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.ToastBox-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+.ToastBox-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+/* #endregion */
+
+/* #region 输入框垂直居中 */
+input {
+  vertical-align: middle;
+}
+/* #endregion */
+
+/* #region 去除type=number的选择按钮 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* #endregion */
+
+/* #region 去除bootstrap按钮按下不弹起的特效 */
+.btn-default:focus,
+btn-default.focus {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-success:focus,
+.btn-success.focus {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-success:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-info:focus,
+.btn-info.focus {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+.btn-warning:focus,
+.btn-warning.focus {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+.btn-warning:hover {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+.btn-danger:focus,
+.btn-danger.focus {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+/* #endregion */
+
+/* #region 改变bootstrap默认card-header高度 */
+.card-header {
+  height: 3rem;
+}
+/* #endregion */
+
+/*TODO:特事特办：解决右上角菜单被遮挡的问题*/
+#navbar-header {
+  z-index: 9;
+}

@@ -1,0 +1,179 @@
+body{
+    margin: 0;
+	padding: 0;
+}
+
+/* 导航栏logo */
+.nav-logo {
+    width: 78px;
+    height: 44px;
+    position: relative;
+    top: -10px;
+    left: -3px;
+}
+
+/* 已登录用户头像 */
+.nav-login>img{
+    width:25px;
+    border-radius:50%;
+    margin-right:6px;
+}
+
+/* 去掉bootstrap输入框焦点默认边框 */
+/*.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+}*/
+
+/* 图标默认颜色 */
+.glyphicon{
+    color: #9c9c9c;
+    top:2px;
+}
+
+/* 禁止用户圈选 */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 输入框垂直居中 */
+input {
+    vertical-align: middle;
+}
+
+/* 去除bootstrap按钮焦点默认边框 */
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+    outline: none;
+}
+a:focus, a:active:focus, a.active:focus, a.focus, a:active.focus, a.active.focus {
+    outline: none;
+}
+
+/* 去除type=number的选择按钮 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* 加载动画1 */
+#loading{
+	background-color: #337ab7;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 10;
+	margin-top: 0;
+    top: 0;
+    display:none;
+    opacity: 0.8;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 200px;
+	width: 200px;
+	margin-top: -100px;
+	margin-left: -100px;
+}
+#object{
+	width: 80px;
+	height: 80px;
+	background-color: #FFF;
+	-webkit-animation: animate 1s infinite ease-in-out;
+	animation: animate 1s infinite ease-in-out;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+}
+@-webkit-keyframes animate {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+@keyframes animate {
+  0% {
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 100% {
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+
+/* 去除bootstrap按钮按下不弹起的特效 */
+.btn-default:focus,btn-default.focus {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+.btn-primary:focus,.btn-primary.focus {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}
+.btn-success:focus,.btn-success.focus {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+.btn-info:focus,.btn-info.focus {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.btn-info:hover {
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+.btn-warning:focus,.btn-warning.focus {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+.btn-warning:hover {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+.btn-danger:focus,.btn-danger.focus {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+}

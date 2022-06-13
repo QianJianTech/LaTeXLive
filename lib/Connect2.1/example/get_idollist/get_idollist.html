@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<ul>
+<?php
+foreach($ret['data'] as $k => $v){
+  if(!is_array($v)){
+  $v = array($k => $v);
+  }
+  foreach($v as $key => $val){
+    if(!is_array($val)){
+    $val = array($key => $val);
+    }
+    echo "<br /><br /><ul>";
+    foreach($val as $key2 => $val2){
+?>
+
+<li><?=$key2?>: &nbsp; <?=$val2?></li>
+<?php
+    }
+    echo "</ul>";
+  }
+}
+?>
+</form>	
+</body>
+</html>

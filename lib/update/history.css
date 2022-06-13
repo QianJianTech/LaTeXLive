@@ -1,0 +1,108 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a,
+img {
+  border: 0;
+}
+body {
+  _background-image: url(about:blank); /*用浏览器空白页面作为背景*/
+  _background-attachment: fixed; /* prevent screen flash in IE6 确保滚动条滚动时，元素不闪动*/
+}
+
+/* history */
+#history {
+  height: auto;
+  width: 2180px;
+  position: relative;
+  margin: 0px auto 0 auto;
+  top: 1rem;
+}
+
+#content {
+  height: 720px;
+  width: 1920px;
+  overflow: auto;
+  background: url(../update/images/vertical.png) no-repeat 634px 2px;
+  padding-top: 10px;
+}
+.list {
+  overflow: hidden;
+  position: relative;
+}
+.list li {
+  height: 110px;
+  vertical-align: bottom;
+  overflow: hidden;
+  position: relative;
+  margin-top: 28px;
+}
+.liwrap {
+  height: 55px;
+  margin-top: 28px;
+}
+.lileft {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 55px;
+  width: 600px;
+  line-height: 55px;
+  text-align: right;
+}
+.liright {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  height: 55px;
+  width: 1200px;
+}
+.histt {
+  height: 35px;
+  line-height: 35px;
+}
+.hisct {
+  font-size: 18px;
+  color: #6e6e6e;
+}
+.md {
+  font-size: 18px;
+  color: #aeaeae;
+}
+.year {
+  font-size: 12px;
+  color: #aeaeae;
+  margin-right: 10px;
+}
+.point {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  left: 609px;
+  background: url(../update/images/point.png) no-repeat 0px 18px;
+  overflow: hidden;
+}
+.point b {
+  font-weight: normal;
+  height: 16px;
+  width: 16px;
+  background: #fff;
+  display: block;
+  border: 7px solid #007bff;
+  margin: 12px 0px 0px 14px;
+  border-radius: 52px;
+  width: 28px;
+  height: 28px;
+
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

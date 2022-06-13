@@ -1,0 +1,414 @@
+﻿/* 背景 */
+
+.banner-login {
+    width: 100%;
+    height: 500px;
+    margin-top: -20px;
+    /* background-color: #337ab7; */
+    background: #fff url("https://oursite-resourse.oss-cn-qingdao.aliyuncs.com/public-imgaes/login_background.png") no-repeat center;
+}
+
+/* 登录框 */
+
+.box-login {
+    width: 500px;
+    height: 550px;
+    position: absolute;
+    left: 60%;
+    top: 70px;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px #707070;
+    border-radius: 4px;
+}
+
+.my-container-wrapper img {
+    width: 196px;
+    height: 70px;
+    position: absolute;
+    left: 140px;
+    top: 50px;
+}
+
+.my-container-wrapper hr {
+    width: 450px;
+    height: 4px;
+    position: absolute;
+    left: 25px;
+    top: 120px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.box-login-form1 {
+    position: absolute;
+    left: 60px;
+    top: 180px;
+}
+
+#select_telarea {
+    margin-right: 10px;
+}
+
+input {
+    vertical-align: middle
+}
+
+.wrapper-vermod {
+    position: absolute;
+    left: 60px;
+    top: 260px;
+}
+
+.box-login-form2 {
+    position: absolute;
+    left: 60px;
+    top: 340px;
+}
+
+.box-login-form3 {
+    position: absolute;
+    left: 130px;
+    top: 470px;
+}
+
+    .box-login-form3 div {
+        font-size: 0.7em;
+        font-weight: 400;
+    }
+
+.ckbx-agreed {
+    position: relative;
+    top: -3px;
+}
+
+.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+}
+
+.errinfo {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: #c26a71;
+    margin-top: 5px;
+    margin-left: 25px;
+    text-align: left;
+    position: relative;
+    /* display: none; */
+}
+
+    .errinfo img {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: -21px;
+        top: -1px;
+    }
+
+.errinfo-redborder {
+    border-color: #c26a71;
+}
+
+#btn-sendcode {
+    margin-left: 10px
+}
+
+#btn-gologin {
+    position: absolute;
+    left: 60px;
+    top: 420px;
+}
+
+.glyphicon-qrcode, .glyphicon-phone {
+    color: #9c9c9c
+}
+
+/* 协议模态框 */
+
+.modal-body {
+    height: 800px;
+    overflow: scroll;
+}
+
+    .modal-body p {
+        margin: 10px auto;
+    }
+
+/* 验证滑块 */
+
+.slidetounlock {
+    font-size: 12px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, #fff), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slidetounlock 3s infinite;
+    -webkit-text-size-adjust: none
+}
+
+@-webkit-keyframes slidetounlock {
+    0% {
+        background-position: -200px 0
+    }
+
+    100% {
+        background-position: 200px 0
+    }
+}
+
+#drag {
+    position: relative;
+    background-color: #e8e8e8;
+    width: 381px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    #drag .handler {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 40px;
+        height: 34px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+.handler_bg {
+    background: #fff url("../store/verblock/img/slider.png") no-repeat center;
+}
+
+.handler_ok_bg {
+    background: #fff url("../store/verblock/img/complet.png") no-repeat center;
+}
+
+#drag .drag_bg {
+    background-color: #337ab7;
+    height: 34px;
+    width: 0px;
+}
+
+#drag, #drag .handler, #drag {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+    #drag .drag_text {
+        position: absolute;
+        top: 0px;
+        width: 381px;
+        color: #9c9c9c;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        font-size: 12px;
+    }
+
+/* 版权信息 */
+
+.my-copyright {
+    position: relative;
+    top: 380px;
+    text-align: center;
+}
+
+    .my-copyright img {
+        width: 15px;
+        margin: 0 2px 5px 0;
+    }
+
+    .my-copyright p {
+        font-size: small;
+    }
+
+/* 移动端适配 */
+
+/* pad竖屏 */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .banner-login {
+        background: #337ab7 url("") no-repeat center;
+        width: 100%;
+        height: 570px;
+    }
+
+    .box-login {
+        left: 18%;
+        top: 70px;
+        background-color: #fff;
+        box-shadow: 2px 2px 3px #707070;
+        border-radius: 4px;
+    }
+
+    .my-copyright {
+        top: 180px;
+    }
+
+   
+}
+
+/* pad横屏 */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .banner-login {
+        height: 450px;
+    }
+
+    .box-login {
+        left: 50%;
+        top: -0px;
+        background-color: #fff;
+        box-shadow: 2px 2px 3px #707070;
+        border-radius: 4px;
+    }
+
+    .my-copyright {
+        top: 110px;
+    }
+}
+
+/* 手机竖屏 */
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    /* 背景 */
+
+    .banner-login {
+        width: 100%;
+        height: 500px;
+        margin-top: -20px;
+        /* background-color: #337ab7; */
+        background: #337ab7 url("") no-repeat center;
+    }
+
+    /* 登录框 */
+
+    .box-login {
+        width: 100%;
+        position: relative;
+        left: 0px;
+        top: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 0px #707070;
+        border-radius: 0px;
+    }
+
+    .my-container-wrapper img {
+        display: none;
+    }
+
+    .my-container-wrapper hr {
+        display: none;
+    }
+
+    .box-login-form1 {
+        position: relative;
+        top: 20px;
+        left: 0px;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    #select_telarea {
+        margin-right: 0px;
+    }
+
+    .box-login-form1 .form-group:nth-child(1) {
+        display: none;
+    }
+
+    .box-login-form1 .form-group:nth-child(2) {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    input {
+        vertical-align: middle
+    }
+
+    .wrapper-vermod {
+        position: absolute;
+        left: 60px;
+        top: 260px;
+    }
+
+    .box-login-form2 {
+        position: absolute;
+        left: 60px;
+        top: 340px;
+    }
+
+    .box-login-form3 {
+        position: absolute;
+        left: 130px;
+        top: 470px;
+    }
+
+        .box-login-form3 div {
+            font-size: 0.7em;
+            font-weight: 400;
+        }
+
+    .ckbx-agreed {
+        position: relative;
+        top: -3px;
+    }
+
+    .form-control:focus {
+        border-color: #ccc;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .errinfo {
+        font-size: 0.7em;
+        font-weight: 400;
+        color: #c26a71;
+        margin-top: 5px;
+        margin-left: 25px;
+        text-align: left;
+        position: relative;
+        /* display: none; */
+    }
+
+        .errinfo img {
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            left: -21px;
+            top: -1px;
+        }
+
+    .errinfo-redborder {
+        border-color: #c26a71;
+    }
+
+    #btn-sendcode {
+        margin-left: 10px
+    }
+
+    #btn-gologin {
+        position: absolute;
+        left: 60px;
+        top: 420px;
+    }
+
+    .glyphicon-qrcode, .glyphicon-phone {
+        color: #9c9c9c
+    }
+
+    /* 协议模态框 */
+
+    .modal-body {
+        height: 800px;
+        overflow: scroll;
+    }
+
+        .modal-body p {
+            margin: 10px auto;
+        }
+}

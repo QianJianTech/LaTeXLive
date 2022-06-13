@@ -1,0 +1,15 @@
+node_modules
+#.gitignore
+
+
+# lib
+# img
+# js
+# json
+# .babelrc
+# package-lock.json
+# package.json
+# web.config
+# webpack_config_bak.txt
+# webpack.config.js
+

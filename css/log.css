@@ -1,0 +1,12 @@
+.log{
+    margin-top: 2rem;
+}
+.log-ver{
+    float: left;
+}
+.log-date{
+    float: right;
+    display: inline;
+    position: relative;
+    /* top:0.5rem; */
+}
